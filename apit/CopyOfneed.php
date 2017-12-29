@@ -15,14 +15,14 @@ $mail->SMTPAuth   = true;  //启用SMTP认证
 $mail->CharSet  = "UTF-8"; //字符集
 //$mail->Encoding = "base64"; //编码方式
 
-$mail->Username = "report@epscn.net";  //你的邮箱
-$mail->Password = "Eps654321";  //你的密码
+$mail->Username = "";  //你的邮箱
+$mail->Password = "";  //你的密码
 $mail->Subject = "你好"; //邮件标题
 
-$mail->From = "report@epscn.net";  //发件人地址（也就是你的邮箱）
+$mail->From = "";  //发件人地址（也就是你的邮箱）
 $mail->FromName = "月光光";  //发件人姓名
 
-$address = "962538375@qq.com";//收件人email
+$address = "";//收件人email
 $mail->AddAddress($address, "亲");//添加收件人（地址，昵称）
 
 //$mail->AddAttachment('xx.xls','我的附件.xls'); // 添加附件,并指定名称
