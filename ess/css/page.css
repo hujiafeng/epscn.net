@@ -1,0 +1,31 @@
+.pagination{margin:15px 0;font:12px Arial;height:25px;position:relative;width:100%;text-align:center;overflow:hidden;}
+.pagination .page-floatR{ float:right; position:relative; left:0;}
+.pagination .page-floatL{ float:left; position:relative; left:0;}
+.pagination .page-floatC{ float:left; position:relative;left:50%;}
+.right50{ right:50%;}
+.left0{ left:0;}
+.right0{ right:0;}
+
+.pagination a,.page-prev,.page-next,.page-cur,.page-start,.page-end,.page-break {
+    float:left; position:relative; margin:0px 3px 0px 0px; vertical-align:middle; font-family:Arial; height:20px; line-height:20px; white-space:nowrap; text-align:center;
+}
+
+.pagination a { border:1px solid #c5c5c5; color:#006599; font-weight:bold; padding:0 5px;}
+.pagination a:hover { background-color:#006599; border:1px solid #006599; color:#ffffff; text-decoration:none;}
+
+a.page-prev { padding-left:16px; background:url(../img/page/page_arrow_l1.gif) no-repeat 6px center;}
+a.page-prev span { color:#006599;}
+a.page-prev:hover{ padding-left:16px; background:url(../img/page/page_arrow_l2.gif) no-repeat 6px center; background-color:#006599;}
+a.page-prev:hover span{ color:#ffffff;}
+a.page-next { padding-right:16px; background:url(../img/page/page_arrow_r1.gif) no-repeat 48px center; background-color:#ffffff;}
+a.page-next span { color:#006599;}
+a.page-next:hover{ padding-right:16px; background:url(../img/page/page_arrow_r2.gif) no-repeat 48px center; background-color:#006599;}
+a.page-next:hover span{ color:#ffffff;}
+
+.page-start,.page-end { border:1px solid #d4d4d4; padding:0 5px;}
+.page-start{ padding-left:16px; background:url(../img/page/page_arrow_l3.gif) no-repeat 6px center;}
+.page-start span{ color:#cccccc;}
+.page-end  { padding-right:18px; background:url(../img/page/page_arrow_r3.gif) no-repeat 48px center;}
+.page-end   span{ color:#cccccc;}
+.page-break{ padding:0 3px;}
+.page-cur  { padding:0 5px; background-color:#006599; border:1px solid #006599; color:#ffffff; font-weight:bold;}

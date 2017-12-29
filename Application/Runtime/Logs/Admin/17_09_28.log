@@ -1,0 +1,1700 @@
+[ 2017-09-28T09:36:25+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-28T09:36:26+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 4 行.
+NOTIC: [8] Undefined variable: Site E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-28T09:36:36+08:00 ] 127.0.0.1 /Admin/Public/tologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `d_fxuser` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0180s ]
+SQL: INSERT INTO `d_fxloginlog` (`username`,`logintime`,`loginip`,`status`,`password`,`info`) VALUES ('admin','2017-09-28 09:36:36','127.0.0.1','1','8888***','') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: UPDATE `d_fxuser` SET `last_login_time`='1506562596',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `d_fxuser` WHERE (  username  = 'admin'  ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-28T09:36:37+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 0 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 36 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 38 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 8 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 33 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 10 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 39 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 40 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 41 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 340 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 44 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 325 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 45 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 329 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 336 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 337 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 364 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 331 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 332 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 333 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 338 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 365 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 376 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 377 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 378 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 366 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 367 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 368 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 371 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 335 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `d_fxadmin_panel` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `d_fxadmin_panel` WHERE `userid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 133 行.
+NOTIC: [8] Use of undefined constant user_login - assumed 'user_login' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:36:38+08:00 ] 127.0.0.1 /Admin/Main/public_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 and type='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT sum(reward-get_reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `d_fxloginlog` ORDER BY `loginid` desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-28T09:36:44+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:37:15+08:00 ] 127.0.0.1 /Admin/Gongdan/lists/status/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined variable: where E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 1  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 1  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:39:18+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:39:54+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:44:03+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0020s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:44:29+08:00 ] 127.0.0.1 /Admin/Gongdan/lists/status/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined variable: where E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 2  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 2  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-28T09:44:31+08:00 ] 127.0.0.1 /Admin/Gongdan/lists/status/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined variable: where E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 3  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 3  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:44:33+08:00 ] 127.0.0.1 /Admin/Gongdan/lists/status/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined variable: where E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 4  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0020s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 4  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T09:44:34+08:00 ] 127.0.0.1 /Admin/Gongdan/lists/status/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined variable: where E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 5  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0020s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 5  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T10:35:52+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-28T10:42:19+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-28T15:29:49+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T15:29:50+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 4 行.
+NOTIC: [8] Undefined variable: Site E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T15:30:00+08:00 ] 127.0.0.1 /Admin/Public/tologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `d_fxuser` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0210s ]
+SQL: INSERT INTO `d_fxloginlog` (`username`,`logintime`,`loginip`,`status`,`password`,`info`) VALUES ('admin','2017-09-28 15:30:00','127.0.0.1','1','8888***','') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: UPDATE `d_fxuser` SET `last_login_time`='1506583800',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `d_fxuser` WHERE (  username  = 'admin'  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-09-28T15:30:02+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 0 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 36 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 38 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 8 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 33 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 10 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 39 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 40 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 41 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 340 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 44 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 325 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 45 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 329 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 336 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 337 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 364 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 331 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 332 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 333 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 338 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 365 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 376 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 377 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 378 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 366 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 367 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 368 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 371 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 335 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `d_fxadmin_panel` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `d_fxadmin_panel` WHERE `userid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 133 行.
+NOTIC: [8] Use of undefined constant user_login - assumed 'user_login' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T15:30:03+08:00 ] 127.0.0.1 /Admin/Main/public_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 and type='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(reward-get_reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `d_fxloginlog` ORDER BY `loginid` desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T15:30:08+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:16+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:18+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:22+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:26+08:00 ] 127.0.0.1 /Admin/Gongdan/lists/status/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined variable: where E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 1  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status = 1  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:30+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:32+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( status = 5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-28T17:24:34+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-28T17:25:01+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: address E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 40 行.
+SQL: INSERT INTO `d_need` (`n_type`,`s_type`,`kuanxing`,`sb_number`,`biaoqian`,`zuobiao`,`address`,`fw_id`,`miaoshu2`,`over_time`,`status`,`uid_x`,`reward`,`uid_f`,`get_reward`,`gw_name`,`no`,`city`,`check_time`,`time`,`pay_time`,`pay_mode`,`n_payed`,`gw_number`) VALUES ('2','中压断路器','1','1','安装','119.914992,31.735371','蒋公岸工业园2268号','','111111111111111','2017-09-29','3','9','','27','','胡剑锋','17090034137','江苏省常州市武进区','2017-09-28 17:25:00','2017-09-28 17:25:00','2017-09-28 17:25:00','2','Y','13585859593') [ RunTime:0.0010s ]
+SQL: SELECT `token` FROM `d_user` WHERE ( uid=9 )  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_notification` WHERE ( ruid='9' and flag='1' and isread='0' ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: INSERT INTO `d_notification` (`obj_id`,`ruid`,`content`) VALUES ('17090034137','9','已为您发布一则线下工单17090034137，请等待施工安排。') [ RunTime:0.0110s ]
+SQL: SELECT `token` FROM `d_user` WHERE ( uid=27 )  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_notification` WHERE ( ruid='27' and flag='1' and isread='0' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `d_notification` (`obj_id`,`ruid`,`content`) VALUES ('17090034137','27','【服务商】您有新的服务工单17090034137，请及时指定施工人员。') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `d_fxmenu` WHERE ( app='Admin' and model='Agongdan' and action='add'  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxoperationlog` [ RunTime:0.0140s ]
+SQL: INSERT INTO `d_fxoperationlog` (`uid`,`username`,`addtime`,`ip`,`status`,`keysn`,`txt`,`mvcname`,`mvc`) VALUES ('1','admin','1506590701','127.0.0.1','add','19','添加工单中压断路器安装','添加工单','Admin#Agongdan#add') [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-28T17:25:03+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

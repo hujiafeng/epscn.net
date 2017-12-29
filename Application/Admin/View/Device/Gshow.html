@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript" src="__PUBLIC__/js/lightbox-2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/lightbox.css"/>
+<body class="J_scroll_fixed">
+
+ <div class="wrap jj">
+<style type="text/css">
+html{_overflow-y:scroll}
+.n_img{width:100px; height:100px; float:left; display:inline; margin-top:5px; margin-left:5px;}
+.table_form tr td{ padding:0px;}
+</style>
+ 
+    <ul class="nav nav-tabs">
+	<li><a href="{:U('Device/Clists',array('uid'=>$d['uid']))}">分组管理</a></li> 
+     <li><a href="{:U('Device/Glists',array('id'=>$d['id'],'uid'=>$d['uid']))}">设备管理</a></li> 
+     <li class="active"><a href="#" >查看设备</a></li> 
+    </ul>
+<div class="pad_10">
+  <div class="common-form">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">分组名称</td>
+            <td>{$d.title}</td>
+            </tr>
+          <tr>
+		  <tr>
+            <td width="80">设备编码</td>
+            <td><input type="text" name="info[no]" class="input-text" id="no" value="{$g.no}"></td>
+            </tr>
+          <tr>
+            <td width="80">设备名称</td>
+            <td><input type="text" name="info[name]" class="input-text" id="name" value="{$g.name}"></td>
+          </tr>
+		  <tr>
+            <td width="80">产品型号</td>
+            <td><input type="text" name="info[type]" class="input-text" value="{$g.type}"></td>
+          </tr>
+		   <tr>
+            <td width="80">额定电压</td>
+            <td><input type="text" name="info[voltage]" class="input-text" style="width:100px;" value="{$g.voltage}"> kV</td>
+          </tr>
+		  <tr>
+            <td width="80">额定电流</td>
+            <td><input type="text" name="info[current]" class="input-text" style="width:100px;" value="{$g.current}"> A</td>
+          </tr>
+		  <tr>
+            <td width="80">额定短路<br />开断电流</td>
+            <td><input type="text" name="info[short_current]" class="input-text" style="width:100px;" value="{$g.short_current}"> kA</td>
+          </tr>
+		  <tr>
+            <td width="80">制造厂商</td>
+            <td><input type="text" name="info[modename]" class="input-text" value="{$g.modename}"></td>
+          </tr>
+		  <tr>
+            <td width="80">制造年月</td>
+            <td><input type="text"  name="info[modeyear]" class="input-text date" style="width:100px;" value="{$g.modeyear}" ></td>
+          </tr>
+		  <tr>
+            <td width="80">产品编号</td>
+            <td><input type="text" name="info[number]" class="input-text" value="{$g.number}"></td>
+          </tr>
+		 
+		  <tr>
+          <td>一次方案图<br />+其他图纸</td>
+          <td>
+			<foreach name="p" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.large}' class="n_img" /></a>
+			</foreach>
+			</td>
+          </tr>
+		  <tr>
+            <td width="80"><b>元器件信息</b></td>
+            <td>
+				<table width="800px" style="background:#EFEFEF">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th style="text-align:center">制造厂商</th>
+					  <th style="text-align:center">产品型号</th>
+					  <th style="text-align:center">制造年月</th>
+					  <th style="text-align:center">产品编号</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>&nbsp;断路器/负荷开关/接触器→</td>
+					  <td style="text-align:center"><input type="text" name="info[d_modename]" class="input-text" style="width:200px;" value="{$g.d_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[d_type]" class="input-text" style="width:100px;" value="{$g.d_type}"></td>
+					  <td style="text-align:center">
+					  <input type="text" name="info[d_modeyear]" class="input-text" style="width:100px;" value="{$g.d_modeyear}"></td>
+					  <td style="text-align:center"><input type="text" name="info[d_number]" class="input-text" style="width:100px;" value="{$g.d_number}"></td>
+					</tr>
+					<tr>
+					  <td>&nbsp;微机保护装置→</td>
+					  <td style="text-align:center"><input type="text" name="info[w_modename]" class="input-text" style="width:200px;" value="{$g.w_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[w_type]" class="input-text" style="width:100px;" value="{$g.w_type}"></td>
+					  <td style="text-align:center">
+					  <input type="text" name="info[w_modeyear]" class="input-text" style="width:100px;" value="{$g.w_modeyear}"></td>
+					  <td style="text-align:center"><input type="text" name="info[w_number]" class="input-text" style="width:100px;" value="{$g.w_number}"></td>
+					</tr>
+					<td>&nbsp;互感器→</td>
+					  <td style="text-align:center"><input type="text" name="info[h_modename]" class="input-text" style="width:200px;" value="{$g.h_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[h_type]" class="input-text" style="width:100px;" value="{$g.h_type}"></td>
+					  <td style="text-align:center"><input type="text" name="info[h_modeyear]" class="input-text" style="width:100px;" value="{$g.h_modeyear}"></td>
+					  <td style="text-align:center"><input type="text" name="info[h_number]" class="input-text" style="width:100px;" value="{$g.h_number}"></td>
+					</tr>
+					<tr>
+					  <td>&nbsp;接地开关→</td>
+					  <td style="text-align:center"><input type="text" name="info[j_modename]" class="input-text" style="width:200px;" value="{$g.j_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[j_type]" class="input-text" style="width:100px;" value="{$g.j_type}"></td>
+					  <td style="text-align:center"><input type="text" name="info[j_modeyear]" class="input-text" style="width:100px;" value="{$g.j_modeyear}"></td>
+					  <td style="text-align:center"><input type="text" name="info[j_number]" class="input-text" style="width:100px;" value="{$g.j_number}"></td>
+					</tr>
+					
+					
+				  </tbody>
+			  </table>
+		  </td>
+          </tr>
+		  <tr><td>&nbsp; </td></tr>
+		  <tr>
+            <td width="80"><b>在线监测</b></td>
+            <td>
+				<table width="350px" style="background:#EFEFEF">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th style="text-align:center">环境</th>
+					  <th style="text-align:center">A相</th>
+					  <th style="text-align:center">B相</th>
+					  <th style="text-align:center">C相</th>
+					</tr>
+				  </thead>
+				  
+				  <tbody>
+					<tr>
+					  <td>&nbsp;温度→</td>
+					  <td style="text-align:center"><input type="text" name="info[wd_h]" class="input-text" style="width:50px;" value="{$g.wd_h}"></td>
+					  <td style="text-align:center"><input type="text" name="info[wd_a]" class="input-text" style="width:50px;" value="{$g.wd_a}"></td>
+					  <td style="text-align:center"><input type="text" name="info[wd_b]" class="input-text" style="width:50px;" value="{$g.wd_b}"></td>
+					  <td style="text-align:center"><input type="text" name="info[wd_c]" class="input-text" style="width:50px;" value="{$g.wd_c}"></td>
+					</tr>
+					<tr>
+					  <td>&nbsp;温升→</td>
+					  <td style="text-align:center"><input type="text" name="info[ws_h]" class="input-text" style="width:50px;" value="{$g.ws_h}"></td>
+					  <td style="text-align:center"><input type="text" name="info[ws_a]" class="input-text" style="width:50px;" value="{$g.ws_a}"></td>
+					  <td style="text-align:center"><input type="text" name="info[ws_b]" class="input-text" style="width:50px;" value="{$g.ws_b}"></td>
+					  <td style="text-align:center"><input type="text" name="info[ws_c]" class="input-text" style="width:50px;" value="{$g.ws_c}"></td>
+					</tr>
+					<tr>
+					  <td colspan="2">短路开断总次数</td>
+					  <td><input type="text" name="info[z_breaking_times]" class="input-text" style="width:50px;" value="{$g.z_breaking_times}"></td>
+					  <td>已使用</td>
+					  <td><input type="text" name="info[breaking_times]" class="input-text" style="width:50px;" value="{$g.breaking_times}"></td>
+					</tr>
+					<tr>
+					  <td colspan="2">机械寿命</td>
+					  <td><input type="text" name="info[z_mechanical_life]" class="input-text" style="width:50px;" value="{$g.z_mechanical_life}"></td>
+					  <td>已使用</td>
+					  <td><input type="text" name="info[mechanical_life]" class="input-text" style="width:50px;" value="{$g.mechanical_life}"></td>
+					</tr>
+				  </tbody>
+			  </table>
+		  </td>
+          </tr>
+		   <tr>
+          <td>二维码图</td>
+          <td><a href="/uploads/erweima/{$g.no}.png" data-lightbox="example-set"><img src='/uploads/erweima/{$g.no}.png' class="n_img" /></a></td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+  </div>
+</div>
+
+</body>
+</html>

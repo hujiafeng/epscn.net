@@ -1,0 +1,47 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title><?php echo ($Config["sitename"]); ?> - 提示信息</title>
+<style type="text/css">
+<!--
+*{ padding:0; margin:0; font-size:12px}
+a:link,a:visited{text-decoration:none;color:#666}
+a:hover,a:active{color:#333;text-decoration: underline}
+.showMsg{ zoom:1; width:450px; height:172px;position:absolute;top:44%;left:50%;margin:-87px 0 0 -225px;background: url(/statics/images/msg_img/msgbg.png) no-repeat;}
+.showMsg h5{color:#fff; padding-left:60px; height:25px; line-height:26px;*line-height:28px; overflow:hidden; font-size:14px; text-align:left; padding-top:8px; font-family:微软雅黑,'宋体';}
+.showMsg .content{ padding:46px 12px 10px 45px; font-size:16px; height:50px; text-align:left; font-family:微软雅黑,'宋体';}
+.showMsg .bottom{ margin: 0 1px 1px 1px;line-height:26px; *line-height:30px; height:26px; text-align:center;}
+.showMsg .ok,.showMsg .guery{}
+.showMsg .guery{background-position: left -460px;}
+-->
+</style>
+<script type="text/javaScript" src="/statics/js/jquery.min.js"></script>
+<script language="JavaScript" src="/statics/js/admin_common.js"></script>
+</head>
+<body>
+<div class="showMsg" style="text-align:center">
+	<h5><?php echo ($msgTitle); ?></h5>
+    <div class="content guery" style="display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline;max-width:330px"><?php echo ($message); ?></div>
+    <div class="bottom">
+    <?php if(($jumpUrl == 'edit') or ($jumpUrl == 'add')): ?><a href="javascript:close_dialog();">如果您的浏览器没有自动跳转，请点击这里 </a>
+    <?php else: ?>
+    <a href="<?php echo ($jumpUrl); ?>">如果您的浏览器没有自动跳转，请点击这里 </a><?php endif; ?>
+    </div>
+</div>
+<?php if(($jumpUrl == 'edit') or ($jumpUrl == 'add') ): ?><script language="javascript">
+var id = '<?php echo ($jumpUrl); ?>';
+setTimeout("window.top.right.location.reload();window.top.art.dialog({id:'"+id+"'}).close();",1000); 
+function close_dialog(id){
+	var id = '<?php echo ($jumpUrl); ?>';
+	window.top.right.location.reload();
+	window.top.art.dialog({id:id}).close();
+}
+</script>
+<?php else: ?>
+<script language="javascript">
+setTimeout("redirect('<?php echo ($jumpUrl); ?>');",1000);
+</script><?php endif; ?>
+</body>
+</html>

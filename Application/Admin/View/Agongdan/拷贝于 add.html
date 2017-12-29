@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript">
+	var path='__PUBLIC__';
+	var url='__URL__';
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/handlers.js"></script>
+
+<!-- <link href="__PUBLIC__/css/default.css" rel="stylesheet" type="text/css" /> -->
+<script type="text/javascript">
+		var swfu;
+		window.onload = function () {
+			swfu = new SWFUpload({
+				upload_url: "__URL__/uploadImg",
+				post_params: {"PHPSESSID": "<?php echo session_id();?>"},
+				file_size_limit : "2 MB",
+				file_types : "*.jpg;*.png;*.gif;*.bmp",
+				file_types_description : "JPG Images",
+				file_upload_limit : "100",
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete,
+				button_image_url : "__PUBLIC__/images/upload.png",
+				button_placeholder_id : "spanButtonPlaceholder",
+				button_width: 113,
+				button_height: 45,
+				button_text : '',
+				button_text_style : '.spanButtonPlaceholder { font-family: Helvetica, Arial, sans-serif; font-size: 14pt;} ',
+				button_text_top_padding: 0,
+				button_text_left_padding: 0,
+				button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+				button_cursor: SWFUpload.CURSOR.HAND,			
+				flash_url : "__PUBLIC__/swf/swfupload.swf",
+				custom_settings : {
+					upload_target : "divFileProgressContainer"
+				},				
+				debug: false
+			});
+		};
+	</script>
+	
+<script type="text/javascript">
+       $(document).ready(function(){
+    	   $("#s_type").change(function(){
+               $("#s_type option").each(function(i,o){
+                   if($(this).attr("selected"))
+                   {
+                       $(".kuanxing").hide();
+					   $(".kuanxing").prop("name","");
+                       $(".kuanxing").eq(i).show();
+					   $(".kuanxing").eq(i).prop("name","info[kuanxing]");
+                   }
+               });
+           });
+           $("#s_type").change();
+		  
+       });
+</script>
+<script type="text/javascript" src="/statics/js/jquery.select2.js"></script>
+
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.biaoqian {display: none;}
+label {display: inline;}
+.biaoqian + label {background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+.biaoqian + label:active, .biaoqian:checked + label:active {box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);}
+.biaoqian:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+#container {
+        width: 800px;
+        height:400px;
+        margin: 0px;
+        font-size: 13px;
+    }
+    
+    #pickerBox {
+        z-index: 9999;
+        width: 300px;
+    }
+    
+    #pickerInput {
+        width: 200px;
+        padding: 5px 5px;
+    }
+    
+    #poiInfo {
+        background: #fff;
+    }
+    
+    .amap_lib_placeSearch .poibox.highlight {
+        background-color: #CAE1FF;
+    }
+    
+    .amap_lib_placeSearch .poi-more {
+        display: none!important;
+    }
+</style>
+</head>
+<body class="J_scroll_fixed">
+ <div class="wrap jj">
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Agongdan/add')}" method="post" id="myform">
+	<input type="hidden" name="s" id="" value=""/>
+	<input type="hidden" name="info[n_type]" value="2"/>
+	<input type="hidden" name="info[gw_name]" value="{$fw.nickname}"/>
+	<input type="hidden" name="info[gw_number]" value="{$fw.number}"/>
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+          <tr>
+            <td width="80">设备类型</td>
+            <td>
+            	<select name="info[s_type]" id="s_type">
+				<option value="中压断路器">中压断路器</option>  
+				<option value="中压开关柜">中压开关柜</option>  
+				</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				款型&nbsp;
+			   <select class="kuanxing">
+				   <option value="1">VBI型机构断路器</option>
+				   <option value="2">VS1机构中压断路器</option>
+				   <option value="3">外资/合资中压断路器</option>
+			   </select>
+			   <select class="kuanxing">
+				   <option value="4">中置式中压开关柜</option>
+				   <option value="5">SF6中压环网柜</option>
+			   </select>
+            </td>
+            </tr>
+			<tr>
+            <td width="80">设备数量</td>
+            <td><input type="text" name="info[sb_number]" class="input-text" id="sb_number"> 台</td>
+            </tr>
+            <tr>
+            <td width="80">标签</td>
+            <td>
+			<!--<input name="info[biaoqian][]" type="radio" value="安装" class="biaoqian" id="bq1" /><label for="bq1">安装</label>-->
+			<input name="info[biaoqian]" type="radio" value="安装" class="biaoqian" id="bq1" /><label for="bq1">安装</label>
+			<input name="info[biaoqian]" type="radio" value="调试" class="biaoqian" id="bq2" /><label for="bq2">调试</label>
+			<input name="info[biaoqian]" type="radio" value="检修" class="biaoqian" id="bq3" /><label for="bq3">检修</label>
+			<input name="info[biaoqian]" type="radio" value="保养" class="biaoqian" id="bq4" /><label for="bq4">保养</label>
+			<input name="info[biaoqian]" type="radio" value="改造" class="biaoqian" id="bq5" /><label for="bq5">改造</label>
+			<input name="info[biaoqian]" type="radio" value="其他" class="biaoqian" id="bq6" /><label for="bq6">其他</label>
+			</td>
+            </tr>
+            
+		  <tr>
+            <td width="80">服务地点</td>
+            <td>
+			 <div id="pickerBox">
+        <input id="pickerInput" placeholder="输入关键字选取地点" /><b id="addrss_b" style="display:none; color:#FF0000; font-weight:lighter;">地址获取成功</b>
+        <div id="poiInfo"></div>
+    </div>
+			<div id="container" class="map" tabindex="0"></div>
+   
+    <script type="text/javascript" src='http://webapi.amap.com/maps?v=1.3&key=313001df758558e6252df426f4b71b3d'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.10"></script>
+    <script type="text/javascript">
+    var map = new AMap.Map('container', {
+        zoom: 15
+    });
+
+    AMapUI.loadUI(['misc/PoiPicker'], function(PoiPicker) {
+        var poiPicker = new PoiPicker({
+            //city:'北京',
+            input: 'pickerInput'
+        });
+        //初始化poiPicker
+        poiPickerReady(poiPicker);
+    });
+
+    function poiPickerReady(poiPicker) {
+        window.poiPicker = poiPicker;
+        var marker = new AMap.Marker();
+        var infoWindow = new AMap.InfoWindow({
+            offset: new AMap.Pixel(0, -20)
+        });
+
+        //选取了某个POI
+        poiPicker.on('poiPicked', function(poiResult) {
+
+            var source = poiResult.source,
+                poi = poiResult.item,
+                info = {
+                    //source: source,
+                   // id: poi.id,
+                    name: poi.name,
+                    //location: poi.location.toString(),
+                    address: poi.address
+                };
+
+            marker.setMap(map);
+            infoWindow.setMap(map);
+
+            marker.setPosition(poi.location);
+            infoWindow.setPosition(poi.location);
+$("#zuobiao").val(poi.location.toString());
+$("#addrss").val(poi.address);
+$("#addrss_b").show();
+            infoWindow.setContent('地址信息: <pre>' + JSON.stringify(info, null, 2) + '</pre>');
+            infoWindow.open(map, marker.getPosition());
+
+            //map.setCenter(marker.getPosition());
+        });
+
+        /*poiPicker.onCityReady(function() {
+            poiPicker.suggest('美食');
+        });*/
+    }
+    </script>
+<input type="hidden" name="info[zuobiao]" class="input-text" id="zuobiao">
+<input type="hidden" name="info[addrss]" class="input-text" id="addrss">
+			 </td>
+            </tr>
+			<tr>
+  			<td width="80">服务身份</td>
+  			<td><input type="text" name="info[fw_id]" class="input-text"></td>
+          	</tr>
+          	<tr>
+  			<td width="80">技术评审</td>
+  			<td><textarea name="info[miaoshu2]" cols="20" rows="3" style="width:400px;" id="miaoshu2"></textarea></td>
+          </tr>
+		  <tr>
+  			<td width="80">图片</td>
+  			<td>
+			<div style="width: 610px; height: auto;font-size: 12px;">
+				<span id="spanButtonPlaceholder"></span>
+				<div id="divFileProgressContainer"></div>
+				<div id="thumbnails">
+					<ul id="pic_list" style="margin: 5px;"></ul>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			</td>
+          </tr>
+			<tr>
+  			<td width="80">上门时间</td>
+  			<td><select name="nian" style="width:80px;">
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>    
+			</select>年
+			<select name="yue" style="width:60px;">
+				<for start="1" end="13">
+				<option value="{$i}">{$i}</option>
+				</for>  
+			</select>月
+			<select name="ri" style="width:60px;">
+				<for start="1" end="32">
+				<option value="{$i}">{$i}</option>
+				</for>  
+			</select>日
+			<select name="wu" style="width:80px;">
+			<option value="上午">上午</option>
+			<option value="下午">下午</option>    
+			</select></td>
+          	</tr>
+			<tr>
+  			<td width="80">服务费合计</td>
+  			<td><input type="text" name="info[reward]" class="input-text"> 元</td>
+          	</tr>
+			<tr>
+  			<td width="80">服务酬劳</td>
+  			<td><input type="text" name="info[get_reward]" class="input-text"> 元</td>
+          	</tr>
+			<tr style="display:none">
+  			<td width="80">支付方式</td>
+  			<td>
+			<select name="info[status]">
+			<option value="3">线下支付</option>
+			<option value="2">线上支付</option>  
+			</select>
+			</td>
+          	</tr>
+			<tr>
+  			<td width="80">需求方</td>
+  			<td><input id="testInput" type="text" class="input-text" style="width:400px;">
+            	<input id="testInputval" type="hidden" name="info[uid_x]]"></td>
+          	</tr>
+			<tr>
+  			<td width="80">服务方</td>
+  			<td><input id="testInput_f" type="text" class="input-text" style="width:400px;">
+            	<input id="testInputval_f" type="hidden" name="info[uid_f]]"></td>
+          	</tr>
+			<tr>
+  			<td width="80">服务顾问</td>
+  			<td>{$fw.nickname}/{$fw.number}</td>
+          	</tr>
+
+        </tbody>
+      </table>
+
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+	 </div>
+    </form>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$("form").submit(function(e){
+		var ex = /^\d+$/;
+		var sb_number = $("#sb_number").val();
+		var biaoqian = $(".biaoqian:checked").val();
+		var zuobiao = $("#zuobiao").val();
+		var fw_id = $("input[name='info[fw_id]']").val();
+		var miaoshu2 = $("#miaoshu2").val();
+		var testInput = $("#testInput").val();
+		var testInput_f = $("#testInput_f").val();
+
+		if(!ex.test(sb_number) || sb_number==0){
+			alert("请填写设备数量！");
+			return false;
+		}
+		if(!biaoqian){
+			alert("请选择标签！");
+			return false;
+		}
+		if(!zuobiao){
+			alert("请输入地址！");
+			return false;
+		}
+		if(!fw_id){
+			alert("请填写服务身份！");
+			return false;
+		}
+		if(!miaoshu2){
+			alert("技术评审不能为空！");
+			return false;
+		}
+		if(!testInput){
+			alert("请选择需求方！");
+			return false;
+		}
+		if(!testInput_f){
+			alert("请选择服务方！");
+			return false;
+		}
+
+    
+  });
+
+	
+  })
+</script>
+
+
+<script type="text/javascript">
+  	var datas =[{<foreach name='user_x' key='key' item='v'>
+"id":"{$v.uid}","text":"{$v.name}_{$v.mobile}_{$v.city}"},{
+</foreach>
+"id":"","text":""}];
+var itemSelectFuntion = function(){
+	$("#testInputval").val(this.id);
+  		};
+  	$.selectSuggest('testInput',datas,itemSelectFuntion);
+	
+	var datas_f =[{<foreach name='user_f' key='key' item='v'>
+"id":"{$v.uid}","text":"{$v.name}_{$v.mobile}_{$v.city}_{$v.task}"},{
+</foreach>
+"id":"","text":""}];
+var itemSelectFuntion_f = function(){
+	$("#testInputval_f").val(this.id);
+  		};
+  	$.selectSuggest('testInput_f',datas_f,itemSelectFuntion_f);
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@charset "utf-8";
+@import url(service.css);
+.head_info_l{ background:url(../images/service/spfb/sheji.png) no-repeat left top;float:left; margin-top:15px}
+.head_info_l span{
+font-size:15px;padding-right:15px; padding-left:30px;color:#828282; 
+}
+.head_info_r{ background:url(../images/service/spfb/kefu.png) no-repeat left center;float:right;padding-right:15px; padding-left:15px;  height:18px; line-height:18px; width:100px; height:50px;cursor:pointer}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<include file="Common:cssjs" />
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/jscal2.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/border-radius.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/win2k.css"/>
+<script type="text/javascript" src="/statics/js/calendar/calendar.js"></script> 
+<script type="text/javascript" src="/statics/js/calendar/lang/en.js"></script>
+
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	.mb10 a{font-size:15px; margin-right:10px; background:#fff; padding:6px 10px;}
+	.mb10 a.a_n{ font-weight:bold; background:#2d3e50;color:#fff;}
+	.mb10 a.a_n_20,.mb10 a.a_n_21{ background:#ffc000;color:#4a4a4a;}
+</style>
+	
+	<form name="searchform" action="{:U('Gongdan/lists')}" method="get"  class="well form-search" id="searchform">
+	<input type="hidden" name="status" value="{$Think.get.status}" />
+<div class="search_type cc mb10">
+	 <div class="mb10">
+	 <a <if condition="$Think.get.status eq ''">class="a_n"</if> href="{:U('Gongdan/lists',array('id'=>$v['id']))}">全部({$count_0})</a>
+	 <foreach name="status" key="k" item="v">
+	 <a class='<if condition="$k eq $Think.get.status ">a_n</if> a_n_{$k}' href="{:U('Gongdan/lists',array('status'=>$k))}">{$v}</a>
+	 </foreach><br /><br />
+	  发布时间:
+              <input type="text" name="start_time" id="start_time" value="{$Think.get.start_time}" size="21" class="date"  style="width:100px;" >
+              &nbsp;<script type="text/javascript">
+			Calendar.setup({
+			weekNumbers: true,
+		    inputField : "start_time",
+		    trigger    : "start_time",
+		    dateFormat: "%Y-%m-%d",
+		    showTime: 12,
+		    minuteStep: 1,
+		    onSelect   : function() {this.hide();}
+			});
+        </script>至
+              <input type="text" name="end_time" id="end_time" value="{$Think.get.end_time}" size="21" class="date"  style="width:100px;" >
+              &nbsp;<script type="text/javascript">
+			Calendar.setup({
+			weekNumbers: true,
+		    inputField : "end_time",
+		    trigger    : "end_time",
+		    dateFormat: "%Y-%m-%d",
+		    showTime: 12,
+		    minuteStep: 1,
+		    onSelect   : function() {this.hide();}
+			});
+        </script>
+		
+	<select name="info_f" style="width:80px;">
+      <option value="需求方" <if condition="$Think.get.info_f eq '需求方' "> selected</if>>需求方</option>
+      <option value="服务方" <if condition="$Think.get.info_f eq '服务方' "> selected</if>>服务方</option>
+      </select>
+	 <input type="text" value="{$Think.get.info_x}" class="input-text" name="info_x" style="width:200px;" placeholder="单号/需方手机号/公司名称" />
+			  &nbsp;
+              <input type="submit" value="搜索当前页"  class="btn btn-primary btn_submit" name="dosubmit" id="goodssearch">
+            </div>
+	</div>
+  </form>
+  
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="2%">#</th>
+			  <th width="6%" align="left" >订单号</th>
+			  <th width="10%" align="left" >发布时间</th>
+	          <th width="5%" align="left" >设备类别</th>
+			  <th width="15%" align="left" >需求方</th>
+			  <th width="8%" style="text-align:center">服务费合计</th>
+			  <th width="15%" align="left" >服务商</th>
+			  <th width="5%" align="left" >服务酬劳</th>
+			  <th width="20%" align="left" >服务地点</th>
+	          <th width="15%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="2%" align="center">{$key+1}</td>
+	          <td width="6%" ><a href="{:U('Gongdan/show',array('id'=>$v['id']))}">{$v.no}</a></td>
+			  <td width="10%" >{$v.time}</td>
+	          <td width="5%" >{$v.s_type}</td>
+			  <td width="15%" >{$v.u_mobile}<br />{$v.khdw}</td>
+			  <td width="8%" style="text-align:center">{$v.reward}</td>
+			  <td width="15%" >{$v.u_company}</td>
+			  <td width="5%" >{$v.get_reward}</td>
+			  <td width="20%" >{$v.city}{$v.address}</td>
+	          <td width="15%"  align="center">
+			  <if condition="$v.status eq '11'">
+	          	<a href="{:U('Gongdan/check',array('id'=>$v['id']))}">需求确认</a> |
+			  </if>
+			  <if condition="$v.xffy eq 1">
+	          	<a href="{:U('Gongdan/show',array('id'=>$v['id'],'bk'=>'1'))}">需方费用</a> |
+			  </if>
+			  <if condition="($v.status gt 11) and ($v.status lt 15)">
+	          	<a href="{:U('Gongdan/show',array('id'=>$v['id'],'bz'=>'1'))}">执行备注</a> |
+			  </if>
+			  <if condition="$v.status eq 14">
+				<if condition="$v.report eq 1">
+					报告已出 |
+				<else />
+					<a href="{:U('Gongdan/endbg',array('id'=>$v['id']))}">完工报告</a> |
+			  	</if>
+			  </if>
+			  <if condition="($v.status eq '14') and ($v.reward gt 0) and ($v.report eq 1)">
+			  <a href="{:U('Gongdan/end',array('id'=>$v['id']))}" onClick="return confirm('确定服务完成?');" style="color:#0000ff">确认完工</a> |
+			  </if>
+			  <if condition="$v.status lt 13">
+			  <span class="delbtn" data="{:U('Gongdan/deln',array('id'=>$v['id']))}" cont="确定取消该订单？" >取消订单</span> | 
+			  </if>
+			  <if condition="($v.status eq '15') and ($v.pay_mode eq 0)">
+			  <span class="delbtn" data="{:U('Gongdan/pay',array('id'=>$v['id']))}" cont="订单号{$v.no}<br />确定选择线下支付？" >线下支付</span> | 
+			  </if>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

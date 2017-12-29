@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.status1{color:#FF0000}
+	.status3{color:#996c33}
+	.status4{color:#FF00FF}
+	.status5{color:#0000ff}
+	.mb10 a{font-size:15px; margin-right:10px; background:#fff; padding:6px 10px;}.mb10 a.a_n{ font-weight:bold; background:#2d3e50;color:#fff;}
+</style>
+	
+	<form name="searchform" action="{:U('Refunds/lists')}" method="get"  class="well form-search" id="searchform">
+<div class="search_type cc mb10">
+	 <div class="mb10">
+	 <input type="text" value="{$Think.get.no}" class="input-text" name="no" placeholder="请输入订单号" />
+			  &nbsp;
+              <input type="submit" value="搜索当前页"  class="btn btn-primary btn_submit" name="dosubmit" id="goodssearch">
+            </div>
+	</div>
+  </form>
+  
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="2%">#</th>
+			  <th width="6%" align="left" >订单号</th>
+			  <th width="10%" align="left" >发布时间</th>
+	          <th width="5%" align="left" >设备类别</th>
+	          <th width="5%" align="left" >模式</th>
+			  <th width="5%" align="left" >需求方</th>
+			  <th width="8%" style="text-align:center">服务费合计</th>
+			  <th width="10%" align="left" >服务商</th>
+			  <th width="5%" align="left" >服务酬劳</th>
+			  <th width="10%" align="left" >取消原因</th>
+			  <th width="10%" align="left" >退款金额</th>
+			  <th width="10%" align="left" >退款时间</th>
+	          <th width="10%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="2%" align="center">{$key+1}</td>
+	          <td width="6%" >{$v.no}</td>
+			  <td width="10%" >{$v.time}</td>
+	          <td width="5%" >{$v.s_type}</td>
+	          <td width="5%" >{$v.type_name}</td>
+			  <td width="5%" >{$v.u_mobile}</td>
+			  <td width="8%" style="text-align:center">{$v.reward}</td>
+			  <td width="10%" >{$v.u_company}</td>
+			  <td width="5%" >{$v.get_reward}</td>
+			  <td width="10%" >{$v.status_name}</td>
+			  <td width="10%" >{$v.reimburse}</td>
+			  <td width="10%" >{$v.re_time}</td>
+	          <td width="10%"  align="center">
+	          <a href="{:U('Refunds/show',array('id'=>$v['id']))}">查看</a>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

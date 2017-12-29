@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<ul class="nav nav-tabs">
+       <li class="active"><a href='javascript:;'>修改菜单</a></li>
+       <li><a href='{:U("Menu/index")}'>菜单管理</a></li>
+   
+  </ul>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="common-form">
+  <form method="post" id="myform" action="{:U('Menu/edit')}" class="form-horizontal J_ajaxForm">
+     <table cellpadding="2" cellspacing="2" width="100%">
+    <input type="hidden" name="id" value="{$Menudata['id']}" />
+      <tbody>
+        <tr>
+          <th width="140">上级:</th>
+          <td><select name="parentid" >
+              <option value="0">作为一级菜单</option>
+              <volist name="Menucache" id="vo"> <option value='{$vo['id']}' <eq name="Menudata['parentid']" value="$vo['id']">selected</eq>> {$vo['name']}
+                </option>
+                <volist name="vo['lower']" id="lo"> <option value='{$lo['id']}' <eq name="Menudata['parentid']" value="$lo['id']">selected</eq>>&nbsp;├ {$lo['name']}
+                  </option>
+                  <volist name="lo['lower']" id="loo"> <option value='{$loo['id']}'  <eq name="Menudata['parentid']" value="$loo['id']">selected</eq>>&nbsp;│&nbsp;├ {$loo['name']}
+                    </option>
+                  </volist>
+                </volist>
+              </volist>
+            </select></td>
+        </tr>
+        <tr>
+          <th>名称:</th>
+          <td><input type="text" class="input-text" name="name" value="{$Menudata['name']}"></td>
+        </tr>
+        <tr>
+          <th>项目:</th>
+          <td><input type="text" class="input-text" name="app" value="{$Menudata['app']}">
+            </td>
+        </tr>
+        <tr>
+          <th>模块:</th>
+          <td><input type="text" class="input-text" name="model" value="{$Menudata['model']}">
+            </td>
+        </tr>
+        <tr>
+          <th>方法:</th>
+          <td><input type="text" class="input-text" name="action" value="{$Menudata['action']}">
+            </td>
+        </tr>
+        <tr>
+          <th>参数:</th>
+          <td><input type="text" class="input-text" name="data" value="{$Menudata['data']}">
+            例:groupid=1&amp;type=2</td>
+        </tr>
+<!--        <tr>
+          <th>备注:</th>
+          <td><textarea name="remark" rows="5" cols="57">{$Menudata['remark']}</textarea></td>
+        </tr>
+-->        <tr>
+          <th>是否显示:</th>
+          <td><input type="radio" name="status" value="1"  <eq name="Menudata['status']" value="1">checked</eq> > 是 <input type="radio" name="status" value="0" <eq name="Menudata['status']" value="0">checked</eq>> 否</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <div class="form-actions">
+      <input type="hidden" name="type" value="1" />
+      <input type="submit" value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn" name="dosubmit">
+      <input type="reset" value="重置" class="btn btn-primary btn_submit J_ajax_submit_btn">
+		      </div>
+  </form>
+  </div>
+</div>
+</body>
+</html>

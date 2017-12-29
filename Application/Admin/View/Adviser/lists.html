@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+	<ul class="nav nav-tabs">
+		<li class="active"><a href='#' >服务顾问列表</a></li> 
+	</ul>
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="5%">ID</th>
+	          <th width="10%" align="left" >姓名</th>
+	          <th width="10%" align="left" >手机号</th>
+	          <th width="10%" align="left" >添加时间</th>
+	          <th width="15%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="5%" align="center">{$v.id}</td>
+	          <td width="10%" >{$v.name}</td>
+	          <td width="10%" >{$v.number}</td>
+	          <td width="30%" >{$v.time}</td>
+	          <td width="15%"  align="center">
+	          <a href="{:U('Adviser/edit',array('id'=>$v['id']))}">修改</a> | 
+	          <span class="delbtn" data="{:U('Adviser/del',array('id'=>$v['id']))}" cont="确定删除该顾问？">删除</span>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

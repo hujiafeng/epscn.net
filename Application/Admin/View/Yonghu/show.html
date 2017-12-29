@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.n_img{width:150px; height:200px;}
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<div class="pad_10">
+  <div class="common-form">
+  
+  <form name="myform" action="{:U('Yonghu/show')}" method="post" id="myform">
+	<input type="hidden" name="uid" value="{$info.uid}" />
+<table width="100%" class="table_form contentWrap">
+        <tbody>
+        <tr>
+            <td width="100">手机号</td>
+			<td>{$info[mobile]}</td>
+        </tr>
+		<tr>
+            <td width="80">性别</td>
+			<td>{$info[gender]}</td>
+        </tr>
+		<tr>
+            <td width="80">年龄</td>
+			<td>{$info[age]}</td>
+        </tr>
+		<tr>
+            <td width="80">地区</td>
+			<td>{$info[city]}</td>
+        </tr>
+		<tr>
+            <td width="80">邮箱账号</td>
+			<td><input type="text" name="info[mailbox]" class="input-text" value="{$info.mailbox}"></td>
+        </tr>
+		<tr>
+            <td width="80">客户单位</td>
+			<td><input type="text" name="info[khdw]" class="input-text" value="{$info.khdw}"></td>
+        </tr>
+		<tr>
+            <td width="80">纳税人识别码</td>
+			<td><input type="text" name="info[pay_number]" class="input-text" value="{$info.pay_number}"></td>
+        </tr>
+		<tr>
+            <td width="80">注册地址</td>
+			<td><input type="text" name="info[register_address]" class="input-text" value="{$info.register_address}"></td>
+        </tr>
+		<tr>
+            <td width="80">公司电话</td>
+			<td><input type="text" name="info[company_phone]" class="input-text" value="{$info.company_phone}"></td>
+        </tr><tr>
+            <td width="80">开户银行</td>
+			<td><input type="text" name="info[bank]" class="input-text" value="{$info.bank}"></td>
+        </tr>
+		<tr>
+            <td width="80">银行账号</td>
+			<td><input type="text" name="info[bank_number]" class="input-text" value="{$info.bank_number}"></td>
+        </tr>
+        </tbody>
+      </table>
+	  <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit" id="dosubmit">
+	  </div>
+	 </form>
+  </div>
+</div>
+</div>
+</body>
+</html>

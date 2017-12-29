@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript" src="/statics/js/region.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/jscal2.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/border-radius.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/win2k.css"/>
+<script type="text/javascript" src="/statics/js/calendar/calendar.js"></script>
+<script type="text/javascript" src="/statics/js/calendar/lang/en.js"></script>
+</head>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#number").formValidator({empty:false,onshow:"请输入服务商编号",onfocus:"请输入服务商编号"}).inputValidator({min:2,max:60,onerror:"请输入服务商编号"});
+	$("#name").formValidator({empty:false,onshow:"请输入联系人姓名",onfocus:"请输入联系人姓名"}).inputValidator({min:2,max:60,onerror:"请输入联系人姓名"});
+	$("#company").formValidator({empty:false,onshow:"请输入公司名",onfocus:"请输入公司名"}).inputValidator({min:2,max:60,onerror:"请输入公司名"});
+	$("#address").formValidator({empty:false,onshow:"请输入公司地址",onfocus:"请输入公司地址"}).inputValidator({min:2,max:100,onerror:"请输入公司地址"});
+	$("#city_f").formValidator({empty:false,onshow:"请添加服务区域",onfocus:"请添加服务区域"}).inputValidator({min:2,max:100,onerror:"请添加服务区域"});
+	$("#end_time").formValidator({empty:false,onshow:"请选择协议到期时间",onfocus:"请选择协议到期时间"}).inputValidator({min:2,max:100,onerror:"请选择协议到期时间"});
+	$("#bz_reward").formValidator({empty:false,onshow:"请输入保证金额",onfocus:"请输入保证金额"}).inputValidator({min:1,max:100,onerror:"请输入保证金额"});
+	
+	$("#city_f").hide();
+	$(".city_b").click(function(){
+		var shen = $("#province").find("option:selected").text();
+		var shi = $("#city").find("option:selected").text();
+		if(shen != "省份/直辖市" && shi != "请选择"){
+			var n_city = $("#city_f").val() + shen + shi + " ";
+			$("#city_f").show().val(n_city);
+		}else{
+			alert("请选择区域！");
+		}
+	});
+	
+	
+  })
+</script>
+<style type="text/css">
+	.need_tr{ font-weight:bold;background:#f2f2f2; line-height:20px; padding-top:10px; padding-left:10px;}
+	.city_b{ font-size:24px; cursor:pointer}
+</style>
+
+<body class="J_scroll_fixed">
+ <div class="wrap jj">
+<div class="pad_10">
+  <div class="common-form">
+  <form name="myform" action="{:U('Fwuser/request')}" method="post" id="myform">
+  <input type="hidden" name="id" value="{$info.uid}">
+  <input type="hidden" name="mobile" value="{$info.mobile}">
+<table width="100%" class="table_form contentWrap">
+        <tbody>
+		 <tr>
+            <td colspan="2" class="need_tr">个人资料</td>
+        </tr>
+        <tr>
+            <td width="80">手机号</td>
+			<td>{$info[mobile]}</td>
+        </tr>
+        <tr>
+            <td width="80">性别</td>
+			<td>{$info[gender]}</td>
+        </tr>
+		<tr>
+            <td width="80">年龄</td>
+			<td>{$info[age]}</td>
+        </tr>
+        <tr>
+            <td width="80">地区</td>
+			<td>{$info[city]}</td>
+        </tr>
+		<tr>
+            <td colspan="2" class="need_tr">服务商资料</td>
+        </tr>
+        <tr>
+            <td width="80">服务商编号</td>
+			<td><input type="text" name="info[number]" class="input-text" id="number"> 例：F000010</td>
+        </tr>
+        <tr>
+            <td width="80">联系人姓名</td>
+			<td><input type="text" name="info[name]" class="input-text" id="name"></td>
+        </tr>
+		<tr>
+            <td width="80">公司名称</td>
+			<td><input type="text" name="info[company]" class="input-text" id="company"></td>
+        </tr>
+		 <tr>
+            <td width="80">公司地址</td>
+			<td><input type="text" name="info[address]" class="input-text" style="width:400px;" id="address"></td>
+        </tr>
+		<tr>
+            <td width="80">服务区域</td>
+			<td>
+			<input type="text" name="info[city_f]" class="input-text" id="city_f" style="width:300px; border-top:0px; border-left:0px; border-right:0px;"><br />
+			<select name="province" id="province" onChange="loadRegion('province',2,'city','{:U('Fwuser/getRegion')}');" style="width:150px;">
+		        <option value="0" selected>省份/直辖市</option>
+		        <volist name="province" id="vo"> 
+		        <option value="{$vo.id}" >{$vo.name}</option>
+		        </volist>
+		     </select>          
+		     <select name="city" id="city" style="width:150px;">
+		       <option value="0">市/县</option>
+		     </select>&nbsp;&nbsp;<b class="city_b" title="添加">+</b>
+		     </td>
+        </tr>
+       
+        <tr>
+            <td width="100">协议到期时间</td>
+			<td><input type="text"  name="info[end_time]" id="end_time" class="input-text date" style="width:200px;" >
+          &nbsp;<script type="text/javascript">
+          Calendar.setup({
+              weekNumbers: true,
+              inputField : "end_time",
+              trigger    : "end_time",
+              dateFormat: "%Y-%m-%d",
+              showTime: 12,
+              minuteStep: 1,
+              onSelect   : function() {this.hide();}
+          });
+      </script></td>
+        </tr>
+        <tr>
+            <td width="80">服务年龄</td>
+			<td><select name="info[years]">
+				   <option value="1">1</option>
+				   <option value="2">2</option>
+				   <option value="3">3</option>
+			   </select></td>
+        </tr>
+        <tr>
+            <td width="80">已缴保证金</td>
+			<td><input type="text" name="info[bz_reward]" class="input-text" id="bz_reward"></td>
+        </tr>
+        </tbody>
+      </table>
+	  
+	  <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+
+	 </div>
+    
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

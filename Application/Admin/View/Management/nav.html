@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+  <if condition="$appinfo.action eq 'manager'">
+   <li class="active"><a href='javascript:;'>管理员管理</a></li>
+   <else />
+   <li><a href='{:U("Management/manager")}' >管理员管理</a></li>
+  </if>
+  <if condition="$appinfo.action eq 'adminadd'">
+  <li class="active"><a href='javascript:;'>添加管理员</a></li> </ul>
+  <else />
+  <li><a href='{:U("Management/adminadd")}' >添加管理员</a></li></ul>
+  </if>
+  </ul>

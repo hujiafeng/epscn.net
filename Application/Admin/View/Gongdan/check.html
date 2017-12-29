@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript">
+	var path='__PUBLIC__';
+	var url='__URL__';
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/handlers.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/jscal2.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/border-radius.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/win2k.css"/>
+<script type="text/javascript" src="/statics/js/calendar/calendar.js"></script>
+<script type="text/javascript" src="/statics/js/calendar/lang/en.js"></script>
+
+<!-- <link href="__PUBLIC__/css/default.css" rel="stylesheet" type="text/css" /> -->
+<script type="text/javascript">
+		var swfu;
+		window.onload = function () {
+			swfu = new SWFUpload({
+				upload_url: "__URL__/uploadImg",
+				post_params: {"PHPSESSID": "<?php echo session_id();?>"},
+				file_size_limit : "2 MB",
+				file_types : "*.jpg;*.png;*.gif;*.bmp",
+				file_types_description : "JPG Images",
+				file_upload_limit : "100",
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete,
+				button_image_url : "",
+				button_placeholder_id : "spanButtonPlaceholder",
+				button_width: 20,
+				button_height: 65,
+				button_text : '+',
+				button_text_style : '.spanButtonPlaceholder { font-family: Helvetica, Arial, sans-serif; font-size: 14pt;} ',
+				button_text_top_padding: 0,
+				button_text_left_padding: 0,
+				button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+				button_cursor: SWFUpload.CURSOR.HAND,			
+				flash_url : "__PUBLIC__/swf/swfupload.swf",
+				custom_settings : {
+					upload_target : "divFileProgressContainer"
+				},				
+				debug: false
+			});
+		};
+	</script>
+	
+
+<script type="text/javascript" src="/statics/js/jquery.select.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/js/lightbox-2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/lightbox.css"/>
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.n_img{width:100px; height:100px; float:left; display:inline; margin-top:5px; margin-left:5px;}
+	.need_td{ font-weight:bold; width:100px;}
+	.swfupload{ float:left;border:1px solid #ccc; padding-top:35px; padding-left:8px;}
+	#thumbnails ul li{float:left;list-style-type:none;width:105px;margin-left:5px;}
+#thumbnails .button{display:block;position: relative;right:-84px;top: -118px;width: 30px;z-index: 1103;cursor:pointer;}
+#pic_list li{padding:0 0 0 5px;}
+</style>
+
+</head>
+<body class="J_scroll_fixed">
+ <div class="wrap jj">
+
+<ul class="nav nav-tabs">
+     <li><a href="{:U('Gongdan/lists')}">订单列表</a></li> 
+     <li class="active"><a href='#' >技术评审</a></li> 
+</ul>
+
+<div class="pad_10">
+  <div class="common-form">
+  <form name="myform" action="{:U('Gongdan/check')}" method="post" id="myform">
+  <input type="hidden" name="s" id="" value=""/>
+  <input type="hidden" name="id" value="{$info.id}">
+  <input type="hidden" name="no" value="{$info.no}">
+  <input type="hidden" name="uid_x" value="{$info.uid_x}">
+   <table width="800px" class="table_form contentWrap">
+		   <tr>
+            <td width="80" class="need_td">订单号</td>
+            <td>{$info.no}</td>
+           </tr>
+		   <tr>
+            <td width="80" class="need_td">设备类别</td>
+            <td>{$info.s_type}</td>
+           </tr>
+		   <tr>
+            <td width="80" class="need_td">设备款型</td>
+            <td>{$info.k_title}</td>
+           </tr>
+           <tr>
+            <td width="80" class="need_td">任务类型</td>
+            <td>{$info.biaoqian}</td>
+           </tr>
+           <tr>
+            <td width="80" class="need_td">需求描述</td>
+            <td>{$info.miaoshu1}</td>
+           </tr>
+           <tr>
+            <td width="80" class="need_td">描述图片</td>
+            <td>
+			<foreach name="info_s" key="k" item="v">
+			<a href="/uploads/{$v.large}" target="_blank"><img src='/statics/admin/n_shipin.jpg' class="n_img" /></a>
+			</foreach>
+			<foreach name="info_p" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.small}' class="n_img" /></a>
+			</foreach></td>
+           </tr>
+           <tr>
+            <td width="80" class="need_td">服务地点</td>
+            <td>{$info.city}{$info.address}</td>
+           </tr>
+           <tr>
+            <td width="80" class="need_td">服务身份</td>
+            <td>{$info.fw_id}</td>
+           </tr>
+      	  <tr>
+  			<td width="80" class="need_td">确认需求</td>
+  			<td><textarea name="info[miaoshu2]" cols="20" rows="3" style="width:400px;" id="miaoshu2"></textarea>（必填）</td>
+          </tr>
+		  <tr>
+			<td width="80" class="need_td">现场联系人</td>
+			<td><input type="text" name="info[lx_name]" class="input-text" id="lx_name">（必填）</td>
+			</tr>
+			<tr>
+			<td width="80" class="need_td">联系人电话</td>
+			<td><input type="text" name="info[lx_number]" class="input-text" id="lx_number" maxlength="11">（必填）</td>
+			</tr>
+		  <tr>
+  			<td width="80" class="need_td">需求图片</td>
+  			<td>
+			<div style="width: 700px;height:130px;font-size: 12px;">
+				<span id="spanButtonPlaceholder"></span>
+				<div id="thumbnails">
+					<ul id="pic_list" style="margin: 5px;"></ul>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			</td>
+          </tr>
+        <tr>
+  			<td width="80" class="need_td">预计上门</td>
+  			<td><input type="text"  name="info[go_time]" id="go_time" class="input-text date" style="width:200px;" >（必填）
+          &nbsp;<script type="text/javascript">
+          Calendar.setup({
+              weekNumbers: true,
+              inputField : "go_time",
+              trigger    : "go_time",
+              dateFormat: "%Y-%m-%d",
+              showTime: 12,
+              minuteStep: 1,
+              onSelect   : function() {this.hide();}
+          });
+      </script>
+			</td>
+          	</tr>
+			<tr>
+  			<td width="80" class="need_td">需求方</td>
+  			<td>{$info.u_x_mobile} {$info.u_x_khdw}</td>
+          	</tr>
+			<tr>
+  			<td width="80" class="need_td">服务方</td>
+  			<td><input id="testInput_f" type="text" class="input-text" style="width:400px;">（必填）
+            	<input id="testInputval_f" type="hidden" name="info[uid_f]]"></td>
+          	</tr>
+			<tr>
+  			<td width="80" class="need_td">客户经理</td>
+  			<td><select name="info[gw_name]" id="gw">
+			<option value="">——请选择——</option>
+			<foreach name="fw" key="key" item="v">
+			<option value="{$v.name}_{$v.number}">{$v.number} {$v.name}</option>
+			</foreach>
+			</select>（必填）</td>
+          	</tr>
+      </table>
+	  <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit" id="dosubmit">
+	 </div>
+	 </form>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$("form").submit(function(e){
+		var miaoshu2 = $("#miaoshu2").val();
+		var lx_name = $("#lx_name").val();
+		var lx_number = $("#lx_number").val();
+		var go_time = $("#go_time").val();
+		var testInput_f = $("#testInput_f").val();
+		var gw = $("#gw").val();
+
+		if(!miaoshu2){
+			alert("确认需求不能为空！");
+			return false;
+		}
+		if(!lx_name){
+			alert("现场联系人不能为空！");
+			return false;
+		}
+		if(!lx_number){
+			alert("联系人电话不能为空！");
+			return false;
+		}
+		if(!go_time){
+			alert("请选择预计上门！");
+			return false;
+		}
+		if(!testInput_f){
+			alert("请选择服务方！");
+			return false;
+		}
+		if(testInput_f.substr(0,11) == {$info.u_x_mobile}){
+			alert("服务方与需求方不能是同一个账号！");
+			return false;
+		}
+		if(!gw){
+			alert("请选择服务顾问！");
+			return false;
+		}
+  });
+  
+  
+  })
+</script>
+
+<script type="text/javascript">
+	var datas_f =[{<foreach name='user_f' key='key' item='v'>
+"id":"{$v.uid}","text":"{$v.mobile} {$v.company}"},{
+</foreach>
+"id":"","text":""}];
+var itemSelectFuntion_f = function(){
+	$("#testInputval_f").val(this.id);
+  		};
+  	$.selectSuggest('testInput_f',datas_f,itemSelectFuntion_f);
+</script>
+</body>
+</html>

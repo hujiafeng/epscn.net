@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript" src="__PUBLIC__/js/lightbox-2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/lightbox.css"/>
+
+<body class="J_scroll_fixed">
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.n_img{width:70px; height:70px; float:left; display:inline; margin-top:5px; margin-left:5px;}
+	.need_tr{ font-weight:bold;background:#f2f2f2; line-height:20px; padding-top:10px; padding-left:10px;}
+</style>
+<ul class="nav nav-tabs">
+     <li><a href='{:U('Gongdan/lists')}' >订单列表</a></li> 
+     <li class="active"><a href='#' >订单详情</a></li> 
+</ul>
+
+<div class="pad_10">
+  <div class="common-form">
+  <if condition="$bz eq 1">
+  <form name="myform" action="{:U('Gongdan/inform')}" method="post" id="form">
+  <else />
+  <form name="myform" action="{:U('Gongdan/bukuan')}" method="post" id="myform">
+  </if>
+  <input type="hidden" name="id" value="{$info.id}">
+   <table width="1000px" class="table_form contentWrap">
+          <tbody>
+		<tr>
+            <td width="80" class="need_td">订单ID</td>
+			<td>{$info.id}</td>
+            <td width="80" class="need_td">订单号</td>
+			<td>{$info.no}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">订单毛利</td>
+			<td>￥{$info.maoli}</td>
+			<td width="80" class="need_td">订单状态</td>
+			<td>{$info.status_name}</td>
+        </tr>
+		<tr>
+            <td colspan="2" class="need_tr">需求方信息</td><td colspan="2" class="need_tr">服务方信息</td>
+       	</tr>
+        <tr>
+			<td width="80" class="need_td">需求方</td>
+            <td>{$info.u_x_mobile}<br />{$info.u_x_khdw}</td>
+			<td width="80" class="need_td">服务商</td>
+			<td>{$info.u_f_mobile}<br />{$info.u_f_company}</td>
+       	</tr>
+		<tr>
+			<td width="80" class="need_td">服务费合计</td>
+            <td>
+			￥
+			<if condition="$bk eq 1">
+				<input type="text" name="info[reward]" style="width:100px;" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9.]/g,'');}).call(this)">
+			<else />
+				{$info.reward}
+				<if condition="$info.reward_m eq '1' ">
+				<font color="red">(账外收入)</font>
+				</if>
+			</if>
+			
+			
+			</td>
+			<td width="80" class="need_td">服务酬劳</td>
+			<td>
+			￥{$info.get_reward}
+			<if condition="$info.reward_m_f eq '1' ">
+			<font color="red">(账外支出)</font>
+			</if>
+			</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">支付方式</td>
+			<td>{$info.n_payed_name}</td>
+			<td width="80" class="need_td">工程师</td>
+			<td>{$info.js_name} - {$info.js_number}</td>
+       	</tr>
+		<tr>
+			<td width="80" class="need_td">订单发布</td>
+            <td>{$info.time}</td>
+			<td width="80" class="need_td">指定人员</td>
+			<td>{$info.js_time}</td>
+        </tr>
+        <tr>
+			
+			<td width="80" class="need_td">需求确认</td>
+			<td>{$info.check_time}</td>
+			<td width="80" class="need_td">申请完工</td>
+			<td>{$info.app_over_time}</td>
+        </tr>
+		<tr>
+            
+			<td width="80" class="need_td">确认完工</td>
+			<td>{$info.end_time}</td>
+            <td width="80" class="need_td">确认完工</td>
+			<td>{$info.end_time_f}</td>
+        </tr>
+		<tr>
+           <td width="80" class="need_td">支付时间</td>
+			<td>{$info.pay_time}</td>
+            <td width="80" class="need_td">确认打款</td>
+			<td>{$info.reward_time}</td>
+        </tr>
+
+		<tr>
+            <td width="80" class="need_td">需方描述</td>
+			<td colspan="3">{$info.miaoshu1}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">需方图片</td>
+			<td colspan="3">
+			<foreach name="info_s" key="k" item="v">
+			<a href="/uploads/{$v.large}" target="_blank"><img src='/statics/admin/n_shipin.jpg' class="n_img" /></a>
+			</foreach>
+			<foreach name="info_m" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.small}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+        <tr>
+            <td width="80" class="need_td">业务员-需</td>
+			<td>{$info.clerk_x_name}</td>
+            <td width="80" class="need_td">业务员-服</td>
+			<td>{$info.clerk_f_name}</td>
+        </tr>
+		<if condition="$evaluate.id gt 0">
+		<tr>
+            <td width="80" class="need_td">评价</td>
+			<td colspan="3">综合评分({$evaluate.zhpf}) 客户经理({$evaluate.fwzl}) 现场服务({$evaluate.sgzl})</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">评价内容</td>
+			<td colspan="3">{$evaluate.content}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">评价图片</td>
+			<td colspan="3">
+			<foreach name="info_j" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.large}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+		</if>
+		<tr>
+            <td colspan="4" class="need_tr">服务内容</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">设备类别</td>
+			<td>{$info.s_type}</td>
+            <td width="80" class="need_td">设备款型</td>
+			<td>{$info.k_title}</td>
+        </tr>
+		<tr>
+			<td width="100" class="need_td">任务类型</td>
+			<td>{$info.biaoqian}</td>
+			<td width="100" class="need_td">预计上门</td>
+			<td>{$info.go_time}</td>
+        </tr>
+		<tr>
+			<td width="100" class="need_td">服务身份</td>
+			<td>{$info.fw_id}</td>
+			<td width="80" class="need_td">客户经理</td>
+			<td>{$info.gw_name} - {$info.gw_number}</td>
+        </tr>
+		 
+        <tr>
+            <td width="80" class="need_td">现场联系人</td>
+			<td>{$info.lx_name} - {$info.lx_number}</td>
+			<td width="80" class="need_td">服务地点</td>
+			<td>{$info.city}{$info.address}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">需求确认</td>
+			<td colspan="3">{$info.miaoshu2}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">确认图片</td>
+			<td colspan="3">
+			<foreach name="info_p" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.small}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+		<if condition="$report.id gt 0">
+		 <tr>
+            <td colspan="4" class="need_tr">完工报告</td>
+       	</tr>
+		<tr>
+		<td width="80" class="need_td">常规工时</td>
+			<td>{$report.routine_time} 天.人</td>
+			<td width="80" class="need_td">加班工时</td>
+			<td>{$report.overtime} 天.人</td>
+        </tr>
+		<td width="80" class="need_td">零配件费用</td>
+			<td>{$report.fitting_reward} 元</td>
+			<td width="80" class="need_td">报告生成</td>
+			<td>{$report.time}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">报告内容</td>
+			<td colspan="3">{$report.content}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">报告图片</td>
+			<td colspan="3">
+			<foreach name="info_b" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.small}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+        </if>
+		<tr>
+            <td colspan="4" class="need_tr">执行备注</td>
+       	</tr>
+		<tr>
+			<td colspan="4">
+			<foreach name="inform" key="k" item="v">
+			<p />{$v.time}<br />{$v.content}
+			</foreach>
+		</td>
+       	</tr>
+        <if condition="$bz eq 1">
+        <tr>
+			<td colspan="4" class="need_td">备注内容：<input type="text" name="info[content]" class="input-text" maxlength="40" style="width:500px;" id="content" required placeholder="10~20个字">
+            <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit" id="submit" style=" margin-top:-10px;">
+            </td>
+		</tr>
+		</if>
+        </tbody>
+      </table>
+      
+	  <if condition="$bk eq 1">
+	  <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit" id="dosubmit">
+	 </div>
+	 </if>
+	 </form>
+	  
+  </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+	$("#form").submit(function(e){
+		var content = $("#content").val();
+		if(content.length < 10){
+			alert("备注内容10~20个字！");
+			return false;
+			if(content.length){
+				return true;
+			}
+		}
+		var gnl=confirm("确定要提交?");  
+		if (gnl==true){  
+			return true;  
+		}else{  
+			return false;  
+		}
+		
+  	});
+  })
+</script>
+</body>
+</html>

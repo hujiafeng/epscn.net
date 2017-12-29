@@ -1,0 +1,25 @@
+<volist name="leftmain" id="tag">
+<h3 class="f14"><span class="switchs cu on" title="展开与收缩"></span>{$tag['name']}</h3>
+<neq name="tag['lower']" value="">
+<ul>
+   <volist name="tag['lower']" id="lo">
+  <li id="_MP{$lo['id']}" class="sub_menu"><a href="javascript:_MP({$lo['id']},'{:U($lo['app'].'/'.$lo['model'].'/'.$lo['action'])}');" hidefocus="true" style="outline:none;">{$lo['name']}</a></li>
+  </volist>
+</ul>
+</neq>
+</volist>
+<script type="text/javascript">
+$(".switchs").each(function(i){
+	var ul = $(this).parent().next();
+	$(this).click(
+	function(){
+		if(ul.is(':visible')){
+			ul.hide();
+			$(this).removeClass('on');
+				}else{
+			ul.show();
+			$(this).addClass('on');
+		}
+	})
+});
+</script>

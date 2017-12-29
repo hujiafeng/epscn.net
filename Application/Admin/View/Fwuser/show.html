@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.need_tr{ font-weight:bold;background:#f2f2f2; line-height:20px; padding-top:10px; padding-left:10px;}
+</style>
+<div class="pad_10">
+  <div class="common-form">
+<table width="100%" class="table_form contentWrap">
+        <tbody>
+		<tr>
+            <td colspan="2" class="need_tr">个人资料</td>
+        </tr>
+        <tr>
+            <td width="80">手机号</td>
+			<td>{$info[mobile]}</td>
+        </tr>
+		<tr>
+            <td width="80">性别</td>
+			<td>{$info[gender]}</td>
+        </tr>
+		<tr>
+            <td width="80">年龄</td>
+			<td>{$info[age]}</td>
+        </tr>
+        <tr>
+            <td width="80">地区</td>
+			<td>{$info[city]}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="need_tr">服务商资料</td>
+        </tr>
+        <tr>
+            <td width="80">服务商编号</td>
+			<td>{$info[number]}</td>
+        </tr>
+		<tr>
+            <td width="80">联系人姓名</td>
+			<td>{$info[name]}</td>
+        </tr>
+		<tr>
+            <td width="80">公司名称</td>
+			<td>{$info[company]}</td>
+        </tr>
+		<tr>
+            <td width="80">公司地址</td>
+			<td>{$info[address]}</td>
+        </tr>
+		<tr>
+            <td width="80">服务区域</td>
+			<td>{$info[city_f]}</td>
+        </tr>
+        
+		<tr>
+            <td width="80">设备类型</td>
+			<td>{$info[task]}</td>
+        </tr>
+        <tr>
+            <td width="100">协议到期时间</td>
+			<td>{$info[end_time]}</td>
+        </tr>
+        <tr>
+            <td width="80">服务年龄</td>
+			<td>{$info[years]}</td>
+        </tr>
+        <tr>
+            <td width="80">已缴保证金</td>
+			<td>{$info[bz_reward]}</td>
+        </tr>
+          
+        </tbody>
+      </table>
+  </div>
+  </div>
+</div>
+</body>
+</html>

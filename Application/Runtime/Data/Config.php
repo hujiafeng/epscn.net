@@ -1,0 +1,1 @@
+a:9:{s:8:"sitename";s:21:"EPS电气服务专家";s:7:"siteurl";s:19:"http://www.eps.com/";s:11:"sitefileurl";s:8:"/d/file/";s:8:"siteinfo";s:14:"11111111111111";s:9:"mail_type";N;s:11:"smtp_server";s:11:"smtp.qq.com";s:9:"smtp_port";s:2:"25";s:9:"smtp_mail";s:12:"eciti@qq.com";s:13:"smtp_password";s:6:"123456";}

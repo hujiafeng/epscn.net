@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#name").formValidator({empty:false,onshow:"请输入姓名/公司名",onfocus:"请输入姓名/公司名"}).inputValidator({min:2,max:60,onerror:"请输入姓名/公司名"});
+	$("#number").formValidator({empty:false,onshow:"请输入联系方式",onfocus:"请输入联系方式"}).inputValidator({min:2,max:60,onerror:"请输入联系方式"});
+  })
+</script>
+ <div class="wrap jj">
+    <ul class="nav nav-tabs">
+		<li class="active"><a href='#' >添加业务员</a></li> 
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Clerk/add')}" method="post" id="myform">
+	<div class="table_list">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">姓名/公司名</td>
+			<td><input type="text" name="info[name]" class="input-text" id="name"></td>
+        </tr>
+		<tr>
+            <td width="80">联系方式</td>
+			<td><input type="text" name="info[number]" class="input-text" id="number"></td>
+        </tr>
+		<tr>
+            <td width="80">备注</td>
+			<td><input type="text" name="info[remark]" class="input-text" style="width:400px;"> 例:离职</td>
+        </tr>
+        </tbody>
+      </table>
+	</div>
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn">
+	 </div>
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

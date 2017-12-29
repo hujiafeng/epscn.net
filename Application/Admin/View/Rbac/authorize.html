@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+ <ul class="nav nav-tabs">
+       <li class="active"><a href='javascript:;'>角色授权</a></li>
+       <li><a href='{:U("Rbac/rolemanage")}' >角色管理</a></li>
+  </ul>
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.tbnew tr td{ padding-top:10px;}
+</style>
+<link href="/statics/css/jquery.treeTable.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/statics/js/jquery.treetable.js"></script>
+<script type="text/javascript"> 
+  $(document).ready(function() {
+    $("#dnd-example").treeTable({
+    	indent: 20
+    	});
+  });
+  function checknode(obj)
+  {
+      var chk = $("input[type='checkbox']");
+      var count = chk.length;
+      var num = chk.index(obj);
+      var level_top = level_bottom =  chk.eq(num).attr('level')
+	  
+      for (var i=num; i>=0; i--)
+      {
+              var le = chk.eq(i).attr('level');
+              if(eval(le) < eval(level_top)) 
+              {
+                  chk.eq(i).attr("checked",true);
+                  var level_top = level_top-1;
+              }
+      }
+      for (var j=num+1; j<count; j++)
+      {
+              var le = chk.eq(j).attr('level');
+              if(chk.eq(num).attr("checked")==true) {
+                  if(eval(le) > eval(level_bottom)) chk.eq(j).attr("checked",true);
+                  else if(eval(le) == eval(level_bottom)) break;
+              }
+              else {
+                  if(eval(le) > eval(level_bottom)) chk.eq(j).attr("checked",false);
+                  else if(eval(le) == eval(level_bottom)) break;
+              }
+      }
+  }
+</script>
+
+<div class="pad_10" >
+  <div class="table-list" id="load_priv">
+     <form name="myform" action="index.php?a=authorize&m=Rbac&g=Admin" method="post" id="myform">
+	  <div class="table-list">
+
+      <table width="100%" cellspacing="0"  class="tbnew" >
+        <thead>
+          <tr>
+            <th style='padding-left:30px;' align="left"><span style="cursor:pointer;" onClick="javascript:$('input[type=checkbox]').attr('checked', true)">全选</span>/<span style="cursor:pointer;" onClick="javascript:$('input[type=checkbox]').attr('checked', false)">取消</span></th>
+            <th align="left" width="150">APP</th>
+            <th align="left" width="150">MODEL</th>
+            <th align="left" width="150">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+        {$categorys}
+        </tbody>
+    </table>
+	</div>
+      <div class="form-actions">         
+    <input type="hidden" name="roid" value="{$roid}" />
+    <input type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn" name="dosubmit" value="确认授权" onClick="document.myform.action='index.php?a=authorize&m=Rbac&g=Admin';return confirm('确认给该角色授权吗？')"/>
+  </div>
+      </form>
+</div>
+</div>
+</div>
+</body>
+</html>

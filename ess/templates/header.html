@@ -1,0 +1,48 @@
+<style>
+html {
+	font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+		sans-serif;
+}
+
+.ft18 {
+	font-size: 18px;
+}
+
+.uk-flex-center li {
+	margin-right: 50px;
+}
+
+.uk-active a {
+	border-bottom: #1e87f0 solid 2px;
+	padding-bottom: 10px;
+}
+
+.cnt {
+	margin-top: -20px;
+}
+</style>
+<div class="uk-margin-medium-top">
+	<ul class="uk-flex-center " uk-tab>
+
+		{#if $tab_name=='tab_project'#}
+		<li class="uk-active"><a href="project.php"><span
+				class="ft18">项目申报</span> {#if $pending_cnt>0#} <span
+				class="uk-badge cnt">{#$pending_cnt#}</span> {#/if#}</a></li> {#else#}
+		<li><a href="project.php"><span class="ft18">项目申报</span>{#if
+				$pending_cnt>0#} <span class="uk-badge cnt">{#$pending_cnt#}</span>
+				{#/if#}</a></li> {#/if#} {#if $tab_name=='tab_product'#}
+		<li class="uk-active"><a href="product.php"><span class="ft18">产品</span></a></li>
+		{#else#}
+		<li><a href="product.php"><span class="ft18">产品</span></a></li>
+		{#/if#}{#if $tab_name=='tab_user'#}
+		<li class="uk-active"><a href="user.php"><span class="ft18">用户</span></a></li>
+		{#else#}
+		<li><a href="user.php"><span class="ft18">用户</span></a></li> {#/if#}
+		{#if $tab_name=='tab_feedback'#}
+		<li class="uk-active"><a href="feedback.php"><span
+				class="ft18">用户反馈</span></a></li> {#else#}
+		<li><a href="feedback.php"><span class="ft18">用户反馈</span></a></li>
+		{#/if#}
+
+	</ul>
+</div>

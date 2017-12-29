@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> 
+  <if condition="$appinfo.action eq 'purview'">
+  <a href='javascript:;' class="on"><em>管理项目</em></a><span>|</span>
+  <else />
+  <a href='{:U("Rbac/purview")}' ><em>管理项目</em></a><span>|</span>
+  </if>
+  <if condition="$appinfo.action eq 'addpur'">
+  <a href='javascript:;' class="on"><em>添加项目</em></a>
+  <else />
+  <a href='{:U("Rbac/addpur")}' ><em>添加项目</em></a>
+  </if>
+  </div>
+</div>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<script type="text/javascript"> 
+	$(function(){
+		$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'200',height:'50'}, function(){this.close();$(obj).focus();})}});
+		$("#title").formValidator({onshow:"请输入名称",onfocus:"请输入名称",oncorrect:"输入正确"}).inputValidator({min:1,onerror:"请输入名称"});
+		$("#name").formValidator({onshow:"请输入项目",onfocus:"请输入项目",oncorrect:"输入正确"}).inputValidator({min:1,onerror:"请输入项目"});
+	})
+var subNodeHtml = '<br/><input name="subaction[]" class="input-text" type="text" value="">&nbsp; ';
+function addSubNode() {
+	$('#addSubNode').before(subNodeHtml);
+}
+</script>
+<form name="myform" id="myform" action="{:U("Rbac/editpur")}" method="post">
+<div class="pad-10">
+   <div class="col-tab">
+  <ul class="tabBut cu-li">
+    <li id="tab_setting_1" class="on">基本信息填写</li>
+  </ul>
+  <div id="div_setting_1" class="contentList pad-10">
+    <table width="100%" class="table_form ">
+      <tr>
+        <th>名称：</th>
+        <td><input type="text" name="title" id="title" class="input-text" value="{$data.title}"></td>
+      </tr>
+      <tr>
+        <th>项目：</th>
+        <td><input type="text" name="name" id="name" class="input-text" value="{$data.name}"></td>
+      </tr>
+      <tr>
+        <th>是否开启：</th>
+        <td><input type='radio' name='status' value='1' <if condition="$data['status'] EQ 1 "> checked</if>>是&nbsp;&nbsp;&nbsp;&nbsp;<input type='radio' name='status' value='0'  <if condition="$data['status'] EQ 0 "> checked</if>>否</td>
+      </tr>
+      <tr>
+        <th>描述：</th>
+        <td><textarea name="remark" maxlength="255" style="width:300px;height:60px;">{$data.remark}</textarea></td>
+      </tr>
+    </table>
+  </div>
+  <div class="bk15"></div>
+  <input name="id" value="{$data.id}" type="hidden" />
+  <input name="dosubmit" type="submit" value="提交" class="button">
+   </div>
+</div>
+</form>
+</body>
+</html>

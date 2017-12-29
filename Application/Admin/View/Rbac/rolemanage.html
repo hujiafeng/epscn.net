@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript">
+var Delete = function(t){
+	if(confirm('是否确定删除?')) location.href=t;
+}
+</script>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<include file="Rbac:nav" />
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="table_list">
+  <form name="myform" action="{:U("Rbac/listorders")}" method="post">
+    <table width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="10%">排序</th>
+          <th width="10%">ID</th>
+          <th width="15%"  align="left" >角色名称</th>
+          <th width="265"  align="left" >角色描述</th>
+          <th width="5%"  align="left" >状态</th>
+          <th  width="20%">管理操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <foreach name="data" item="vo">
+        <tr>
+          <td width="10%" align="center"><input name='listorders[{$vo.id}]' type='text' size='3' value='{$vo.listorder}' class="input input-order"></td>
+          <td width="10%" align="center">{$vo.id}</td>
+          <td width="15%"  >{$vo.name}</td>
+          <td width="265" >{$vo.remark}</td>
+          <td width="5%">
+          <if condition="$vo['status'] eq 1"> 
+          <font color="red">√</font>
+          <else />
+          <font color="red">╳</font>
+          </if>
+          </td>
+          <td align="center">
+          <if condition="$vo['id'] eq 1"> 
+          <font color="#cccccc">权限设置</font> | <a href="{:U('Management/manager',array('role_id'=>$vo['id']))}">成员管理</a> | <font color="#cccccc">修改</font> | <font color="#cccccc">删除</font>
+          <else />
+          <a href="{:U("Rbac/authorize",array("id"=>$vo["id"]))}">权限设置</a> | <a href="{:U('Management/manager',array('role_id'=>$vo['id']))}">成员管理</a> | <a href="{:U('Rbac/roleedit',array('id'=>$vo['id']))}">修改</a> | <a href="{:U('Rbac/roledelete',array('id'=>$vo['id']))}" onclick="Delete(this);return false;">删除</a>
+          </if>
+          </td>
+        </tr>
+        </foreach>
+      </tbody>
+    </table>
+<div class="form-actions">
+<input type="submit" class="btn btn-primary J_ajax_submit_btn" name="dosubmit" value="排序" />            
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>

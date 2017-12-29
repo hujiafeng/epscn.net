@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({
+		autotip:true,
+		formid:"myform",
+		onerror:function(msg){}});
+	$("#password").formValidator({
+		empty:true,
+		onshow:"不修改密码请留空。",
+		onfocus:"密码应该为6-20位之间",
+		oncorrect:"旧密码输入正确"
+		}).inputValidator({min:5,max:20,onerror:"密码应该为5-20位之间"}).ajaxValidator({
+	    type : "get",
+		url : "{:U('Admin/Adminmanage/public_verifypass')}",
+		data :"",
+		datatype : "json",
+		async:'false',
+		success : function(data){	
+            if( data.status )
+			{
+                return true;
+			}
+            else
+			{
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "旧密码输入错误",
+		onwait : "请稍候..."
+	});
+	$("#new_password").formValidator({onshow:"不修改密码请留空。",onfocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onerror:"密码应该为6-20位之间"});
+	$("#new_pwdconfirm").formValidator({onshow:"不修改密码请留空。",onfocus:"请输入两次密码不同。",oncorrect:"密码输入一致"}).compareValidator({desid:"new_password",operateor:"=",onerror:"请输入两次密码不同。"});
+  })
+</script>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+  <ul class="nav nav-tabs">
+       <li class="active"><a href='javascript:;'>修改密码</a></li>
+      
+  </ul>
+  <div class="common-form">
+        <form method="post" class="form-horizontal J_ajaxForm" action="{:U('Adminmanage/chanpass')}" id="myform">
+      <div class="table_list">
+        <table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+          <tbody>
+          <tr>
+          <td width="80">用户名</td>
+          <td> {$User.username}</td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td> {$User.email}</td>
+        </tr>
+        <tr>
+          <td>旧密码</td>
+          <td><input type="password" name="password" id="password" class="input">
+            </input></td>
+        </tr>
+        <tr>
+          <td>新密码</td>
+          <td><input type="password" name="new_password" id="new_password" class="input">
+            </input></td>
+        </tr>
+        <tr>
+          <td>重复新密码</td>
+          <td><input type="password" name="new_pwdconfirm" id="new_pwdconfirm" class="input">
+            </input></td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-actions">
+	        <input name="dosubmit" type="submit" value="提交"  class="btn btn-primary btn_submit J_ajax_submit_btn" id="dosubmit">
+          
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

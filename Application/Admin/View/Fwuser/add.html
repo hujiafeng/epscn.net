@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript" src="/statics/js/region.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#mobile").formValidator({empty:false,onshow:"请输手机号",onfocus:"请输手机号"}).inputValidator({min:2,max:60,onerror:"请输手机号"});
+	$("#passwd").formValidator({empty:false,onshow:"请输入密码",onfocus:"请输入密码"}).inputValidator({min:2,max:60,onerror:"请输入密码"});
+	
+  })
+</script>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Fwuser/add')}" method="post" id="myform">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+            <tr>
+            <td width="80">手机号</td>
+            <td><input type="text" name="info[mobile]" class="input-text" id="mobile"></td>
+            </tr>
+            <tr>
+  			<td width="80">密码</td>
+  			<td><input type="text" name="info[passwd]" class="input-text" value="88888888" id="passwd"></td>
+          </tr>
+         <tr>
+            <td width="80">性别</td>
+            <td><select name="info[gender]">
+					<option value=""></option>
+				   <option value="男">男</option>
+				   <option value="女">女</option>
+			   </select></td>
+            </tr>
+            <tr>
+  			<td width="80">年龄</td>
+  			<td><select name="info[age]">
+					<option value=""></option>
+				   <option value="50后">50后</option>
+				   <option value="60后">60后</option>
+				   <option value="70后">70后</option>
+				   <option value="80后">80后</option>
+				   <option value="90后">90后</option>
+			   </select></td>
+          </tr>
+         <tr>
+            <td width="80">地区</td>
+			<td>
+			<select name="province" id="province" onChange="loadRegion('province',2,'city','{:U('Fwuser/getRegion')}');" style="width:150px;">
+		        <option value="0" selected>省份/直辖市</option>
+		        <volist name="province" id="vo"> 
+		        <option value="{$vo.id}" >{$vo.name}</option>
+		        </volist>
+		     </select>          
+		     <select name="city" id="city"  onchange="loadRegion('city',3,'town','{:U('Fwuser/getRegion')}');" style="width:150px;">
+		       <option value="0">市/县</option>
+		     </select>
+			 <select name="town" id="town" style="width:150px;">
+		       <option value="0">镇/区</option>
+		     </select>
+		     </td>
+        </tr>
+		 <tr>
+  			<td width="80">客户单位</td>
+  			<td><input type="text" name="info[khdw]" class="input-text"></td>
+          </tr>
+        </tbody>
+      </table>
+
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+
+	 </div>
+    
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

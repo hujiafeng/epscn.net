@@ -1,0 +1,41 @@
+[ 2017-08-08T10:05:26+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-08T10:05:27+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 4 行.
+NOTIC: [8] Undefined variable: Site E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

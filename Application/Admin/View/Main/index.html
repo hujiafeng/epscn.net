@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.jqChart.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/highcharts.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/modules/exporting.js"></script>
+<script type="text/javascript">
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			defaultSeriesType: 'column'
+		},
+		title: {
+			text: '【最近一年内营收、支出、账外支出统计】'
+		},
+		xAxis: {
+			categories: [
+			<foreach name="t_y" key="k" item="v">
+			'{$v}',
+			</foreach>
+			]
+		},
+		tooltip: {
+			formatter: function() {
+				return ''+
+					 this.series.name +': '+ this.y +'';
+			}
+		},
+		credits: {
+			enabled: false
+		},
+		series: [{
+			name: '总营收',
+			data: [
+			<foreach name="t_yse" key="k" item="v">
+			{$v},
+			</foreach>
+			]
+		}, {
+			name: '总支出',
+			data: [
+			<foreach name="t_zce" key="k" item="v">
+			{$v},
+			</foreach>
+			]
+		}, {
+			name: '账外总支出',
+			data: [
+			<foreach name="t_zwzce" key="k" item="v">
+			{$v},
+			</foreach>
+			]
+		}]
+	});
+	
+	
+});	
+</script>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.line_type_li{ width:200px; height:150px; margin:20px; float:left; background:#4AA41D; text-align:center; line-height:160%; font-size:30px; font-family:微软雅黑; cursor:pointer; color:#FFF;}
+	.line_type_li span{ padding-top:15px; display:block;}
+	.line_type_li:hover{ background:#1FB628;}
+	.taskmain{ width:95%; float:left; margin-bottom:10px; }
+	.taskmain ul{ float:left; margin:0px; padding:0px;}
+	.taskmain ul li{margin:0px; padding:0px; list-style-type:none}
+	.taskmain ul li{ width:220px; float:left; height:95px; margin-right:10px; color:#FFF; margin-top:10px;}
+	.li1{ background: url('/statics/admin/1.jpg') no-repeat left center;}
+	.li2{ background: url('/statics/admin/2.jpg') no-repeat left center;}
+	.li3{ background: url('/statics/admin/3.jpg') no-repeat left center;}
+	.li4{ background: url('/statics/admin/4.jpg') no-repeat left center;}
+	.li5{ background: url('/statics/admin/1.png') no-repeat left center;}
+	.li6{ background: url('/statics/admin/2.png') no-repeat left center;}
+	.li7{ background: url('/statics/admin/3.png') no-repeat left center;}
+	.li8{ background: url('/statics/admin/4.png') no-repeat left center;}
+	.taskmain ul li span{ float:left; width:200px; padding:0px; margin-top:10px; text-indent:70px;}
+	.taskmain ul li .sp1{ font-size:16px; font-weight:300}
+	.taskmain ul li .sp2{font-size:34px; font-weight:300; margin-top:20px;}
+    .tasktable{ width:95%; float:left; margin-top:20px;  }
+</style>
+<div class="pad-lr-10">
+<div class="taskmain">
+ <ul>
+<li class="li1"><span class="sp2">{$count1}</span><span class="sp1">用户数</span></li>
+<li class="li2"><span class="sp2">{$count2}</span><span class="sp1">服务商数</span></li>
+<li class="li3"><span class="sp2">{$count3}</span><span class="sp1">总订单数</span></li>
+<li class="li4"><span class="sp2">{$count4}</span><span class="sp1">总销售额</span></li>
+<li class="li5"><span class="sp2">{$count5}</span><span class="sp1">总支出额</span></li>
+<li class="li6"><span class="sp2">{$count6}</span><span class="sp1">总账外支</span></li>
+<li class="li7"><span class="sp2">{$count7}</span><span class="sp1">总应收款</span></li>
+<li class="li8"><span class="sp2">{$count8}</span><span class="sp1">总应付款</span></li>
+</ul> 
+</div>
+
+<div id="container" style="width:1380px; height: 400px; margin: 0 auto; float:left"></div>
+
+<ul class="nav nav-tabs" style="width:100%; height:37px;float:left; display:inline">     
+<li class="active" ><a href='#' ><font color="#E26A6A">最近登录记录</font></a></li>
+</ul>
+
+<div class="table_list" >
+      <table width="100%" class="table table-hover" style="margin-top:10px;">
+       <thead>
+        <tr>
+        <th width="10%"></th>
+            <th width="20%">用户名</th>
+            <th align="center" width='20%'>密码</th>
+            <th width="30%" align="center">状态</th>
+            <th width="10%" align="center">时间</th>
+            <th align="center" width='10%'>IP</th>
+          </tr>
+        </thead>
+        <if condition="!$Logs"><tr><td colspan="5">暂无数据</td></tr></if>
+         <volist name="Logs" id="vo">
+          <tr>
+            <td align="center">{$vo.loginid}</td>
+            <td align="center">{$vo.username}</td>
+            <td align="center">{$vo.password}</td>
+            <td align="center"><if condition="$vo['status'] eq 1">登陆成功<else /><font color="#FF0000">登陆失败/</font></if>{$vo.info}</td>
+            <td align="center">{$vo.logintime}</td>
+            <td align="center">{$vo.loginip}</td>
+          </tr>
+         </volist>
+          </table>
+    </div>
+     
+    </div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript">
+var Menudelete = function(t){
+	if(confirm('你确定要删除嘛？删除后不可恢复！')) location.href=t;
+}
+</script>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+  <ul class="nav nav-tabs">
+       <li class="active"><a href='javascript:;'>部门管理</a></li>
+       <li><a href='{:U("Department/add",array("parentid"=>0))}' >添加部门</a></li>
+  </ul>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<form name="myform"  method="post" class="J_ajaxForm" action="{:U('Department/listorders')}">
+    <div class="table-list">
+      <table width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th width="2" ></th>
+            <th width="100">id</th>
+            <th align="left">单位名称</th>
+             <th align="left">单位编号</th>
+             <th align="left">单位地址</th>
+            
+            <th width="200">管理操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        {$categorys}
+        </tbody>
+      </table>
+      <div class="form-actions">
+      
+	  </div>
+    </div>
+  </div>
+  </div>
+</form>
+
+</body>
+</html>

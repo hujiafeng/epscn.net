@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> </div>
+</div>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Main/profile')}" method="post" id="myform">
+      <table cellpadding="0" cellspacing="0" class="table_form" width="100%">
+        <tbody>
+          <tr>
+            <td width="120">会员名</td>
+            <td>{$username}</td>
+          </tr>
+          <tr>
+            <td width="120">真实姓名</td>
+            <td><input type="text" class="input-text" name="realname" value="{$realname}"></td>
+          </tr>
+          <tr>
+            <td>邮箱</td>
+            <td><input type="text" class="input-text" name="email" value="{$email}"></td>
+          </tr>
+          <tr>
+            <td>问题</td>
+            <td><input type="text" class="input-text" name="question" value="{$question}"></td>
+          </tr>
+          <tr>
+            <td>答案</td>
+            <td><input type="text" class="input-text" name="answer" value="{$answer}"></td>
+          </tr>
+          <tr>
+            <td>性别</td>
+            <td><input type="radio" id="" name="sex" value="1" <eq name="sex" value="1">checked</eq>>
+              男&nbsp;
+              <input type="radio" id="" name="sex" value="2" <eq name="sex" value="2">checked</eq>>
+              女 </td>
+          </tr>
+          <tr>
+            <td>电话</td>
+            <td><input type="text" class="input-text" name="tel" value="{$tel}"></td>
+          </tr>
+          <tr>
+            <td>手机号码</td>
+            <td><input type="text" class="input-text" name="mobile" value="{$mobile}"></td>
+          </tr>
+          <tr>
+            <td>传真</td>
+            <td><input type="text" class="input-text" name="fax" value="{$fax}"></td>
+          </tr>
+          <tr>
+            <td>网址</td>
+            <td><input type="text" class="input-text" name="web_url" value="{$web_url}"></td>
+          </tr>
+          <tr>
+            <td>地址</td>
+            <td><input type="text" class="input-text" name="address" value="{$address}"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="bk15"></div>
+      <input name="dosubmit" type="submit" value="提交" class="button" id="dosubmit">
+    </form>
+  </div>
+</div>
+</body>
+</html>

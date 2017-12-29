@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.status1{color:#FF0000}
+	.status3{color:#0000FF}
+	.status4{color:#FF00FF}
+	.status5{color:blue}
+</style>
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="5%">ID</th>
+			  <th width="10%" align="left" >类型名称</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="5%" align="center">{$v.seq}</td>
+	          <td width="10%" >{$v.title}</td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script language="javascript" type="text/javascript" src="{$Config.siteurl}statics/js/jquery.form.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+});
+var ar = art.dialog.through;
+var shuipf={
+	suo:false,
+	//增加表单
+	addhtml:function(id){
+		$("#rbac"+id).after('<tr id="addm'+id+'" style="background-color: #EFEFEF;"><form id="formaddm'+id+'" name="formaddm'+id+'" action="{:U("Rbac/purlist")}" method="post"><td>&nbsp;</td><td>方法：<input name="name" type="text" id="name"> 名称：<input name="title" type="text" id="title"><br/>介绍：<br/><textarea name="remark" id="remark" style="width:250px; height:50px;"></textarea></td><td><select name="status"><option value="1">开启状态</option><option value="0">关闭状态</option></select><input type="hidden" name="pid" value="'+id+'" /><input type="hidden" name="level" value="3" /><input type="hidden" name="operate" value="add"></td><td><a href="javascript:shuipf.addm('+id+')">添加</a> | <a href="javascript:shuipf.addmout('+id+')">取消</a></td></form></tr>');
+	},
+	//增加权限操作
+	addm:function(id){
+		if(this.suo){
+			return;
+		}
+		this.suo = true;
+		var options = {
+			url:$("#formaddm"+id).attr("action"),
+			type:'POST', 
+			dataType:"json",
+			success: function(data){ 
+				 if(data.status==false){
+					  ar({
+								  id:"error",
+								  title:"系统提示",
+								  icon: 'error',
+								  content: data.info,
+								  button:[{
+									  name: '确定',
+									  callback:function(){
+										  $("#formaddm"+id+" input[name='"+data.data+"']").focus();
+										  return true;
+										  }
+									  }]
+								  });
+				 }else{
+					 window.location = "{:U('Rbac/purlist',array('id'=>$app['id']))}";
+				 }
+			}
+		}
+		$("#formaddm"+id).ajaxSubmit(options);
+		this.suo = false;
+	},
+	//取消增加
+	addmout:function(id){
+		$("#addm"+id).remove();
+	},
+	//编辑表单
+	edithtml:function(id){
+		$("#rbac"+id).hide();
+		$("#edit"+id).show();
+	},
+	//取消编辑
+	editout:function(id){
+		$("#rbac"+id).show();
+		$("#edit"+id).hide();
+	},
+	//更新操作
+	edit:function(id){
+		if(this.suo){
+			return;
+		}
+		this.suo = true;
+		var options = {
+			url:$("#formedit"+id).attr("action"),
+			type:'POST', 
+			dataType:"json",
+			success: function(data){ 
+				 if(data.status==false){
+					  ar({
+								  id:"error",
+								  title:"系统提示",
+								  icon: 'error',
+								  content: data.info,
+								  button:[{
+									  name: '确定',
+									  callback:function(){
+										  
+										  return true;
+										  }
+									  }]
+								  });
+				 }else{
+					 window.location = "{:U('Rbac/purlist',array('id'=>$app['id']))}";
+				 }
+			}
+		}
+		$("#formedit"+id).ajaxSubmit(options);
+		this.suo = false;
+	},
+	//删除
+	Delete:function(id){
+		ar({
+			id:"delete",
+			title:"系统询问",
+			icon: 'question',
+			content: "确定要删除嘛？不可恢复！",
+			button:[{
+				name: '确定',
+				callback:function(){
+					$.ajax({
+						type: "POST",
+						dataType:"json",
+						url: "{:U('Rbac/purlist')}",
+						data: {"id":id,"operate":"delete"},
+						success: function(data){
+							if(data.status==false){
+								ar({id:"error",icon: 'error',title:"系统提示",content: data.info,button:[{name:'确定',callback:true}]});
+							}else{
+								window.location = "{:U('Rbac/purlist',array('id'=>$app['id']))}";
+							}
+						}
+						});
+					return true;
+				}
+				},{
+				name:"取消",
+				callback:function(){
+					return true;
+				}
+				}]
+			});
+	}
+};
+</script>
+</head>
+<body>
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> <a href='javascript:;' class="on"><em>权限列表</em></a> </div>
+</div>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<link href="{$Config.siteurl}statics/css/jquery.treeTable.css" rel="stylesheet" type="text/css" />
+<div class="table-list pad-lr-10" id="load_priv">
+  <div class="explain-col"> 温馨提示：注意大小写！方法为*时，全部方法都通过！！！方法为“*”时标识其模块下面所有方法都通过！关联方法请用“|”隔开！ </div>
+  <div class="bk10"></div>
+  <table class="table" cellpadding="0" cellspacing="0" width="100%" border="0">
+    <thead class="tb-tit-bg">
+      <tr>
+        <th><div class="th-gap">ID</div></th>
+        <th><div class="th-gap">权限名称</div></th>
+        <th><div class="th-gap">状态</div></th>
+        <th><div class="th-gap">操作</div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="{$app.name}">
+        <form id="formaddm" name="formaddm" action="{:U("Rbac/purlist")}" method="post">
+          <td>&nbsp;</td>
+          <td>模块：<input name="name" type="text" id="name"> 名称：<input name="title" type="text" id="title">
+            <br>
+            介绍：<br>
+            <textarea name="remark" id="remark" style="width:250px; height:50px;"></textarea></td>
+          <td><select name="status">
+              <option value="1">开启状态</option>
+              <option value="0">关闭状态</option>
+            </select>
+            <input type="hidden" name="operate" value="add">
+            <input type="hidden" name="pid" value="{$app.id}">
+            <input type="hidden" name="level" value="2"></td>
+          <td><a href="javascript:shuipf.addm('')">添加模块</a></td>
+        </form>
+      </tr>
+      <volist name="data" id="vo">
+       <tr id="rbac{$vo.id}" style="background-color: #EFEFEF;">
+        <td>{$vo.id}</td>
+        <td><b>{$vo.name}</b> {$vo.title}模块 (说明：{$vo.remark})</td>
+        <td><if condition="$vo['status'] eq 1 "> 使用状态<else/><font color="#FF0000">关闭状态</font></if></td>
+        <td><a href="javascript:shuipf.edithtml({$vo.id});">编辑</a> | <a href="javascript:shuipf.addhtml({$vo.id})">添加</a> | <a href="javascript:shuipf.Delete({$vo.id})">删除</a></td>
+      </tr>
+      <tr id="edit{$vo.id}"  style="display:none">
+        <form id="formedit{$vo.id}" name="formedit{$vo.id}" action="{:U("Rbac/purlist")}" method="post">
+          <td>{$vo.id}</td>
+          <td>模块：<input name="name" type="text" id="name" value="{$vo.name}" /> 名称：<input name="title" type="text" id="title" value="{$vo.title}">
+            <br/>
+            介绍：<br/>
+            <textarea name="remark" id="remark" style="width:250px; height:50px;">{$vo.remark}</textarea></td>
+          <td><select name="status">
+              <option value="1" <if condition="$vo['status'] eq 1 "> selected</if>>开启状态</option>
+              <option value="0" <if condition="$vo['status'] eq 0 "> selected</if>>关闭状态</option>
+            </select></td>
+          <td><a href="javascript:shuipf.edit({$vo.id});">更新</a> | <a href="javascript:shuipf.editout({$vo.id});">放弃</a></td>
+          <input type="hidden" name="id" value="{$vo.id}" />
+          <input type="hidden" name="operate" value="edit">
+        </form>
+      </tr>
+      <volist name="vo['child']" id="child">
+      <tr id="rbac{$child.id}">
+        <td>{$child.id}</td>
+        <td>&nbsp;&nbsp;┗&nbsp;<b>{$child.name}</b>{$child.tutle} <br/>
+          &nbsp;&nbsp;&nbsp; (说明：{$child.remark})</td>
+        <td><if condition="$child['status'] eq 1 "> 使用状态<else/><font color="#FF0000">关闭状态</font></if></td>
+        <td><a href="javascript:shuipf.edithtml({$child.id});">编辑</a> | <a href="javascript:shuipf.Delete({$child.id})">删除</a></td>
+      </tr>
+      <tr id="edit{$child.id}" style="display:none">
+        <form id="formedit{$child.id}" name="formedit{$child.id}" action="{:U("Rbac/purlist")}" method="post">
+          <td>{$child.id}</td>
+          <td>方法：<input name="name" type="text" id="name" value="{$child.name}" /> 名称：<input name="title" type="text" id="title" value="{$child.title}">
+            <br/>
+            介绍：<br/>
+            <textarea name="remark" id="remark" style="width:250px; height:50px;">{$child.remark}</textarea></td>
+          <td><select name="status">
+              <option value="1" <if condition="$vo['status'] eq 1 "> selected</if>>开启状态</option>
+              <option value="0" <if condition="$vo['status'] eq 2 "> selected</if>>关闭状态</option>
+            </select></td>
+          <td><a href="javascript:shuipf.edit({$child.id});">更新</a> | <a href="javascript:shuipf.editout({$child.id});">放弃</a></td>
+          <input type="hidden" name="id" value="{$child.id}" />
+          <input type="hidden" name="operate" value="edit">
+        </form>
+      </tr>
+      </volist>
+      </volist>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

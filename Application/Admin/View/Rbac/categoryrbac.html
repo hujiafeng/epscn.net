@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> <a href='javascript:;' class="on"><em>栏目权限配置</em></a><span>|</span> <a href='{:U("Rbac/rolemanage")}' ><em>角色管理</em></a> <span>|</span> <a href='{:U("Rbac/roleadd")}' ><em>添加角色</em></a> </div>
+</div>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="table-list pad-lr-10">
+  <form action="{:U("Rbac/setting_cat_priv")}" method="post">
+    <table width="100%">
+      <thead>
+        <tr>
+          <th width="25">全选</th>
+          <th align="left">栏目名称</th>
+          <th width="35">查看</th>
+          <th width="35">添加</th>
+          <th width="35">修改</th>
+          <th width="35">删除</th>
+          <th width="35">排序</th>
+          <th width="35">推送</th>
+          <th width="35">移动</th>
+        </tr>
+      </thead>
+      <tbody>
+      {$categorys}
+      </tbody>
+    </table>
+    <div class="btn">
+      <input type="hidden" name="roleid" value="{$roleid}" />
+      <input type="submit" value="提交" class="button"/>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+<!--
+function select_all(name, obj) {
+	if (obj.checked) {
+		$("input[type='checkbox'][name='priv["+name+"][]']").attr('checked', 'checked');
+	} else {
+		$("input[type='checkbox'][name='priv["+name+"][]']").attr('checked', null);
+	}
+}
+//-->
+</script>
+</body>
+</html>

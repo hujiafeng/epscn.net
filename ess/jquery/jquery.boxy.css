@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.boxy-wrapper{position:absolute;}
+.boxy-wrapper.fixed{position:fixed;}
+/* Modal */ 
+.boxy-modal-blackout{position:absolute;background-color:#000;left:0;top:0;} 
+/* Border */
+.boxy-wrapper{empty-cells:show;}
+.boxy-wrapper .top-left,.boxy-wrapper .top-right,.boxy-wrapper .bottom-right,.boxy-wrapper .bottom-left{width:10px;height:10px;background-color:#666666;opacity:0.3;filter:alpha(opacity=30);padding:0;}
+.boxy-wrapper .top,.boxy-wrapper .bottom{height:10px; background-color:#666666;opacity:0.3; filter:alpha(opacity=30); padding:0}
+.boxy-wrapper .left,.boxy-wrapper .right{float:none;width:10px; background-color:#666666; opacity:0.3; filter:alpha(opacity=30); padding:0}
+/* Title bar */
+.boxy-wrapper .title-bar{background-color:#ebf5eb;height:40px;position:relative;}
+.boxy-wrapper .title-bar.dragging{cursor:move;}
+.boxy-wrapper .title-bar h2{font-size:14px;color:#349e62;line-height:1;margin:0;padding:15px 0 0 10px;font-weight:normal;}
+.boxy-wrapper .title-bar .close{font-family:Tahoma;font-size:16px;color:#000000;position:absolute;top:12px;right:10px; text-decoration:none;}
+.boxy-wrapper .title-bar .close:hover{ text-decoration:none;}
+/* Content Region */
+.boxy-inner{background-color:white; padding:0}
+.boxy-content{padding:15px;}
+/* Question Boxes */
+.boxy-wrapper .question{width:350px; min-height:60px; _height:60px;}
+.boxy-wrapper .answers{text-align:right;}
+/* Confirm Btn */
+.boxy-btn1,.boxy-btn2,.boxy-btn3{padding:3px 12px 1.9px; border-width:1px; border-style:solid; letter-spacing:1px; line-height:15px; cursor:pointer; overflow:visible;} 
+.boxy-btn1{background-color:#349e62; border-color:#3ebb73 #333333 #333333 #3ebb73; color:white;}
+.boxy-btn2{background-color:#ECE9D8; border-color:#eeeeee #bbbbbb #bbbbbb #eeeeee; color:#333333;}
+.boxy-btn3{background-color:#EAEAEA; border-color:#EAEAEA #aaaaaa #aaaaaa #EAEAEA; color:#333333; padding:3px 5px 1.9px;}
+.boxy-btn3:hover{background-color:#ebf5eb; border-color:#ebf5eb #A2ADBC #A2ADBC #ebf5eb;}

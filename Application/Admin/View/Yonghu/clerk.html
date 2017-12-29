@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<ul class="nav nav-tabs">
+		<li class="active"><a href='#' >解绑业务员</a></li> 
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+  
+  <form name="myform" action="{:U('Yonghu/clerk')}" method="post" id="myform" onsubmit="return confirm('确定提交吗?')"; >
+	<input type="hidden" name="uid" value="{$info.uid}" />
+<table width="100%" class="table_form contentWrap">
+        <tbody>
+        <tr>
+            <td width="100">用户手机号</td>
+			<td>{$info[mobile]}</td>
+        </tr>
+		<if condition="$info.khdw neq ''">
+		<tr>
+            <td width="100">需方客户单位</td>
+			<td>{$info[khdw]}</td>
+        </tr>
+		</if>
+		<if condition="$info.company neq ''">
+		<tr>
+            <td width="100">服务商公司名</td>
+			<td>{$info[company]}</td>
+        </tr>
+		</if>
+		<tr>
+            <td width="100">需求方业务员</td>
+			<td>
+			<label><input name="info[clerk_x]" type="radio" value="0" style="width:20px; height:20px;" /> 无</label>
+			<foreach name="clerk" key="key" item="v">
+				<label><input name="info[clerk_x]" type="radio" value="{$v.id}" style="width:20px; height:20px;" <if condition="$v.id eq $clerk_x">checked</if> /> {$v.name}</label>
+			</foreach>
+			</td>
+        </tr>
+		<if condition="$info.type eq 1">
+		<tr style="border-top:1px solid #EBEBEB">
+            <td width="100">服务方业务员</td>
+			<td>
+			<label><input name="info[clerk_f]" type="radio" value="0" style="width:20px; height:20px;" /> 无</label>
+			<foreach name="clerk" key="key" item="v">
+				<label><input name="info[clerk_f]" type="radio" value="{$v.id}" style="width:20px; height:20px;" <if condition="$v.id eq $clerk_f">checked</if> /> {$v.name}</label>
+			</foreach>
+			</td>
+        </tr>
+		</if>
+        </tbody>
+      </table>
+	  <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit" id="dosubmit">
+	  </div>
+	 </form>
+  </div>
+</div>
+</div>
+</body>
+</html>

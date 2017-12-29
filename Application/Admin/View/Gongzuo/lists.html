@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+	<ul class="nav nav-tabs">
+		<li class="active"><a href='{:U('Gongzuo/lists')}' >模式列表</a></li> 
+		<li ><a href='{:U('Gongzuo/add')}' >添加模式</a></li> 
+	</ul>
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="5%">序号</th>
+	          <th width="10%" align="left" >模式</th>
+	          <th width="10%" align="left" >时间(天)</th>
+	          <th width="10%" align="left" >酬劳(元)</th>
+	          <th width="15%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="vo">
+	        <tr>
+	          <td width="5%" align="center">{$key+1}</td>
+	          <td width="10%" >{$vo.type_name}</td>
+	          <td width="10%" >{$vo.days}</td>
+	          <td width="10%" >{$vo.price}</td>
+	          <td width="15%"  align="center">
+	          <a href="{:U("Gongzuo/edit",array("id"=>$vo[id]))}">修改</a> | 
+	          <span class="delbtn" data="{:U('Gongzuo/del',array('id'=>$vo['id']))}" >删除</span>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

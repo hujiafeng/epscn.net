@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户积分明细-电气销售家</title>
+<link rel="stylesheet" href="uikit/css/uikit.min.css" />
+<link rel="stylesheet" href="css/page.css" />
+<script src="jquery/jquery-1.7.2.min.js"></script>
+<script src="uikit/js/uikit.min.js"></script>
+<script src="uikit/js/uikit-icons.min.js"></script>
+<script>
+	$(function() {
+		$("#save_record").click(function() {
+			var user_id = $("#user_id").val();
+			var score = $("input[name='score']").val();
+			if (score.length == 0 || score == 0) {
+				alert("兑换积分不能为零！");
+			} else {
+				$.post('user.php', {
+					act : 'redeem_points',
+					user_id : user_id,
+					score : score
+				}, function(data) {
+					if (data == 1)
+						setTimeout(function() {
+							window.location.reload();
+						}, 500);
+					else
+						alert("兑换记录保存失败！");
+
+				});
+			}
+		});
+		
+		$("[id^='view_detail_']").click(function() {
+			var _data = $(this).attr('id');
+			var project_id = _data.split("_")[2];
+			
+			$.post('project.php', {
+				act : 'detail',
+				project_id : project_id
+			}, function(data) {
+				$("#detail_table").html(data);
+			});
+		});
+	});
+
+	function del(record_id) {
+		if (confirm("确定删除这条记录吗？")) {
+			$.post('user.php', {
+				act : "del_record",
+				record_id : record_id
+			}, function(data) {
+				if (data == 1)
+					setTimeout(function() {
+						window.location.reload();
+					}, 500);
+				else
+					alert("删除失败！");
+			});
+		}
+	}
+</script>
+</head>
+<body>
+	{#include file="top.html"#}
+	<div class="uk-container">
+		{#include file="header.html"#}
+		<h2>
+			{#$username#}积分明细<span style="font-size:16px;color:#999">&nbsp;&nbsp; ( 当前积分：{#$score_now#} )</span> <span style="float: right;"><a class="uk-text-small uk-link-muted"
+				id="add_record" href="#modal-record" uk-toggle>+创建积分兑现</a></span>
+		</h2>
+
+		<table class="uk-table uk-table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>获得积分</th>
+					<th>兑现积分</th>
+					<th>产品信息</th>
+					<th>操作人/时间</th>
+					<th>废弃人/时间</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#foreach from=$data item=temp#}
+				<tr class="uk-text-small">
+					<td>{#$temp.record_id#}</td>
+					<td>{#$temp.get_score#}</td>
+					<td>{#$temp.redeem_score#}</td>
+					<td>{#$temp.products#}</td>
+					<td>{#$temp.act_uname#} <br/> {#$temp.act_time#}</td>
+					<td>{#if !empty($temp.del_uid)#} {#$temp.del_uname#}
+						 <br/> {#$temp.del_time#} {#/if#}</td>
+					<td><a href="javascript:del('{#$temp.record_id#}')"
+						class="uk-text-small uk-text-primary">删除</a>
+						{#if $temp.get_score#}&nbsp;&nbsp;
+						<a href="#modal-detail" id="view_detail_{#$temp.project_id#}"
+						class="uk-text-small uk-text-primary" uk-toggle>项目信息</a>
+						{#/if#}
+						</td>
+				</tr>
+				{#/foreach#}
+			</tbody>
+		</table>
+		<div class="uk-margin uk-margin-bottom">{#$page#}</div>
+
+		<div id="modal-record" class="uk-flex-top" uk-modal>
+			<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+				<form class="uk-form-horizontal uk-margin-large">
+					<input type="hidden" id="user_id" value='{#$user_id#}'
+						name="record_id">
+					<div class="uk-margin">
+						<label class="uk-form-label" for="form-horizontal-text">兑换积分：</label>
+						<div class="uk-form-controls">
+							<input class="uk-input" id="form-horizontal-text" type="text"
+								name="score">
+						</div>
+					</div>
+					<p class="uk-text-right">
+						<button class="uk-button uk-button-default uk-modal-close"
+							type="button">取消</button>
+						<button class="uk-button uk-button-primary" type="button"
+							id="save_record">确定</button>
+					</p>
+				</form>
+			</div>
+		</div>
+		
+		<div id="modal-detail" uk-modal>
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2>相关项目信息</h2>
+				</div>
+				<div class="uk-modal-body" uk-overflow-auto>
+					<table class="uk-text-small" style="line-height: 35px;">
+						<col width="80" />
+						<col width="220" />
+						<col width="80" />
+						<col width="220" />
+						<tbody id="detail_table">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

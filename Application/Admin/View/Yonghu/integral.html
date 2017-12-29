@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.integral{ background:}
+	.integral li{ float:left; display:inline;width:100%; line-height:30px;}
+	.integral li span{float:left; display:inline;width:200px;}
+	.integral li.i_li1{ font-weight:bold;}
+	.integral li span.i_s2{width:100px;}
+	.integral li span.i_s3{width:300px;}
+</style>
+ <ul class="nav nav-tabs">
+     <li><a>{$info[mobile]}({$info[name]})</a></li> 
+     </ul>
+<div class="pad_10 integral">
+  <ul>
+  <li class="i_li1"><span>时间</span><span class="i_s2">积分</span><span class="i_s3">备注</span></li>
+  <foreach name="info_i" key="k" item="v">
+  <li><span>{$v.time}</span><span class="i_s2">{$v.contact}</span><span class="i_s3">{$v.remark} / {$v.n_no}</span></li>
+  </foreach>
+  </ul>
+</div>
+  
+  
+  
+</div>
+</body>
+</html>

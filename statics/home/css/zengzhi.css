@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import url(service.css);
+.head_info_l{ background:url(../images/service/zengzhi/yuanquan.png)  no-repeat left center;float:left; margin-top:15px}
+.head_info_l span{ color:#67B70A; padding-left:20px;letter-spacing:4px; font-size:16px; font-weight: 600;}
+.head_info_r{ background:url(../images/service/spfb/kefu.png) no-repeat left center;float:right;padding-right:15px; padding-left:15px;line-height:18px; width:100px; height:50px;cursor:pointer}
+.head_info_b{background:url(../images/service/zengzhi/header.png) no-repeat left center;width:924px; height:154px; margin-top:60px}
+.report{}
+.report_l{width:160px;height:250px; float:left}
+.report_l ul{border: none;width:160px;border-collapse: inherit;}
+.report_l ul li{width:160px; margin-top:8px; height:50px; background:#E8E8E8; line-height:50px; text-align:center;}
+.report_l ul li a{ color:#A8A8A8; font-size:20px; cursor:pointer}
+.report_l ul .active {background:#41A8F7;}
+.report_l ul .active a{ color:#fff}
+.report_r{width:748px;height:250px; float:right; margin-top:8px; border:1px solid #DDDDDD}
+.report_r_inner{ width:720px;height:220px;margin-left:2px;}
+.report_r_inner ul{width:700px;border-collapse: inherit;padding: 0px 10px;letter-spacing:2px;}
+.report_r_inner ul li{margin-top:8px; border-bottom:dashed 1px #D3D3D3; float:left;  height:50px; line-height:50px; padding-left:5px; width:695px}
+.report_r_inner_left{ float:left;}
+.report_r_inner ul li a{ float:right; text-decoration:underline;  font-size:14px}
+.report_btn{ float:left; padding:15px;}
+.report_btn .r_btn{ width:100px; height:35px; line-height:50px; cursor:pointer; line-height:35px;background: #0089E9 none repeat scroll 0% 0%;text-align: center;color: #FFF;border-radius: 2px;font-size:14px;font-weight: bold;}
+.order_type_tab {
+    float: left;
+    position: relative;
+    width: 216px;
+    height: 30px;
+    background-color: #F0F3F5;
+    border-bottom: 1px solid #BDCADA;
+}
+.order_type_tab ul {
+    position: absolute;
+}
+.order_type_tab li {
+    float: left;
+    width: 103px;
+    margin-right: 5px;
+}
+.order_type_tab li.hover a {
+    float: left;
+    width: 103px;
+    height: 36px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFF;
+    background: transparent url("../images/assess_tab.png") no-repeat scroll 0% 0%;
+}
+.order_type_tab li {
+    float: left;
+    width: 103px;
+    margin-right: 5px;
+}
+.order_type_tab li a {
+    float: left;
+    width: 103px;
+    height: 36px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}
+.drop_title {
+	cursor:pointer;
+    float: left;
+    position: relative;
+    width: 481px;
+    padding: 7px 0px 0px 15px;
+    height: 23px;
+    font-weight: bold;
+    background-color: #F2F2F2;
+    border: 1px solid #CCC;
+}
+.drop_title .current {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background: transparent url("../images/order_arrow_type.png") no-repeat scroll 0% 0%;
+}
+.drop_way li {
+    padding: 12px 25px;
+    border-bottom: 1px dotted #CCC;
+    color: #999;
+	cursor:pointer
+}
+.drop_title .open_way {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background: transparent url("../images/order_arrow_type_hover.png") no-repeat scroll 0% 0%;
+}
+.drop_way {
+    float: left;
+    overflow: hidden;
+    width: 496px;
+    background-color: #FBFBFB;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+.r_write{ color: #F00;
+font-size: 16px;
+width: 20px;
+padding-right: 5px;}
+.btn_log {
+    width: 100px;
+    height: 34px;
+    background: transparent url("../images/btn_log.png") no-repeat scroll 0px 0px;
+    font: 16px/14px "微软雅黑",sans-serif;
+}
+.btn_log:hover {
+    width: 100px;
+    height: 34px;
+    background: transparent url("../images/btn_log.png") no-repeat scroll 0px -34px;
+}
+.button {
+    border: medium none;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}

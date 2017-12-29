@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+	<ul class="nav nav-tabs">
+		<li class="active"><a href='#' >反馈列表</a></li> 
+	</ul>
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="5%">序号</th>
+	          <th width="10%" align="left" >标题</th>
+	          <th width="10%" align="left" >留言时间</th>
+	          <th width="30%" align="left" >留言内容</th>
+	          <th width="15%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="vo">
+	        <tr>
+	          <td width="5%" align="center">{$key+1}</td>
+	          <td width="10%" >{$vo.title}</td>
+	          <td width="10%" >{$vo.submit_time}</td>
+	          <td width="30%" >{$vo.info}</td>
+	          <td width="15%"  align="center">
+	          <if condition="$vo.read eq '2'">
+	          <span class="delbtn" data="{:U('Yijian/del',array('id'=>$vo['id']))}" cont="确定已处理？">未处理</span>
+	          <else />
+	          已处理
+	          </if>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

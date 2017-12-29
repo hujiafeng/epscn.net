@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+    <ul class="nav nav-tabs">
+     <li ><a href='{:U('Yonghu/xquser')}' >需求用户列表</a></li> 
+      <li class="active" ><a href='#' >积分调整</a></li> 
+
+     </ul>
+
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#contact").formValidator({onshow:"请填写积分",onfocus:"请填写积分"}).inputValidator({min:1,max:30,onerror:"请填写积分"});
+	$("#remark").formValidator({onshow:"请填写备注",onfocus:"请填写备注"}).inputValidator({min:1,max:30,onerror:"请填写备注"});
+})
+//-->
+</script>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Yonghu/edit_integral')}" method="post" id="myform">
+	<input type="hidden" name="uid" value="{$info.uid}">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+          <tr>
+            <td width="80">用户</td>
+            <td><b>{$info.mobile}</b></td>
+          </tr>
+		   <tr>
+            <td width="80">积分</td>
+            <td>
+            	<input type="text" name="info[contact]" class="input-text" id="contact"> 例：+2或-2
+            </td>
+          </tr>
+		  <tr>
+            <td width="80">备注</td>
+            <td>
+            	<input type="text" name="info[remark]" class="input-text" id="remark">
+            </td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+
+	 </div>
+    
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户-电气销售家</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/page.css" />
+<link rel="stylesheet" href="uikit/css/uikit.min.css" />
+<script src="jquery/jquery-1.7.2.min.js"></script>
+<script src="uikit/js/uikit.min.js"></script>
+<script src="uikit/js/uikit-icons.min.js"></script>
+<script>
+	$(function() {
+		$("[id^='set_utype_']").click(function() {
+			$("#user_id").val('0');
+			var _data = $(this).attr('id');
+			var _arr=_data.split("_");
+			var user_id = _arr[2];
+			var utype=_arr[3];
+			$("#user_id").val(user_id);
+			$("input[name='utype'][value='" + utype + "']").prop("checked", 'checked');
+		});
+		$("#save_utype").click(function() {
+			var user_id = $("#user_id").val();
+			var utype = $("input[name='utype']:checked").val();
+			$.post('user.php', {
+				act : 'save_utype',
+				user_id : user_id,
+				utype : utype
+			}, function(data) {
+				if (data == 1)
+					setTimeout(function() {
+						window.location.reload();
+					}, 500);
+				else
+					alert("设置用户类型失败！");
+			});
+		})
+	});
+</script>
+</head>
+<body>
+	{#include file="top.html"#}
+	<div class="uk-container">
+		{#include file="header.html"#}
+
+		<form class="uk-search uk-search-default" style="width:400px;">
+			<span uk-search-icon></span> <input
+				class="uk-search-input uk-text-small" type="search"
+				placeholder="用户ID、姓名、手机..." name="kw"  style="width:400px;"/>
+		</form>
+
+		<table class="uk-table uk-table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>用户名</th>
+					<th>手机号码</th>
+					<th>用户类型</th>
+					<th>性别</th>
+					<th>当前积分/总积分</th>
+					<th>注册时间</th>
+					<th>平台</th>
+					<th>状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#foreach from=$data item=temp#}
+				<tr class="uk-text-small">
+					<td>{#$temp.user_id#}</td>
+					<td><img class="uk-preserve-width" src="{#$temp.avatar#}"
+						width="40"> <span class="uk-text-primary">{#$temp.fullname#}</span>
+					</td>
+					<td>{#$temp.mobile_phone#}</td>
+					<td>{#$temp.utype#}</td>
+					<td>{#$temp.gender#}</td>
+					<td>{#$temp.score_now#}/{#$temp.score_total#}</td>
+					<td>{#$temp.reg_time#}</td>
+					<td>{#$temp.plat#}</td>
+					<td>{#if $temp.uflag==0#}<span class="green">√</span>{#else#}
+						<span class="red">x</span>{#/if#}
+					</td>
+					<td><a href="#set_utype" class="uk-text-small uk-text-primary"
+						id="set_utype_{#$temp.user_id#}_{#$temp.utype#}" uk-toggle>设置用户类型</a>
+						&nbsp;&nbsp;<a
+						href="user.php?act=score_record&user_id={#$temp.user_id#}"
+						class="uk-text-small uk-text-primary">积分与兑现</a> &nbsp;&nbsp; <a
+						href="user.php?act=user_product&user_id={#$temp.user_id#}"
+						class="uk-text-small uk-text-primary">设置产品结算价格</a></td>
+				</tr>
+				{#/foreach#}
+			</tbody>
+		</table>
+
+		<div class="uk-margin uk-margin-bottom">{#$page#}</div>
+
+		<div id="set_utype" class="uk-flex-top" uk-modal>
+			<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+				<form class="uk-form-horizontal uk-margin-large">
+					<input type="hidden" id="user_id" value='0'>
+					<div class="uk-margin">
+						<div class="uk-form-label">用户类型：</div>
+						<div class="uk-form-controls">
+							<p>
+								<input class="uk-radio" type="radio" name="utype" checked
+									value="MEMBER"> <span class="uk-text-small">普通成员</span>
+							</p>
+							<label><input class="uk-radio" type="radio" name="utype"
+								value="ADMIN"> <span class="uk-text-small">管理员</span></label>
+						</div>
+					</div>
+					<p class="uk-text-right">
+						<button class="uk-button uk-button-default uk-modal-close"
+							type="button">取消</button>
+						<button class="uk-button uk-button-primary" type="button"
+							id="save_utype">确定</button>
+					</p>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

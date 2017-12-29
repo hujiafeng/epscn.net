@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body >
+<div class="wrap jj">
+  <ul class="nav nav-tabs">
+     
+       <li><a href='{:U("Adminmanage/chanpass")}' >修改密码</a></li>
+  </ul>
+  <div class="common-form">
+    <form msethod="post" class="form-horizontal J_ajaxForm" action="" id="myform">
+      <div class="table_list">
+        <table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+          <tbody>
+           <tr>
+          <td width="80">用户名:</td>
+          <td>{$data.username}</td>
+        </tr>
+        <tr>
+          <td >联系邮箱:</td>
+          <td>{$data.email}</td>
+        </tr>
+        <tr>
+          <td width="80">真实姓名：</td>
+          <td>{$data.user_real_name}</td>
+        </tr>
+         <tr>
+          <td width="80">固定电话：</td>
+          <td>{$data.user_home_tel}</td>
+        </tr>
+        
+         <tr>
+          <td width="80">联系手机：</td>
+          <td>{$data.user_tel}</td>
+        </tr>
+         <tr>
+          <td width="80">联系地址：</td>
+          <td>{$data.user_address}</td>
+        </tr>
+        
+          <tr>
+          <td width="80">公司名称：</td>
+          <td>{$data.user_company}</td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-actions" style="display:none">
+	        <input name="dosubmit" type="submit" value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn" id="dosubmit">
+            <a class="btn" href="__URL__">返回</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<ul class="nav nav-tabs">
+       <li><a href='{:U("Department/index")}' >部门管理</a></li>
+       <li class="active"><a href='javascript:;'>添加部门</a></li>
+  </ul>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="common-form">
+<form method="post" id="myform" action="{:U('Department/add')}" class="form-horizontal J_ajaxForm">
+  <table cellpadding="2" cellspacing="2" width="100%">
+      <tbody>
+        <tr>
+          <th width="100">上级单位:</th>
+          <td><select name="parentid" style="width:350px;" >
+              <option value="0">作为一级部门</option>
+              <volist name="data" id="vo"> <option value='{$vo['id']}' <eq name="Think.get.parentid" value="$vo['id']">selected</eq>> {$vo['name']}
+                </option>
+                <volist name="vo['lower']" id="lo"> <option value='{$lo['id']}' <eq name="Think.get.parentid" value="$lo['id']">selected</eq>>&nbsp;├ {$lo['name']}
+                  </option>
+                  <volist name="lo['lower']" id="loo"> <option value='{$loo['id']}'  <eq name="Think.get.parentid" value="$loo['id']">selected</eq>>&nbsp;│&nbsp;├ {$loo['name']}
+                    </option>
+                  </volist>
+                </volist>
+              </volist>
+            </select></td>
+        </tr>
+        <tr>
+          <th>单位名称:</th>
+          <td><input type="text" class="input-text" name="name" value=""  style="width:350px;"></td>
+        </tr>
+        <tr>
+          <th>单位编号:</th>
+          <td><input type="text" class="input-text" name="codesn" value="" style="width:350px;"> 
+            </td>
+        </tr>
+        
+         <tr>
+          <th>单位地址:</th>
+          <td><input type="text" class="input-text" name="address" value="" style="width:350px;"> 
+            </td>
+        </tr>
+       <!--
+        <tr>
+          <th>单位类型:</th>
+          <td><input type="radio" name="type" value="1" checked> 电商运营中心 <input type="radio" name="type" value="2"> 	服务中心</td>
+        </tr>
+		-->
+      </tbody>
+    </table>
+    <div class="form-actions">
+      <input type="hidden" name="type" value="1" />
+      <input type="submit" value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn" name="dosubmit">
+      <input type="reset" value="重置" class="btn btn-primary btn_submit J_ajax_submit_btn"></div>
+              </form>
+</div>
+</div>
+</div>
+</body>
+</html>

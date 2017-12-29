@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body  class="J_scroll_fixed">
+<div class="wrap jj">
+<ul class="nav nav-tabs">
+<li class="active"><a href='javascript:;'>资料修改</a></li> 
+<li><a href='{:U("Management/manager")}' >管理员管理</a></li>
+<li><a href='{:U("Management/adminadd")}' >添加管理员</a></li>
+</ul>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#username").formValidator({empty:true,onshow:"不修改用户名请留空。",onfocus:"用户名应该为6-20位之间"}).inputValidator({min:2,max:20,onerror:"用户名应该为2-20位之间"});
+	$("#password").formValidator({empty:true,onshow:"不修改密码请留空。",onfocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onerror:"密码应该为6-20位之间"});
+	$("#pwdconfirm").formValidator({empty:true,onshow:"不修改密码请留空。",onfocus:"请输入两次密码不同。",oncorrect:"密码输入一致"}).compareValidator({desid:"password",operateor:"=",onerror:"请输入两次密码不同。"});
+	$("#email").formValidator({onshow:"请输入E-mail",onfocus:"E-mail格式错误",oncorrect:"E-mail格式正确"}).regexValidator({regexp:"email",datatype:"enum",onerror:"E-mail格式错误"});
+  })
+</script>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U("Management/edit")}" method="post" id="myform">
+      <input type="hidden" name="id" value="{$data.id}">
+      </input>
+      <input type="hidden" name="username" value="{$data.username}">
+      </input>
+      <table width="100%" class="table_form contentWrap">
+	   <tr>
+            <td width="80">真实姓名</td>
+            <td><input type="text" name="nickname" class="input-text" id="nickname" value="{$data.nickname}" >
+             </td>
+          </tr>
+        <tr>
+          <td width="80">登录名</td>
+          <td><input type="text" name="username" id="username" value="{$data.username}" class="input-text"  /></td>
+        </tr>
+        <tr>
+          <td>密码</td>
+          <td><input type="password" name="password" id="password" class="input-text">
+            </input></td>
+        </tr>
+        <tr>
+          <td>确认密码</td>
+          <td><input type="password" name="pwdconfirm" id="pwdconfirm" class="input-text">
+            </input></td>
+        </tr>
+      <tr>
+            <td>联系电话</td>
+            <td><input type="text" name="number" class="input-text" id="number" value="{$data.number}">
+          </tr>
+        <tr>
+          <td>备注</td>
+          <td><textarea name="remark" rows="2" cols="20" id="remark" class="inputtext" style="height:100px;width:500px;">{$data.remark}</textarea></td>
+        </tr>
+          <tr>
+          <td width="100">所属单位:</td>
+          <td><select name="departmentid" style="width:350px;" >
+              <volist name="datalist" id="vo"> <option value='{$vo['id']}' <if condition="$data['departmentid'] eq $vo['id'] ">selected</if> > {$vo['name']}
+                </option>
+                <volist name="vo['lower']" id="lo"> <option value='{$lo['id']}' <if condition="$data['departmentid'] eq $lo['id'] ">selected</if>>&nbsp;├ {$lo['name']}
+                  </option>
+                  <volist name="lo['lower']" id="loo"> <option value='{$loo['id']}'  <if condition="$data['departmentid'] eq $loo['id'] ">selected</if> >&nbsp;│&nbsp;├ {$loo['name']}
+                    </option>
+                  </volist>
+                </volist>
+              </volist>
+            </select></td>
+        </tr>
+        
+        <tr>
+          <td>所属角色</td>
+          <td><select name="role_id">
+              <foreach name="role" item="vo">
+                <option value="{$vo.id}" <if condition="$data['role_id'] eq $vo['id'] ">selected</if>>{$vo.name}</option>
+                </foreach>
+          </select></td>
+        </tr>
+        
+        <tr>
+          <td>状态</td>
+          <td><select name="status">
+                <option value="1" <if condition="$data['status'] eq 1 ">selected</if>>开启</option>
+                <option value="0" <if condition="$data['status'] eq 0 ">selected</if>>禁止</option>
+          </select></td>
+        </tr>
+      </table>
+     <div class="form-actions">
+     <input name="dosubmit" type="submit" value="提交" class="button" id="btn btn-primary btn_submit">
+	 </div>
+    
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>

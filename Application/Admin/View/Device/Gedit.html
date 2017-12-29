@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript">
+	var path='__PUBLIC__';
+	var url='__URL__';
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/handlers.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/jscal2.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/border-radius.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/win2k.css"/>
+<script type="text/javascript" src="/statics/js/calendar/calendar.js"></script>
+<script type="text/javascript" src="/statics/js/calendar/lang/en.js"></script>
+
+<script type="text/javascript">
+	var swfu;
+	window.onload = function () {
+		swfu = new SWFUpload({
+			upload_url: "__URL__/addphoto",
+			post_params: {"PHPSESSID": "<?php echo session_id();?>"},
+			file_size_limit : "2 MB",
+			file_types : "*.jpg;*.png;*.gif;*.bmp",
+			file_types_description : "JPG Images",
+			file_upload_limit : "100",
+			file_queue_error_handler : fileQueueError,
+			file_dialog_complete_handler : fileDialogComplete,
+			upload_progress_handler : uploadProgress,
+			upload_error_handler : uploadError,
+			upload_success_handler : uploadSuccess,
+			upload_complete_handler : uploadComplete,
+			button_image_url : "",
+			button_placeholder_id : "spanButtonPlaceholder",
+			button_width: 20,
+			button_height: 65,
+			button_text : '+',
+			button_text_style : '.spanButtonPlaceholder {background:red} ',
+			button_text_top_padding: 0,
+			button_text_left_padding: 0,
+			button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+			button_cursor: SWFUpload.CURSOR.HAND,			
+			flash_url : "__PUBLIC__/swf/swfupload.swf",
+			custom_settings : {
+				upload_target : "divFileProgressContainer"
+			},				
+			debug: false
+		});
+	};
+</script>
+
+<body class="J_scroll_fixed">
+
+ <div class="wrap jj">
+<style type="text/css">
+html{_overflow-y:scroll}
+.swfupload{ float:left;border:1px solid #ccc; padding-top:35px; padding-left:8px;}
+#thumbnails ul li{float:left;list-style-type:none;width:105px;margin-left:5px;}
+#thumbnails .button{display:block;position: relative;right:-84px;top: -118px;width: 30px;z-index: 1103;cursor:pointer;}
+#pic_list li{padding:0 0 0 5px;}
+.table_form tr td{ padding:0px;}
+</style>
+ 
+    <ul class="nav nav-tabs">
+	<li><a href="{:U('Device/Clists',array('uid'=>$d['uid']))}">分组管理</a></li> 
+     <li><a href="{:U('Device/Glists',array('id'=>$d['id'],'uid'=>$d['uid']))}">设备管理</a></li> 
+     <li class="active"><a href="#" >修改设备</a></li> 
+    </ul>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Device/Gedit')}" method="post" id="myform">
+	<input type="hidden" name="s" id="" value=""/>
+	<input type="hidden" name="gid" value="{$g.gid}">
+	<input type="hidden" name="did" value="{$d.id}">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">分组名称</td>
+            <td>{$d.title}</td>
+            </tr>
+          <tr>
+            <td width="80">设备名称</td>
+            <td><input type="text" name="info[name]" class="input-text" id="name" value="{$g.name}"></td>
+          </tr>
+		  <tr>
+            <td width="80">产品型号</td>
+            <td><input type="text" name="info[type]" class="input-text" value="{$g.type}"></td>
+          </tr>
+		  <tr>
+            <td width="80">额定电压</td>
+            <td><input type="text" name="info[voltage]" class="input-text" style="width:100px;" value="{$g.voltage}"> kV</td>
+          </tr>
+		  <tr>
+            <td width="80">额定电流</td>
+            <td><input type="text" name="info[current]" class="input-text" style="width:100px;" value="{$g.current}"> A</td>
+          </tr>
+		  <tr>
+            <td width="80">额定短路<br />开断电流</td>
+            <td><input type="text" name="info[short_current]" class="input-text" style="width:100px;" value="{$g.short_current}"> kA</td>
+          </tr>
+		  <tr>
+            <td width="80">制造厂商</td>
+            <td><input type="text" name="info[modename]" class="input-text" value="{$g.modename}"></td>
+          </tr>
+		  <tr>
+            <td width="80">制造年月</td>
+            <td><input type="text"  name="info[modeyear]" id="modeyear" class="input-text date" style="width:100px;" value="{$g.modeyear}" >
+          &nbsp;<script type="text/javascript">
+          Calendar.setup({
+              weekNumbers: true,
+              inputField : "modeyear",
+              trigger    : "modeyear",
+              dateFormat: "%Y-%m-%d",
+              showTime: 12,
+              minuteStep: 1,
+              onSelect   : function() {this.hide();}
+          });
+      </script></td>
+          </tr>
+		  <tr>
+            <td width="80">产品编号</td>
+            <td><input type="text" name="info[number]" class="input-text" value="{$g.number}"></td>
+          </tr>
+		  
+		  <tr>
+          <td>一次方案图必须第一张</td>
+          <td>
+			<div style="width:800px;font-size: 12px;height:120px;" id="pingshentupianheight">
+				<span id="spanButtonPlaceholder"></span>
+				<div id="thumbnails">
+					<ul id="pic_list"></ul>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			</td>
+          </tr>
+		  <tr>
+            <td width="80"><b>元器件信息</b></td>
+            <td>
+				<table width="800px" style="background:#EFEFEF">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th style="text-align:center">制造厂商</th>
+					  <th style="text-align:center">产品型号</th>
+					  <th style="text-align:center">制造年月</th>
+					  <th style="text-align:center">产品编号</th>
+					</tr>
+				  </thead>
+				  
+				  <tbody>
+					<tr>
+					  <td>&nbsp;断路器/负荷开关/接触器→</td>
+					  <td style="text-align:center"><input type="text" name="info[d_modename]" class="input-text" style="width:200px;" value="{$g.d_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[d_type]" class="input-text" style="width:100px;" value="{$g.d_type}"></td>
+					  <td style="text-align:center">
+					  <input type="text" name="info[d_modeyear]" class="input-text" style="width:100px;" id="d_modeyear" value="{$g.d_modeyear}">
+					  <script type="text/javascript">
+						  Calendar.setup({
+							  weekNumbers: true,
+							  inputField : "d_modeyear",
+							  trigger    : "d_modeyear",
+							  dateFormat: "%Y-%m-%d",
+							  showTime: 12,
+							  minuteStep: 1,
+							  onSelect   : function() {this.hide();}
+						  });
+					  </script>
+					  </td>
+					  <td style="text-align:center"><input type="text" name="info[d_number]" class="input-text" style="width:100px;" value="{$g.d_number}"></td>
+					</tr>
+					<tr>
+					  <td>&nbsp;微机保护装置→</td>
+					  <td style="text-align:center"><input type="text" name="info[w_modename]" class="input-text" style="width:200px;" value="{$g.w_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[w_type]" class="input-text" style="width:100px;" value="{$g.w_type}"></td>
+					  <td style="text-align:center">
+					  <input type="text" name="info[w_modeyear]" class="input-text" style="width:100px;" id="w_modeyear" value="{$g.w_modeyear}">
+					  <script type="text/javascript">
+						  Calendar.setup({
+							  weekNumbers: true,
+							  inputField : "w_modeyear",
+							  trigger    : "w_modeyear",
+							  dateFormat: "%Y-%m-%d",
+							  showTime: 12,
+							  minuteStep: 1,
+							  onSelect   : function() {this.hide();}
+						  });
+					  </script>
+					  </td>
+					  <td style="text-align:center"><input type="text" name="info[w_number]" class="input-text" style="width:100px;" value="{$g.w_number}"></td>
+					</tr>
+					<td>&nbsp;互感器→</td>
+					  <td style="text-align:center"><input type="text" name="info[h_modename]" class="input-text" style="width:200px;" value="{$g.h_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[h_type]" class="input-text" style="width:100px;" value="{$g.h_type}"></td>
+					  <td style="text-align:center"><input type="text" name="info[h_modeyear]" class="input-text" style="width:100px;" id="h_modeyear" value="{$g.h_modeyear}">
+					  <script type="text/javascript">
+						  Calendar.setup({
+							  weekNumbers: true,
+							  inputField : "h_modeyear",
+							  trigger    : "h_modeyear",
+							  dateFormat: "%Y-%m-%d",
+							  showTime: 12,
+							  minuteStep: 1,
+							  onSelect   : function() {this.hide();}
+						  });
+					  </script>
+					  </td>
+					  <td style="text-align:center"><input type="text" name="info[h_number]" class="input-text" style="width:100px;" value="{$g.h_number}"></td>
+					</tr>
+					<tr>
+					  <td>&nbsp;接地开关→</td>
+					  <td style="text-align:center"><input type="text" name="info[j_modename]" class="input-text" style="width:200px;" value="{$g.j_modename}"></td>
+					  <td style="text-align:center"><input type="text" name="info[j_type]" class="input-text" style="width:100px;" value="{$g.j_type}"></td>
+					  <td style="text-align:center"><input type="text" name="info[j_modeyear]" class="input-text" style="width:100px;" id="j_modeyear" value="{$g.j_modeyear}">
+					  <script type="text/javascript">
+						  Calendar.setup({
+							  weekNumbers: true,
+							  inputField : "j_modeyear",
+							  trigger    : "j_modeyear",
+							  dateFormat: "%Y-%m-%d",
+							  showTime: 12,
+							  minuteStep: 1,
+							  onSelect   : function() {this.hide();}
+						  });
+					  </script>
+					  </td>
+					  <td style="text-align:center"><input type="text" name="info[j_number]" class="input-text" style="width:100px;" value="{$g.j_number}"></td>
+					</tr>
+					
+					
+				  </tbody>
+			  </table>
+		  </td>
+          </tr>
+		  <tr><td>&nbsp; </td></tr>
+		  <tr>
+            <td width="80"><b>在线监测</b></td>
+            <td>
+				<table width="350px" style="background:#EFEFEF">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th style="text-align:center">环境</th>
+					  <th style="text-align:center">A相</th>
+					  <th style="text-align:center">B相</th>
+					  <th style="text-align:center">C相</th>
+					</tr>
+				  </thead>
+				  
+				  <tbody>
+					<tr>
+					  <td>&nbsp;温度→</td>
+					  <td style="text-align:center"><input type="text" name="info[wd_h]" class="input-text" style="width:50px;" value="{$g.wd_h}"></td>
+					  <td style="text-align:center"><input type="text" name="info[wd_a]" class="input-text" style="width:50px;" value="{$g.wd_a}"></td>
+					  <td style="text-align:center"><input type="text" name="info[wd_b]" class="input-text" style="width:50px;" value="{$g.wd_b}"></td>
+					  <td style="text-align:center"><input type="text" name="info[wd_c]" class="input-text" style="width:50px;" value="{$g.wd_c}"></td>
+					</tr>
+					<tr>
+					  <td>&nbsp;温升→</td>
+					  <td style="text-align:center"><input type="text" name="info[ws_h]" class="input-text" style="width:50px;" value="{$g.ws_h}"></td>
+					  <td style="text-align:center"><input type="text" name="info[ws_a]" class="input-text" style="width:50px;" value="{$g.ws_a}"></td>
+					  <td style="text-align:center"><input type="text" name="info[ws_b]" class="input-text" style="width:50px;" value="{$g.ws_b}"></td>
+					  <td style="text-align:center"><input type="text" name="info[ws_c]" class="input-text" style="width:50px;" value="{$g.ws_c}"></td>
+					</tr>
+					<tr>
+					  <td colspan="2">短路开断总次数</td>
+					  <td><input type="text" name="info[z_breaking_times]" class="input-text" style="width:50px;" value="{$g.z_breaking_times}"></td>
+					  <td>已使用</td>
+					  <td><input type="text" name="info[breaking_times]" class="input-text" style="width:50px;" value="{$g.breaking_times}"></td>
+					</tr>
+					<tr>
+					  <td colspan="2">机械寿命</td>
+					  <td><input type="text" name="info[z_mechanical_life]" class="input-text" style="width:50px;" value="{$g.z_mechanical_life}"></td>
+					  <td>已使用</td>
+					  <td><input type="text" name="info[mechanical_life]" class="input-text" style="width:50px;" value="{$g.mechanical_life}"></td>
+					</tr>
+				  </tbody>
+			  </table>
+		  </td>
+          </tr>
+		   
+        </tbody>
+      </table>
+
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+
+	 </div>
+    
+    </form>
+  </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+	$("form").submit(function(e){
+		var name = $("#name").val();
+
+		if(!name){
+			alert("请输入设备名称！");
+			return false;
+		}
+	});
+  })
+</script>
+</body>
+</html>

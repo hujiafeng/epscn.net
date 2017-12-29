@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript" src="__PUBLIC__/js/lightbox-2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/lightbox.css"/>
+
+<body class="J_scroll_fixed">
+
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.n_img{width:100px; height:100px; float:left; display:inline; margin-top:5px; margin-left:5px;}
+	.need_tr{ font-weight:bold;background:#f2f2f2; line-height:20px; padding-top:10px; padding-left:10px;}
+</style>
+<ul class="nav nav-tabs">
+     <li><a href="{:U('Refunds/lists')}" >已退款订单列表</a></li> 
+     <li class="active"><a href='#' >退款订单详情</a></li> 
+</ul>
+
+<div class="pad_10">
+  <div class="common-form">
+   <table width="800px" class="table_form contentWrap">
+          <tbody>
+		  <tr>
+            <td colspan="4" class="need_tr">基本信息</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">ID/订单号</td>
+			<td>{$info.id}/{$info.no}</td>
+            <td width="80" class="need_td">订单状态</td>
+			<td>{$info.status_name}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">订单毛利</td>
+			<td id="maoli" style="color:red;"><if condition="$bk eq 1">
+			
+			<else />
+			{$info.maoli}
+			</if></td>
+            <td width="80" class="need_td">模式</td>
+			<td>{$info.type_name}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">是否取消</td>
+			<td>{$info.status_q}</td>
+            <td width="80" class="need_td">取消原因</td>
+			<td>{$info.status_name}</td>
+        </tr>
+		
+		<tr>
+            <td colspan="2" class="need_tr">需求方信息</td><td colspan="2" class="need_tr">服务方信息</td>
+       	</tr>
+        <tr>
+            <td width="80" class="need_td">发布时间</td>
+            <td>{$info.time}</td>
+			<td width="80" class="need_td">指派时间</td>
+			<td>{$info.check_time}</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">需求方</td>
+            <td>{$info.u_x_mobile}</td>
+			<td width="80" class="need_td">服务商</td>
+			<td>{$info.u_f_mobile}/{$info.u_f_company}</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">服务费合计</td>
+            <td>
+			{$info.reward}
+			</td>
+			<td width="80" class="need_td">服务酬劳</td>
+			<td>
+			{$info.get_reward}
+			</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">支付方式</td>
+			<td>{$info.n_payed_name}</td>
+			<td width="80" class="need_td">工程师姓名</td>
+			<td>{$info.js_name}</td>
+        </tr>
+        <tr>
+            <td width="80" class="need_td">支付时间</td>
+			<td>{$info.pay_time}</td>
+			<td width="80" class="need_td">工程师电话</td>
+			<td>{$info.js_number}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">确认完工时间</td>
+			<td>{$info.end_time}</td>
+            <td width="80" class="need_td">施工指派时间</td>
+			<td>{$info.js_time}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">需求描述</td>
+			<td colspan="3">{$info.miaoshu1}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">描述图片</td>
+			<td colspan="3">
+			<foreach name="info_s" key="k" item="v">
+			<a href="/uploads/{$v.large}" target="_blank"><img src='/statics/admin/n_shipin.jpg' class="n_img" /></a>
+			</foreach>
+			<foreach name="info_m" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.small}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+		<tr>
+            <td colspan="4" class="need_tr">服务内容</td>
+       	</tr>
+		<tr>
+            <td width="80" class="need_td">设备类别</td>
+			<td>{$info.s_type}</td>
+            <td width="80" class="need_td">设备款型</td>
+			<td>{$info.k_title}</td>
+        </tr>
+		<tr>
+            <td width="100" class="need_td">设备数量</td>
+			<td>{$info.sb_number}（台）</td>
+			<td width="100" class="need_td">任务类型</td>
+			<td>{$info.biaoqian}</td>
+        </tr>
+		<tr>
+            <td width="100" class="need_td">上门时间</td>
+			<td>{$info.over_time}</td>
+			<td width="100" class="need_td">服务身份</td>
+			<td>{$info.fw_id}</td>
+        </tr>
+        <tr>
+            <td width="80" class="need_td">服务顾问</td>
+			<td>{$info.gw_name}/{$info.gw_number}</td>
+			<td width="80" class="need_td">服务地点</td>
+			<td>{$info.city}{$info.address}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">技术评审</td>
+			<td colspan="3">{$info.miaoshu2}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">评审图片</td>
+			<td colspan="3">
+			<foreach name="info_p" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.small}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+          <tr>
+            <td colspan="4" class="need_tr">退款处理</td>
+       	</tr>
+		<tr>
+		<td width="80" class="need_td">退款金额</td>
+			<td>{$info.reimburse}</td>
+			<td width="80" class="need_td">退款时间</td>
+			<td>{$info.re_time}</td>
+        </tr>
+		<tr>
+            <td width="80" class="need_td">退款原因</td>
+			<td colspan="3">{$info.re_remark}</td>
+        </tr>
+		
+        </tbody>
+      </table>
+  </div>
+  </div>
+</div>
+</body>
+</html>

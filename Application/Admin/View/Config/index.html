@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<form method='post' id="myform" name="form1"  action="" class="form-horizontal J_ajaxForm" >
+    <ul class="nav nav-tabs">
+     <li class="active"><a>基本配置</a></li>
+
+  </ul>
+<div id="div_setting_1" class="contentList pad-10">
+<table cellpadding="2" cellspacing="2" class="table_form" width="100%">
+       <tr>
+	     <th width="140">系统名称:</th>
+	     <td><input type="text" class="input-text"  name="sitename" value="{$Site.sitename}" size="40"></td>
+      </tr>
+      <tr>
+	     <th width="140">系统地址:</th>
+	     <td><input type="text" class="input-text"  name="siteurl" value="{$Site.siteurl}" size="40">请以“/”结尾</td>
+      </tr>
+      <tr>
+	     <th width="140">系统简介:</th>
+	     <td><textarea name="siteinfo" style="width:380px; height:150px;">{$Site.siteinfo}</textarea> </td>
+      </tr>
+</table>
+      
+</div>
+
+ <div class="form-actions">
+    <input name="dosubmit" type="submit" value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn" id="dosubmit">
+    <input TYPE="reset"  value="重置" class="btn btn-primary btn_submit">
+      </div>
+</form>
+</div>
+</div>
+
+
+</body>
+</html>

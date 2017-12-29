@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+    <ul class="nav nav-tabs">
+		<li class="active"><a href='#' >{$info.name}</a></li> 
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Fwuser/zuobiao')}" method="post" id="myform">
+	<input type="hidden" name="uid" value="{$info.uid}" />
+	<input type="hidden" name="name" value="{$info.name}" />
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80" class="need_td">设置坐标</td>
+			<td colspan="3"><input type="text" name="zuobiao" value="{$info.zuobiao}" class="input-text" > <a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" target="_blank">[ 拾取坐标 ]</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+
+	 </div>
+    
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

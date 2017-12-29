@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript" src="/statics/js/region.js"></script>
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+	<ul class="nav nav-tabs">
+		<li class="active"><a href='#' >临时工列表</a></li> 
+		<li><a href="{:U('Temporary/add')}">添加临时工</a></li> 
+	</ul>
+	<form name="searchform" action="{:U('Temporary/index')}" method="get"  class="well form-search" id="searchform">
+		<select name="province" id="province" onChange="loadRegion('province',2,'city','{:U('Fwuser/getRegion')}');" style="width:150px;">
+		<if condition="$sheng neq ''">
+		<option value="{$Think.get.province}" selected>{$sheng}</option>
+		<else />
+		<option value="0" selected>省份/直辖市</option>
+		</if>
+			<volist name="province" id="vo"> 
+			<option value="{$vo.id}" >{$vo.name}</option>
+			</volist>
+		 </select>          
+		 <select name="city" id="city" style="width:150px;">
+		 <if condition="$shi neq ''">
+		<option value="{$Think.get.city}" selected>{$shi}</option>
+		</if>
+		   <option value="">市/县</option>
+		 </select>
+		 <select name="n_type" style="width:150px;">
+		   <option value="">—选择工种—</option>
+		   <foreach name="type" key="k" item="v">
+		   <option value="{$v}" <if condition="$Think.get.n_type eq $v"> selected </if> >{$v}</option>
+			</foreach>
+		 </select>
+		  <input type="submit" value="搜索当前页"  class="btn btn-primary btn_submit" name="dosubmit" id="goodssearch">
+	</form>
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="5%">ID</th>
+			  <th width="15%" align="left" >服务区域</th>
+	          <th width="15%" align="left" >行业工种</th>
+	          <th width="10%" align="left" >姓名</th>
+	          <th width="10%" align="left" >手机号</th>
+			  <th width="10%" align="left" >微信号</th>
+			  <th width="10%" align="left" >能力等级</th>
+	          <th width="15%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="5%" align="center">{$v.id}</td>
+			  <td width="15%" >{$v.city}</td>
+	          <td width="15%" >{$v.n_type}</td>
+			  <td width="10%" >{$v.name}</td>
+	          <td width="10%" >{$v.number}</td>
+	          <td width="10%" >{$v.wx_number}</td>
+	          <td width="10%" >{$v.grade}</td>
+	          <td width="15%"  align="center">
+	          <a href="{:U('Temporary/show',array('id'=>$v['id']))}">查看</a> | 
+	          <span class="delbtn" data="{:U('Temporary/del_t',array('id'=>$v['id']))}" cont="确定删除该顾问？">删除</span> |
+			  <a href="{:U('Temporary/edit',array('id'=>$v['id']))}">修改</a>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

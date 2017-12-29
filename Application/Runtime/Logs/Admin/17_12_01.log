@@ -1,0 +1,1087 @@
+[ 2017-12-01T16:56:55+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-01T16:56:56+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 4 行.
+NOTIC: [8] Undefined variable: Site E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-01T16:57:06+08:00 ] 127.0.0.1 /Admin/Public/tologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `d_fxuser` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0070s ]
+SQL: INSERT INTO `d_fxloginlog` (`username`,`logintime`,`loginip`,`status`,`password`,`info`) VALUES ('admin','2017-12-01 16:57:06','127.0.0.1','1','8888***','') [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: UPDATE `d_fxuser` SET `last_login_time`='1512118626',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `d_fxuser` WHERE (  username  = 'admin'  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-12-01T16:57:07+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 0 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0130s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 36 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 38 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 8 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 33 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 10 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 39 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 40 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 41 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 340 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 44 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 325 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 45 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 329 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 336 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 337 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 364 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 331 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 332 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 333 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 338 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 365 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 366 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 367 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 368 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 380 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 381 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 386 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 387 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 388 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 390 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 371 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 335 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `d_fxadmin_panel` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `d_fxadmin_panel` WHERE `userid` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 133 行.
+NOTIC: [8] Use of undefined constant user_login - assumed 'user_login' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-01T16:57:07+08:00 ] 127.0.0.1 /Admin/Public/tologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined index: code E:\WWW\eps\Application\Appframe\AppframeController.class.php 第 138 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T16:57:08+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+
+[ 2017-12-01T16:57:09+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 0 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 36 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 38 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 8 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 33 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 10 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 39 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 40 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 41 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 340 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 44 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 325 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 45 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 329 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 336 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 337 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 364 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 331 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 332 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 333 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 338 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 365 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 366 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 367 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 368 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 380 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 381 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 386 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 387 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 388 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 390 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 371 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 335 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `d_fxadmin_panel` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `d_fxadmin_panel` WHERE `userid` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 133 行.
+NOTIC: [8] Use of undefined constant user_login - assumed 'user_login' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T16:57:10+08:00 ] 127.0.0.1 /Admin/Main/public_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 and type='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `d_fxloginlog` ORDER BY `loginid` desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-01-01' and end_time<'2017-01-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-01-01' and end_time<'2017-01-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-01-01' and end_time<'2017-01-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-02-01' and end_time<'2017-02-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-02-01' and end_time<'2017-02-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-02-01' and end_time<'2017-02-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-03-01' and end_time<'2017-03-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-03-01' and end_time<'2017-03-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-03-01' and end_time<'2017-03-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-04-01' and end_time<'2017-04-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-04-01' and end_time<'2017-04-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-04-01' and end_time<'2017-04-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-05-01' and end_time<'2017-05-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-05-01' and end_time<'2017-05-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-05-01' and end_time<'2017-05-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-06-01' and end_time<'2017-06-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-06-01' and end_time<'2017-06-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-06-01' and end_time<'2017-06-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-07-01' and end_time<'2017-07-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-07-01' and end_time<'2017-07-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-07-01' and end_time<'2017-07-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-08-01' and end_time<'2017-08-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-08-01' and end_time<'2017-08-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-08-01' and end_time<'2017-08-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-09-01' and end_time<'2017-09-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-09-01' and end_time<'2017-09-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-09-01' and end_time<'2017-09-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-10-01' and end_time<'2017-10-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-10-01' and end_time<'2017-10-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-10-01' and end_time<'2017-10-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-11-01' and end_time<'2017-11-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-11-01' and end_time<'2017-11-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-11-01' and end_time<'2017-11-31' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-12-01' and end_time<'2017-12-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and end_time>'2017-12-01' and end_time<'2017-12-31' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(get_reward) as reward FROM `d_need` WHERE ( status='5' and reward_m_f=1 and end_time>'2017-12-01' and end_time<'2017-12-31' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T16:57:14+08:00 ] 127.0.0.1 /Admin/Yonghu/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\YonghuController::show() should be compatible with that of Think\Controller::show() E:\WWW\eps\Application\Admin\Controller\YonghuController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `d_clerk` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_user` WHERE ( 1=1 ) ORDER BY `reg_time` desc LIMIT 0,60   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_clerk` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title E:\WWW\eps\Application\Runtime\Cache\Admin\5fcb2555c8953062d3ecb4397af81b62.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-01T16:57:16+08:00 ] 127.0.0.1 /Admin/Device/Clists/uid/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0160s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_device as d INNER JOIN d_user as u on d.uid=u.uid  WHERE ( 1=1 and d.uid=44  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0040s ]
+SQL: SELECT d.*,u.mobile FROM d_device as d INNER JOIN d_user as u on d.uid=u.uid  WHERE ( 1=1 and d.uid=44  ) ORDER BY d.id desc LIMIT 0,60   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=19 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=16 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 135 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 137 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 135 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 137 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T16:57:19+08:00 ] 127.0.0.1 /Admin/Device/Glists/id/19/uid/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=19 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_device_goods` WHERE ( did=19 ) ORDER BY `time` desc LIMIT 0,60   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-01T16:57:21+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:02:00+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:02:43+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-01T17:02:57+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:03:11+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:03:29+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:05:53+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-01T17:11:50+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:12:12+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:12:22+08:00 ] 127.0.0.1 /Admin/Device/Gadd/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:15:21+08:00 ] 127.0.0.1 /Admin/Device/Glists/id/19/uid/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=19 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=19 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_device_goods` WHERE ( did=19 ) ORDER BY `time` desc LIMIT 0,60   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:15:24+08:00 ] 127.0.0.1 /Admin/Device/Clists/uid/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_device as d INNER JOIN d_user as u on d.uid=u.uid  WHERE ( 1=1 and d.uid=44  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0030s ]
+SQL: SELECT d.*,u.mobile FROM d_device as d INNER JOIN d_user as u on d.uid=u.uid  WHERE ( 1=1 and d.uid=44  ) ORDER BY d.id desc LIMIT 0,60   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=19 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=16 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 135 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 137 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 135 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' E:\WWW\eps\Application\Runtime\Cache\Admin\bd1a856a0a8b1e12b499989063d43eff.php 第 137 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:15:26+08:00 ] 127.0.0.1 /Admin/Device/Glists/id/16/uid/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_device_goods` WHERE ( did=16 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_device_goods` WHERE ( did=16 ) ORDER BY `time` desc LIMIT 0,60   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 146 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 147 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' E:\WWW\eps\Application\Runtime\Cache\Admin\923a0a905313345ed3e1a5312c2d4224.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-01T17:15:29+08:00 ] 127.0.0.1 /Admin/Device/Gshow/gid/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device_goods` WHERE ( gid=32 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_device` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in E:\WWW\eps\Application\Admin\Controller\DeviceController.class.php on line 350 and defined E:\WWW\eps\ThinkPHP\Library\Think\Model.class.php 第 1720 行.
+NOTIC: [8] Undefined variable: field E:\WWW\eps\ThinkPHP\Library\Think\Model.class.php 第 1721 行.
+NOTIC: [8] Undefined variable: field E:\WWW\eps\ThinkPHP\Library\Think\Model.class.php 第 1731 行.
+SQL: SELECT * FROM `d_device_photo` WHERE ( gid=32 and flag=1 and type=1 )  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:15:41+08:00 ] 127.0.0.1 /Admin/Device/Gcopy/gid/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device_goods` WHERE ( gid=32 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_device` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-01T17:15:45+08:00 ] 127.0.0.1 /Admin/Device/Gedit/gid/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with that of Think\Controller::success() E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_device_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_device_photo` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_device_goods` WHERE ( gid=32 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_device` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

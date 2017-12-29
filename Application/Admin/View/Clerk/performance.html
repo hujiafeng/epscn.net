@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/jscal2.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/border-radius.css"/>
+<link rel="stylesheet" type="text/css" href="/statics/js/calendar/win2k.css"/>
+<script type="text/javascript" src="/statics/js/calendar/calendar.js"></script> 
+<script type="text/javascript" src="/statics/js/calendar/lang/en.js"></script>
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ <form name="searchform" action="{:U('Clerk/performance')}" method="get"  class="well form-search" id="searchform">
+<div class="search_type cc mb10">
+	 <div class="mb10">
+	 业务员: <select name="clerk" style="width:100px;">
+	 <option value="">——</option>
+	 <foreach name="clerk" key="k" item="v">
+      <option value="{$v.id}" <if condition="$Think.get.clerk eq $v.id "> selected </if> > {$v.name}</option>
+	  </foreach>
+	  </select>&nbsp;
+	 完成时间:
+              <input type="text" name="start_time" id="start_time" value="{$Think.get.start_time}" size="21" class="date"  style="width:100px;" >
+              <script type="text/javascript">
+			Calendar.setup({
+			weekNumbers: true,
+		    inputField : "start_time",
+		    trigger    : "start_time",
+		    dateFormat: "%Y-%m-%d",
+		    showTime: 12,
+		    minuteStep: 1,
+		    onSelect   : function() {this.hide();}
+			});
+        </script>至
+              <input type="text" name="end_time" id="end_time" value="{$Think.get.end_time}" size="21" class="date"  style="width:100px;" >
+              &nbsp;<script type="text/javascript">
+			Calendar.setup({
+			weekNumbers: true,
+		    inputField : "end_time",
+		    trigger    : "end_time",
+		    dateFormat: "%Y-%m-%d",
+		    showTime: 12,
+		    minuteStep: 1,
+		    onSelect   : function() {this.hide();}
+			});
+        </script>&nbsp;
+              <input type="submit" value="搜索当前页"  class="btn btn-primary btn_submit" name="dosubmit" id="goodssearch">
+            </div>
+	</div>
+  </form>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href='{:U("Clerk/performance")}' >需求方业绩表</a></li>
+		<li><a href='{:U("Clerk/performance_f")}' >服务方业绩表</a></li> 
+	</ul>
+ <b>当前总计：￥<font color="red">{$sum_reward}</font></b>
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="5%">ID</th>
+	          <th width="10%">单号</th>
+	          <th width="10%">账号</th>
+	          <th width="10%">服务费合计</th>
+			  <th width="10%">发布日期</th>
+			  <th width="10%">完成日期</th>
+			  <th width="10%">业务员</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="5%" align="center">{$v.id}</td>
+	          <td width="10%" ><a href="{:U('Gongdan/show',array('id'=>$v['id']))}">{$v.no}</a></td>
+	          <td width="10%" >{$v.mobile}<br />{$v.khdw}</td>
+	          <td width="10%" >{$v.reward}</td>
+			  <td width="10%" >{$v.time}</td>
+			  <td width="10%" >{$v.pay_time}</td>
+			  <td width="10%" >{$v.name}</td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

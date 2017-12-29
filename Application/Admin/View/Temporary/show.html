@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript" src="__PUBLIC__/js/lightbox-2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/lightbox.css"/>
+<body class="J_scroll_fixed">
+<style type="text/css">
+html{_overflow-y:scroll;}
+.n_img{width:100px; height:100px; float:left; display:inline; margin-top:5px; margin-left:5px;}
+.table_form tr td{ padding:0px;}
+td{ line-height:30px;}
+</style>
+ <div class="wrap jj">
+    <ul class="nav nav-tabs">
+		<li class="active"><a href='#' >查看临时工资料</a></li> 
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+	<div class="table_list">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">服务区域</td>
+			<td>{$info.city}</td>
+        </tr>
+		<tr>
+            <td width="80">行业工种</td>
+			<td>{$info.n_type}</td>
+        </tr>
+		<tr>
+            <td width="80">姓名</td>
+			<td>{$info.name}</td>
+        </tr>
+		<tr>
+            <td width="80">手机号</td>
+			<td>{$info.number}</td>
+        </tr>
+		<tr>
+            <td width="80">微信号</td>
+			<td>{$info.wx_number}</td>
+        </tr>
+		<tr>
+            <td width="80">开户银行</td>
+			<td>{$info.bank}</td>
+        </tr>
+		<tr>
+            <td width="80">银行卡号</td>
+			<td>{$info.bank_number}</td>
+        </tr>
+		<tr>
+            <td width="80">能力等级</td>
+			<td>{$info.grade}</td>
+        </tr>
+		<tr>
+            <td width="80">备注</td>
+			<td>{$info.remark}</td>
+        </tr>
+		<tr>
+            <td width="80">身份证</td>
+			<td>
+			<foreach name="p" key="k" item="v">
+			<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src='/uploads/{$v.large}' class="n_img" /></a>
+			</foreach>
+			</td>
+        </tr>
+		
+        </tbody>
+      </table>
+	</div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

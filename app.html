@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <style>
+        body,div {margin: 0; padding: 0;}
+        body{background: #fff;}
+        #iphone {display: none; margin: 0 auto; width: 640px; height: 850px;
+            background: url("./statics/home/images/iphone.jpg") no-repeat;}
+        #android {display: none; margin: 0 auto; width: 640px; height: 500px;
+            background: url("./statics/home/images/android.jpg") no-repeat;}
+    </style>
+    <title>EPS电气服务专家</title>
+</head>
+<body>
+<div id="iphone"></div>
+<div id="android"></div>
+<script>
+    var redirect = false;
+    var ua = navigator.userAgent.toLowerCase();
+    var iOS = ( ua.match(/(ipad|iphone|ipod)/g) ? true : false );
+    var android = ( ua.match(/android/i) ? true : false );
+    var wx = ( ua.match(/micromessenger/i) ? true : false );
+    var applink, url;
+    if ( wx ) {
+        if ( iOS ) {
+            document.getElementById('iphone').style.display = 'block';
+        } else if (android) {
+            document.getElementById('android').style.display = 'block';
+        }
+    } else {
+        if ( iOS ) {
+            applink = 'https://itunes.apple.com/cn/app/eps/id1270634633?l=zh&ls=1&mt=8';
+        } else { //安卓跳转，有安卓apk下载地址时请替换
+            applink = 'https://www.epscn.net/addon/EPS.apk';
+        }
+        if ( window.location.hash !== "#no-refresh" ) { // avoid loop
+            // 尝试跳转 App, iOS 和 Android 的跳法不一样
+            //iOS ?  window.location = url : ""; // window.open(url);
+
+            // 跳转下载
+            window.setTimeout(function() {
+                redirect = true;
+                window.location = applink;
+            }, 150);
+
+            window.setTimeout(function() {
+                if (redirect) {
+                    window.location.href = window.location.href + '#no-refresh';
+                    window.location.reload();
+                }
+            }, 1500);
+
+        }
+    }
+</script>
+</body>
+</html>

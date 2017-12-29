@@ -1,0 +1,1413 @@
+[ 2017-07-14T08:35:26+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-14T08:35:27+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 4 行.
+NOTIC: [8] Undefined variable: Site E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:35:37+08:00 ] 127.0.0.1 /Admin/Public/tologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `d_fxuser` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0310s ]
+SQL: INSERT INTO `d_fxloginlog` (`username`,`logintime`,`loginip`,`status`,`password`,`info`) VALUES ('admin','2017-07-14 08:35:37','127.0.0.1','1','8888***','') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: UPDATE `d_fxuser` SET `last_login_time`='1499992537',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_fxuser` WHERE (  username  = 'admin'  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-07-14T08:35:38+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 0 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 36 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 38 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 8 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 33 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 10 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 39 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 40 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 41 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 340 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 44 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 325 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 45 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 329 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 336 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 337 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 331 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 332 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 333 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 338 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 339 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 335 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `d_fxadmin_panel` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `d_fxadmin_panel` WHERE `userid` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 133 行.
+NOTIC: [8] Use of undefined constant user_login - assumed 'user_login' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:35:40+08:00 ] 127.0.0.1 /Admin/Main/public_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `d_fxloginlog` ORDER BY `loginid` desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: count1 E:\WWW\eps\Application\Runtime\Cache\Admin\05ed27b1bd05ed4fd478f0f4d5dc0fae.php 第 136 行.
+NOTIC: [8] Undefined variable: count2 E:\WWW\eps\Application\Runtime\Cache\Admin\05ed27b1bd05ed4fd478f0f4d5dc0fae.php 第 137 行.
+NOTIC: [8] Undefined variable: count4 E:\WWW\eps\Application\Runtime\Cache\Admin\05ed27b1bd05ed4fd478f0f4d5dc0fae.php 第 138 行.
+NOTIC: [8] Undefined variable: count3 E:\WWW\eps\Application\Runtime\Cache\Admin\05ed27b1bd05ed4fd478f0f4d5dc0fae.php 第 139 行.
+NOTIC: [8] Undefined variable: count5 E:\WWW\eps\Application\Runtime\Cache\Admin\05ed27b1bd05ed4fd478f0f4d5dc0fae.php 第 140 行.
+NOTIC: [8] Undefined variable: count6 E:\WWW\eps\Application\Runtime\Cache\Admin\05ed27b1bd05ed4fd478f0f4d5dc0fae.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:35:44+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:35:51+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-14T08:35:52+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:38:26+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/20170714/596811e7b30d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+
+[ 2017-07-14T08:40:40+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:41:03+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:41:26+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:41:31+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-14T08:42:11+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0300s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:42:31+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+NOTIC: [2] unlink(/uploads/20170713/1.png): No such file or directory E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 63 行.
+
+[ 2017-07-14T08:43:29+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+
+[ 2017-07-14T08:44:02+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0010s ]
+
+[ 2017-07-14T08:45:02+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:45:33+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:45:34+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:45:35+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:48:30+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:48:35+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:48:37+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:48:38+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:49:03+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/596814e3cd2d0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+
+[ 2017-07-14T08:49:15+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+ERR: 不存在的图像文件
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\WWW\eps\ThinkPHP\Common\functions.php:102) E:\WWW\eps\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\WWW\eps\ThinkPHP\Common\functions.php:102) E:\WWW\eps\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-07-14T08:50:18+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0210s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-14T08:50:31+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:50:32+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-14T08:50:33+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:50:55+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/596815597c1f0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0020s ]
+
+[ 2017-07-14T08:51:15+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968155859740.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+
+[ 2017-07-14T08:51:24+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968155726ac0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+
+[ 2017-07-14T08:51:30+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:51:37+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:51:38+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-14T08:51:39+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:51:53+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968159bc1b38.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0060s ]
+
+[ 2017-07-14T08:51:57+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968159a9eca0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+
+[ 2017-07-14T08:52:01+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/596815997ece8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0060s ]
+
+[ 2017-07-14T08:52:17+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0090s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-14T08:52:18+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0020s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:52:20+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:52:28+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 38 行.
+ERR: 不存在的图像文件
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\WWW\eps\ThinkPHP\Common\functions.php:102) E:\WWW\eps\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\WWW\eps\ThinkPHP\Common\functions.php:102) E:\WWW\eps\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-07-14T08:53:37+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:53:45+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:53:46+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:53:47+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0090s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-14T08:53:54+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/59681619846c0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+
+[ 2017-07-14T08:53:56+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968161a9f470.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0060s ]
+
+[ 2017-07-14T08:53:58+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968161bc5da0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+
+[ 2017-07-14T08:54:05+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:54:06+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:54:07+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:54:11+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+ERR: 不存在的图像文件
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\WWW\eps\ThinkPHP\Common\functions.php:102) E:\WWW\eps\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\WWW\eps\ThinkPHP\Common\functions.php:102) E:\WWW\eps\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-07-14T08:54:47+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+
+[ 2017-07-14T08:55:35+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:55:41+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0060s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:55:42+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:55:43+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:55:51+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968168e97770.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+
+[ 2017-07-14T08:56:03+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968168fb5bd0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+
+[ 2017-07-14T08:56:07+08:00 ] 127.0.0.1 /Admin/Agongdan/del?src=/uploads/2017/07/5968168d6fea0.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+
+[ 2017-07-14T08:56:16+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-14T08:56:17+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-14T08:56:18+08:00 ] 127.0.0.1 /Admin/Agongdan/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\WWW\eps\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-14T08:56:22+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+
+[ 2017-07-14T08:56:56+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+SQL: SELECT `name` FROM `d_region` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `d_region` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `d_region` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-07-14T08:57:58+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+
+[ 2017-07-14T09:01:12+08:00 ] 127.0.0.1 /Admin/Agongdan/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: biaoqian E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+NOTIC: [2] implode(): Invalid arguments passed E:\WWW\eps\Application\Admin\Controller\AgongdanController.class.php 第 28 行.
+SQL: SELECT `name` FROM `d_region` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `d_region` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `d_region` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-07-14T16:51:09+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0300s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

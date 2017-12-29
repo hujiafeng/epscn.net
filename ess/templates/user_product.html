@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户产品配置-电气销售家</title>
+<link rel="stylesheet" href="css/page.css" />
+<link rel="stylesheet" href="uikit/css/uikit.min.css" />
+<script src="jquery/jquery-1.7.2.min.js"></script>
+<script src="uikit/js/uikit.min.js"></script>
+<script src="uikit/js/uikit-icons.min.js"></script>
+<script>
+	$(function() {
+		$("input[name='productIds']").prop('checked', false);
+		$("#checkAll").prop('checked', false);
+		$("#checkAll").click(function() {
+			var v = $(this).prop('checked');
+			$("input[name='productIds']").prop('checked', v);
+		});
+
+		$("#set_price").click(function() {
+			//检查是否选择了产品
+			var str = "";
+			$("input[name='productIds']:checked").each(function() {
+				str += ',' + $(this).val();
+			});
+			if (str) {
+				$("#agioProductIds").val(str);
+				$("#agio").val('');
+				$("#modal-price").show();
+			} else {
+				$("#modal-price").hide();
+				alert("请选择产品!");
+			}
+		});
+
+		$("#save_agio").click(function() {
+			var user_id = $("#user_id").val();
+			var productIds = $("#agioProductIds").val();
+			var agio = $("#agio").val();
+			if (productIds.length == 0) {
+				alert("请选择产品！");
+			} else if (isNaN(agio)) {
+				alert("折扣请输入数字！");
+			} else {
+				$.post('user.php', {
+					act : 'save_agio',
+					user_id : user_id,
+					productIds : productIds,
+					agio : agio
+				}, function(data) {
+					if (data == 1)
+						setTimeout(function() {
+							window.location.reload();
+						}, 500);
+					else
+						alert("折扣设置失败！");
+				});
+			}
+		});
+
+		//brand
+		/*$("#brand")
+				.change(
+						function() {
+							var brand = $(this).children('option:selected')
+									.val();
+							var user_id = $("#user_id").val();
+							if (brand.length > 0)
+								window.location.href = "user.php?act=user_product&user_id="
+										+ user_id + "&brand=" + brand;
+						});
+		//category
+		$("#category")
+				.change(
+						function() {
+							var category = $(this).children('option:selected')
+									.val();
+							var user_id = $("#user_id").val();
+							if (category.length > 0)
+								window.location.href = "user.php?act=user_product&user_id="
+										+ user_id + "&category=" + category;
+						});
+		//model
+		$("#model")
+				.change(
+						function() {
+							var model = $(this).children('option:selected')
+									.val();
+							var user_id = $("#user_id").val();
+							if (model.length > 0)
+								window.location.href = "user.php?act=user_product&user_id="
+										+ user_id + "&model=" + model;
+						});*/
+
+		$("#brand").change(function() {
+			$("#sp").html('款型');
+			$("#model").val('');
+			var brand_id = $(this).val();
+			var category_id = $("#category").val();
+			$.post('index.php', {
+				act : 'getModel',
+				brand_id : brand_id,
+				category_id : category_id
+			}, function(data) {
+				$("#model").html(data);
+
+			});
+		});
+
+		$("#category").change(function() {
+			$("#sp").html('款型');
+			$("#model").val('');
+			var brand_id = $("#brand").val();
+			var category_id = $(this).val();
+			$.post('index.php', {
+				act : 'getModel',
+				brand_id : brand_id,
+				category_id : category_id
+			}, function(data) {
+				$("#model").html(data);
+
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	{#include file="top.html"#}
+	<div class="uk-container">
+		{#include file="header.html"#}
+		<div>
+		<form action="user.php" method="get" id="search_form">
+		<input type="hidden" name="act" value="user_product"/>
+		<input type="hidden" name="user_id" value="{#$user_id#}"/>
+			<div class="uk-inline">
+				<span class="uk-form-icon" uk-icon="icon: search"></span> <input
+					class="uk-input" type="text" placeholder="产品ID、规格..." name="kw"
+					value="{#$kw#}" style="width: 400px;" id="kw">
+			</div>
+			<div uk-form-custom="target: > * > span:first">
+				<select id="brand" name="brand">
+					<option value="">品牌</option> {#foreach from=$brand
+					item=brand_temp#} {#if $brand_id==$brand_temp.brand_id#}
+					<option value="{#$brand_temp.brand_id#}" selected>{#$brand_temp.name#}</option>
+					{#else#}
+					<option value="{#$brand_temp.brand_id#}">{#$brand_temp.name#}</option>
+					{#/if#} {#/foreach#}
+				</select>
+				<button class="uk-button uk-button-default" type="button"
+					tabindex="-1">
+					<span></span> <span uk-icon="icon: chevron-down"></span>
+				</button>
+			</div>
+
+			<div uk-form-custom="target: > * > span:first">
+				<select id="category" name="category">
+					<option value="">品类</option> {#foreach from=$category
+					item=category_temp#} {#if $category_id==$category_temp.cid#}
+					<option value="{#$category_temp.cid#}" selected>{#$category_temp.name#}</option>
+					{#else#}
+					<option value="{#$category_temp.cid#}">{#$category_temp.name#}</option>
+					{#/if#} {#/foreach#}
+				</select>
+				<button class="uk-button uk-button-default" type="button"
+					tabindex="-1">
+					<span></span> <span uk-icon="icon: chevron-down"></span>
+				</button>
+			</div>
+
+			<div uk-form-custom="target: > * > span:first">
+				<select id="model" name="model">
+					<option value="">款型</option> {#foreach from=$model
+					item=model_temp#} {#if $model_id==$model_temp.model_id#}
+					<option value="{#$model_temp.model_id#}" selected>{#$model_temp.name#}</option>
+					{#else#}
+					<option value="{#$model_temp.model_id#}">{#$model_temp.name#}</option>
+					{#/if#} {#/foreach#}
+				</select>
+				<button class="uk-button uk-button-default" type="button"
+					tabindex="-1">
+					<span id="sp"></span> <span uk-icon="icon: chevron-down"></span>
+				</button>
+			</div>
+			<button class="uk-button uk-button-primary uk-margin-small-right"
+				type="submit">搜索</button>
+
+			<span style="float: right;"><button
+					class="uk-button uk-button-primary uk-margin-small-right"
+					type="button" uk-toggle="target: #modal-price" id="set_price">设置结算价格</button></span>
+		</form>
+	</div>
+
+
+	<div id="modal-price" class="uk-flex-top" uk-modal>
+		<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+			<form class="uk-form-horizontal uk-margin-large">
+				<input type="hidden" id="user_id" value='{#$user_id#}' /> <input
+					id="agioProductIds" type="hidden" value="" />
+				<div class="uk-margin">
+					<label class="uk-form-label" for="agio">设置折扣（例：0.75）：</label>
+					<div class="uk-form-controls">
+						<input class="uk-input" type="text" name="agio" id="agio" />
+					</div>
+				</div>
+				<p class="uk-text-right">
+					<button class="uk-button uk-button-default uk-modal-close"
+						type="button">取消</button>
+					<button class="uk-button uk-button-primary" type="button"
+						id="save_agio">确定</button>
+				</p>
+			</form>
+		</div>
+	</div>
+
+	<table class="uk-table uk-table-striped">
+		<thead>
+			<tr>
+				<th><input class="uk-checkbox" type="checkbox" name="checkAll"
+					id="checkAll"> ID</th>
+				<th>型号</th>
+				<th>品牌/类</th>
+				<th>规格</th>
+				<th>面价(元)</th>
+				<th>最低价(元)</th>
+				<th>结算价(元)</th>
+				<th>计量单位</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{#foreach from=$data item=temp#}
+			<tr class="uk-text-small">
+				<td><input class="uk-checkbox" type="checkbox"
+					name="productIds" value="{#$temp.product_id#}">
+					{#$temp.product_id#}</td>
+				<td>{#$temp.model_name#}</td>
+				<td>{#$temp.brand_name#}/{#$temp.category_name#}</td>
+				<td>{#$temp.specification#}</td>
+				<td>{#$temp.market_price#}</td>
+				<td>{#$temp.min_price#}</td>
+				<td>{#$temp.last_price#}</td>
+				<td>{#$temp.measure_name#}</td>
+			</tr>
+			{#/foreach#}
+		</tbody>
+	</table>
+	<div class="uk-margin uk-margin-bottom">{#$page#}</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="renderer" content="webkit">
+<meta charset="utf-8">
+<title>江苏明及电气—供应商竞标系统</title>
+<script type="text/javaScript" src="/statics/js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/statics/home/css/indexn.css"/>
+<script type="text/javascript">
+    $(document).ready(function(){
+	$("ul li").mouseover(function(){
+            $(this).addClass("lis");
+        })
+        .mouseout(function(){
+            $(this).removeClass("lis");
+        });  
+    });
+	
+	$(function(){ updateEndTime(); });  
+      
+    //倒计时函数  
+    function updateEndTime()  
+    {  
+        var date = new Date();  
+        var time = date.getTime();  //当前时间距1970年1月1日之间的毫秒数  
+       
+        $(".settime").each(function(i){  
+       
+        var endDate =this.getAttribute("endTime"); //结束时间字符串  
+        //转换为时间日期类型  
+        var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');  
+      
+        var endTime = endDate1.getTime(); //结束时间毫秒数  
+       
+        var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数  
+        if(lag > 0)  
+        {  
+            var second = Math.floor(lag % 60);      
+            var minite = Math.floor((lag / 60) % 60);  
+            var hour = Math.floor((lag / 3600) % 24);  
+            var day = Math.floor((lag / 3600) / 24);  
+            $(this).html(day+"天"+hour+"小时"+minite+"分"+second+"秒");  
+        }  
+        else $(this).html("已结束");  
+     });  
+       
+     setTimeout("updateEndTime()",1000);  
+    }  
+function checkNull(){
+	if(confirm("是否确定{$info[moshi]}！")){
+		var form_ms=$(".form_ms").val();
+		if(form_ms == "竞价"){
+			if($(".show_j").val() == ""){
+				alert("请输入价格");
+				$(".show_j").focus();
+				return false;
+			}	
+		}
+	}else{
+		return false;
+	}
+}
+</script> 
+<style type="text/css">
+<if condition="$info.moshi eq '竞价'">
+.show_s{background:url('/statics/home/images/woyaojingjia.png') no-repeat;}
+<else />
+.show_s{background:url('/statics/home/images/woyaoqiangdan.png') no-repeat;}
+</if>
+</style>
+</head>
+<body>
+<div class="tou">
+	<div class="tou_cont">
+		<div class="denglu">
+		<a>{$Think.cookie.uname}</a>
+			<a href="{:U('Index/index')}" title="返回竞标"><img src="/statics/home/images/fanhui.png"></a>
+		</div>
+	</div>
+</div>
+
+<div class="cont1">
+<li class="cont1_li">欢迎更多优秀的供应商加入我们！</li><li class="cont1_r">账号开通方式： ▪ 联系人[ <font color="#0e4481">王经理</font> ]  ▪ 联系电话[ <font color="#0e4481">13585359094</font> ]</li>
+</div>
+
+<div class="show_cont2">
+	<ul class="show_cont2_ul">
+	<li class="show_li1"><b>&nbsp;&nbsp;&nbsp;模&nbsp;&nbsp;式&nbsp;&nbsp;：</b>{$info[moshi]} <img src="/statics/home/images/{$info[status]}.png"></li>
+	<li><if condition="$info.moshi eq '抢单'"><b>&nbsp;&nbsp;定&nbsp;&nbsp;价&nbsp;&nbsp;：</b>{$info[jiage]}</if></li>
+	<li class="show_li1"><b>需求标题：</b>{$info[title]}</li><li><b>&nbsp;&nbsp;数&nbsp;&nbsp;量&nbsp;&nbsp;：</b>{$info[shuliang]}</li>
+	<li class="show_li1"><b>联系电话：</b>{$info[phone]}</li><li><b>&nbsp;联&nbsp;系&nbsp;人：</b>{$info[name]}</li>
+	<li class="show_li1"><b>开票要求：</b>{$info[kaipiao]}</li><li><b>供货地址：</b>{$info[address]}</li>
+	<li class="show_li1"><b>到货日期：</b>{$info[daohuo_time]}</li><li><b>截止日期：</b>{$info[jiezhi_time]}</li>
+	</ul>
+<div class="show_cont3"><b>加工要求</b></div>
+<div class="show_cont4">{$info[contents]}</div>
+<div class="show_form">
+<if condition="$info.status eq 'zhaobiaozhong'">
+<form action="{:U('Index/show')}" method="post">
+<input type="hidden" name="id" value="{$info[id]}">
+<input type="hidden" name="ms" value="{$info[moshi]}" class="form_ms">
+<input type="hidden" name="uids" value="{$info[uids]}">
+<if condition="$info.moshi eq '竞价'">
+<input type="text" name="jiage" class="show_j" placeholder="请输入价格"> 元<br><br>
+<input type="submit" name="submit" class="show_s" value="" onclick="return checkNull()">
+<else />
+<input type="submit" name="submit" class="show_s" value="" onclick="return checkNull()">
+</if>
+</form>
+</if>
+</div>
+
+<div class="show_cont3"><b>已参与企业</b></div>
+<ul class="show_cont2_ul2">
+<foreach name="g" key="key" item="v">
+<li><b class="show_cont2_ul2_b1">{$v.name}</b><b>{$v.name2}</b><b>{$v.phone}</b></li>
+</foreach>
+</ul>
+
+
+<div class="footn">Copyright © 2016 Mecan Co.,Ltd. 保留所有权利。苏ICP备10206808号-2</div>
+</div>
+
+
+
+</body>
+</html>

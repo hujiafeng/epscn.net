@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+ <ul class="nav nav-tabs">
+       <li class="active"><a href='javascript:;'>角色编辑</a></li>
+       <li><a href='{:U("Rbac/rolemanage")}' >角色管理</a></li>
+       <li><a href='{:U("Rbac/roleadd")}' >添加角色</a></li>
+  </ul>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<script type="text/javascript">
+<!--
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#rolename").formValidator({onshow:"请输入角色名称",onfocus:"角色名称不能为空。"}).inputValidator({min:1,max:999,onerror:"角色名称不能为空。"});
+})
+//-->
+</script>
+<div class="table-list" id="load_priv">
+    <form name="myform" action="{:U("Rbac/roleedit")}" method="post" id="myform"  class="form-horizontal J_ajaxForm">
+      <table width="100%" class="table_form contentWrap">
+        <tr>
+          <td>角色名称</td>
+          <td><input type="text" name="name" value="{$data.name}" class="input-text" id="rolename"></input></td>
+        </tr>
+        <tr>
+          <td>角色描述</td>
+          <td><textarea name="remark" rows="2" cols="20" id="remark" class="inputtext" style="height:100px;width:500px;">{$data.remark}</textarea></td>
+        </tr>
+        <tr>
+          <td>是否启用</td>
+          <td><input type="radio" name="status" value="1"  <if condition="$data['status'] eq 1">checked</if>>启用&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="status" value="0" <if condition="$data['status'] eq 0">checked</if>>禁止</td>
+        </tr>
+      </table>
+       <div class="form-actions">
+       <input type="hidden" name="id" value="{$data.id}" />
+      <input name="dosubmit" type="submit" value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn">
+		      </div>
+     
+    </form>
+  </div>
+</div>
+</body>
+</html>

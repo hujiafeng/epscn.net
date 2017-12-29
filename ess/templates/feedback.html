@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户反馈-电气销售家</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/page.css" />
+<link rel="stylesheet" href="uikit/css/uikit.min.css" />
+<script src="jquery/jquery-1.7.2.min.js"></script>
+<script src="uikit/js/uikit.min.js"></script>
+<script src="uikit/js/uikit-icons.min.js"></script>
+</head>
+<body>
+{#include file="top.html"#}
+	<div class="uk-container">
+		{#include file="header.html"#}
+
+		<form class="uk-search uk-search-default" style="width:400px;">
+			<span uk-search-icon></span> <input
+				class="uk-search-input uk-text-small" type="search"
+				placeholder="反馈信息.." name="kw"  style="width:400px;"/>
+		</form>
+
+		<table class="uk-table uk-table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>用户名</th>
+					<th>反馈信息</th>
+					<th>联系方式</th>
+					<th>版本号</th>
+					<th>设备类型</th>
+					<th>提交时间</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#foreach from=$data item=temp#}
+				<tr class="uk-text-small">
+					<td>{#$temp.id#}</td>
+					<td><img class="uk-preserve-width" src="{#$temp.avatar#}"
+						width="40"> <span class="uk-text-primary">{#$temp.uname#}</span>
+					</td>
+					<td width="30%" style="word-break : break-all;">{#$temp.info#}</td>
+					<td>{#$temp.contact#}</td>
+					<td>{#$temp.version#}</td>
+					<td>{#$temp.app_type#}</td>
+					<td>{#$temp.submit_time#}</td>
+				</tr>
+				{#/foreach#}
+			</tbody>
+		</table>
+
+		<div class="uk-margin uk-margin-bottom">{#$page#}</div>
+</body>
+</html>

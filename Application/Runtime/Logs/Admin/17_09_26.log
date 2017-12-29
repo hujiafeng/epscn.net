@@ -1,0 +1,1456 @@
+[ 2017-09-26T09:01:55+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-26T09:01:56+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 4 行.
+NOTIC: [8] Undefined variable: Site E:\WWW\eps\Application\Runtime\Cache\Admin\3e5d3d9a1e6b1fcd430d87ee7be4f518.php 第 42 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:02:08+08:00 ] 127.0.0.1 /Admin/Public/tologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `d_fxuser` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0300s ]
+SQL: INSERT INTO `d_fxloginlog` (`username`,`logintime`,`loginip`,`status`,`password`,`info`) VALUES ('admin','2017-09-26 09:02:08','127.0.0.1','1','8888***','') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: UPDATE `d_fxuser` SET `last_login_time`='1506387728',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `d_fxuser` WHERE (  username  = 'admin'  ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-26T09:02:09+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 0 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0130s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 36 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 38 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 8 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 33 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 10 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 39 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 40 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 41 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 340 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 44 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 325 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 45 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 329 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 336 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 337 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 364 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 331 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 332 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 333 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 338 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 365 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 376 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 377 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 378 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 366 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 367 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 368 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 371 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SELECT * FROM `d_fxmenu` WHERE `parentid` = 335 AND `status` = 1 ORDER BY listorder asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data E:\WWW\eps\Application\Admin\Model\FxmenuModel.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `d_fxadmin_panel` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `d_fxadmin_panel` WHERE `userid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 133 行.
+NOTIC: [8] Use of undefined constant user_login - assumed 'user_login' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Undefined variable: admin E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 135 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 61 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 73 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+NOTIC: [8] Use of undefined constant icon - assumed 'icon' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 43 行.
+NOTIC: [8] Use of undefined constant lower - assumed 'lower' E:\WWW\eps\Application\Runtime\Cache\Admin\836688c1f1d849de38afaba03368efc4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:02:10+08:00 ] 127.0.0.1 /Admin/Main/public_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 and type='1' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_need` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT sum(reward-get_reward) as reward FROM `d_need` WHERE ( 1=1 and status='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxloginlog` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `d_fxloginlog` ORDER BY `loginid` desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:02:16+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0220s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:02:58+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-26T09:03:16+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0320s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:03:30+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:03:40+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:11:09+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:11:15+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:12:11+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:13:52+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:14:07+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0040s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:14:21+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:16:07+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:18:15+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:20:09+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:21:54+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:23:00+08:00 ] 127.0.0.1 /Admin/Fwuser/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:23:05+08:00 ] 127.0.0.1 /Admin/Yonghu/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\YonghuController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\YonghuController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_user` WHERE ( 1=1 ) ORDER BY `reg_time` desc LIMIT 0,60   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: title E:\WWW\eps\Application\Runtime\Cache\Admin\5fcb2555c8953062d3ecb4397af81b62.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:23:11+08:00 ] 127.0.0.1 /Admin/Fwuser/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 and type=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_user` WHERE ( 1=1 and type=1 ) ORDER BY `reg_time` desc LIMIT 0,60   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title E:\WWW\eps\Application\Runtime\Cache\Admin\d1501b46bebf398526dbadbb372c2fc7.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:23:16+08:00 ] 127.0.0.1 /Admin/Agongdan/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city` FROM `d_user` WHERE `flag` = 0 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`mobile`,`name`,`city`,`task`,`company` FROM `d_user` WHERE `flag` = 0 AND `type` = 1 ORDER BY `last_time` desc  [ RunTime:0.0010s ]
+SQL: SELECT `name`,`number` FROM `d_adviser` WHERE `status` = '2' ORDER BY `time` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:23:23+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0140s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:25:03+08:00 ] 127.0.0.1 /Admin/Gongdan/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0050s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=4 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 122 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: status E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 126 行.
+NOTIC: [8] Undefined index: number E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 127 行.
+NOTIC: [8] Undefined index: no E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 128 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:25:11+08:00 ] 127.0.0.1 /Admin/Gongdan/lists.html?status=&number=1377&no=&dosubmit=%E6%90%9C%E7%B4%A2%E5%BD%93%E5%89%8D%E9%A1%B5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\GongdanController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `d_photo` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_m_library` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_adviser` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 and u.mobile LIKE '%1377%'  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `d_need` [ RunTime:0.0080s ]
+SQL: SELECT n.* FROM d_need as n INNER JOIN d_user as u on n.uid_x=u.uid  WHERE ( n.status > 0 and u.mobile LIKE '%1377%'  ) ORDER BY n.time desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_m_library` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+SQL: SELECT * FROM `d_m_library` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`name`,`mobile` FROM `d_user` WHERE ( uid=5 )  [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`name`,`company` FROM `d_user` WHERE ( uid=0 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\WWW\eps\Application\Admin\Controller\GongdanController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v E:\WWW\eps\Application\Runtime\Cache\Admin\f3608d595422fc0dabb28ab5220a7890.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:26:08+08:00 ] 127.0.0.1 /Admin/Fwuser/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:26:09+08:00 ] 127.0.0.1 /Admin/Fwuser/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 and type=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_user` WHERE ( 1=1 and type=1 ) ORDER BY `reg_time` desc LIMIT 0,60   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title E:\WWW\eps\Application\Runtime\Cache\Admin\d1501b46bebf398526dbadbb372c2fc7.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:26:11+08:00 ] 127.0.0.1 /Admin/Yonghu/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\YonghuController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\YonghuController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `d_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+NOTIC: [8] Undefined index: page E:\WWW\eps\ThinkPHP\Library\Com\Util\Page.class.php 第 127 行.
+SQL: SELECT * FROM `d_user` WHERE ( 1=1 ) ORDER BY `reg_time` desc LIMIT 0,60   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: title E:\WWW\eps\Application\Runtime\Cache\Admin\5fcb2555c8953062d3ecb4397af81b62.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:26:15+08:00 ] 127.0.0.1 /Admin/Fwuser/request/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant mobile - assumed 'mobile' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 163 行.
+NOTIC: [8] Use of undefined constant gender - assumed 'gender' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 167 行.
+NOTIC: [8] Use of undefined constant age - assumed 'age' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 171 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-09-26T09:27:27+08:00 ] 127.0.0.1 /Admin/Fwuser/request/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant mobile - assumed 'mobile' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 163 行.
+NOTIC: [8] Use of undefined constant gender - assumed 'gender' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 167 行.
+NOTIC: [8] Use of undefined constant age - assumed 'age' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 171 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T09:27:46+08:00 ] 127.0.0.1 /Admin/Fwuser/request/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\FwuserController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\WWW\eps\Application\Admin\Controller\FwuserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `d_user` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `d_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_reward` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_notification` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `d_region` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_region` WHERE `pid` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant mobile - assumed 'mobile' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 163 行.
+NOTIC: [8] Use of undefined constant gender - assumed 'gender' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 167 行.
+NOTIC: [8] Use of undefined constant age - assumed 'age' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 171 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' E:\WWW\eps\Application\Runtime\Cache\Admin\7bde684b1f08cbfedf156f24bef88aa5.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:32:16+08:00 ] 127.0.0.1 /Admin/Config/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxconfig` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `d_fxconfig`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: indextp E:\WWW\eps\Application\Admin\Controller\ConfigController.class.php 第 42 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-09-26T09:32:17+08:00 ] 127.0.0.1 /Admin/Rbac/rolemanage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\RbacController::listorders() should be compatible with Appframe\AdminbaseController::listorders($model) E:\WWW\eps\Application\Admin\Controller\RbacController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxrole` [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `d_fxadmin_role_priv` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `d_fxrole` ORDER BY `listorder` asc,`id` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-26T09:32:26+08:00 ] 127.0.0.1 /Admin/Rbac/authorize/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\RbacController::listorders() should be compatible with Appframe\AdminbaseController::listorders($model) E:\WWW\eps\Application\Admin\Controller\RbacController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxrole` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `d_fxadmin_role_priv` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_fxmenu`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adminmanage' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Logs' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'admin' AND `model` = 'Config' AND `action` = 'inii' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Menu' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Config' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adminmanage' AND `action` = 'chanpass' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Management' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Management' AND `action` = 'manager' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Rbac' AND `action` = 'rolemanage' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Logs' AND `action` = 'indexleft' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Logs' AND `action` = 'loginlog' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Agongdan' AND `action` = 'add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'reset' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yijian' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Task' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Rebate' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Department' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'del' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Index' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'reset' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'task' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'dakuan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'reward' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'request' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'check' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'deln' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'bukuan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'end' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Rebate' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yijian' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'cancel' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'add' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'edit' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'add' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'edit' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'n_list' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'edit' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-26T10:10:02+08:00 ] 127.0.0.1 /Admin/Rbac/authorize/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Appframe\AdminbaseController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) E:\WWW\eps\Application\Appframe\AdminbaseController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\RbacController::listorders() should be compatible with Appframe\AdminbaseController::listorders($model) E:\WWW\eps\Application\Admin\Controller\RbacController.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `d_fxuser` [ RunTime:0.0210s ]
+SQL: SELECT `id`,`username`,`nickname`,`last_login_time`,`last_login_ip`,`email`,`status` FROM `d_fxuser` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `d_fxrole` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `d_fxadmin_role_priv` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `d_fxmenu` [ RunTime:0.0160s ]
+NOTIC: [8] Undefined offset: 1 E:\WWW\eps\ThinkPHP\Library\Think\Controller.class.php 第 232 行.
+SQL: SELECT * FROM `d_fxmenu`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adminmanage' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Logs' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'admin' AND `model` = 'Config' AND `action` = 'inii' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Menu' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Config' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adminmanage' AND `action` = 'chanpass' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Management' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Management' AND `action` = 'manager' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Rbac' AND `action` = 'rolemanage' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Logs' AND `action` = 'indexleft' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Logs' AND `action` = 'loginlog' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Agongdan' AND `action` = 'add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'reset' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yijian' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Task' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Rebate' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Department' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'show' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yonghu' AND `action` = 'del' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Index' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'reset' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'task' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'dakuan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'reward' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'request' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'show' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'check' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'deln' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'bukuan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'end' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Fwuser' AND `action` = 'add' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Rebate' AND `action` = 'del' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Yijian' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Gongdan' AND `action` = 'cancel' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'edit' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Adviser' AND `action` = 'del' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'edit' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'del' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Temporary' AND `action` = 'show' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'n_list' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'lists' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'show' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `d_fxadmin_role_priv` WHERE `roleid` = 9 AND `app` = 'Admin' AND `model` = 'Refunds' AND `action` = 'edit' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

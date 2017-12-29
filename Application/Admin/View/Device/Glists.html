@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<ul class="nav nav-tabs">
+	<li><a href="{:U('Device/Clists',array('uid'=>$d['uid']))}">分组管理</a></li> 
+    <li class="active"><a href="{:U('Device/Glists',array('id'=>$d['id'],'uid'=>$d['uid']))}">设备管理</a></li> 
+    <li><a href="{:U('Device/Gadd',array('id'=>$d['id']))}" >添加设备</a></li> 
+</ul>
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="2%">#</th>
+			  <th width="10%" align="left" >分组名称</th>
+			  <th width="10%" align="left" >设备名称</th>
+			  <th width="8%" align="left" >设备编号</th>
+			  <th width="8%" align="left" >产品型号</th>
+			  <th width="10%" align="left" >制造厂商</th>
+			  <th width="8%" align="left" >制造年月</th>
+			  <th width="8%" align="left" >产品编号</th>
+			  <th width="20%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="2%" align="center">{$key+1}</td>
+			  <td width="10%" >{$d.title}</td>
+			  <td width="10%" >{$v.name}</td>
+			  <td width="10%" >{$v.no}</td>
+			  <td width="10%" >{$v.type}</td>
+			  <td width="10%" >{$v.modename}</td>
+			  <td width="10%" >{$v.modeyear}</td>
+			  <td width="10%" >{$v.number}</td>
+			  <td width="20%"  align="center">
+	          <a href="{:U('Device/Gshow',array('gid'=>$v[gid]))}">查看</a> | 
+			  <a href="{:U('Device/Gedit',array('gid'=>$v[gid]))}">修改</a> | 
+	          <span class="delbtn" data="{:U('Device/Gdel',array('gid'=>$v['gid'],'id'=>$d['id']))}" >删除</span> |
+			  <a href="{:U('Device/Gcopy',array('gid'=>$v[gid]))}">复制</a>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

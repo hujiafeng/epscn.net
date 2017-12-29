@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>项目产品采购记录-电气销售家</title>
+<link rel="stylesheet" href="uikit/css/uikit.min.css" />
+<script src="jquery/jquery-1.7.2.min.js"></script>
+<script src="uikit/js/uikit.min.js"></script>
+<script src="uikit/js/uikit-icons.min.js"></script>
+<script>
+	$(function() {
+		$("#save_record").click(
+				function() {
+					var str = "";
+					var num = "";
+					$("input[name='ppIds']:checked").each(function() {
+							var id = $(this).val();
+							str += ',' + id;
+							var purchase_num = $("input[name='purchase_num_"+ id + "']").val();
+							if(purchase_num.length==0 || purchase_num==0){
+							    //alert("请填写采购数量！");
+					         return false;
+							}else
+								num += ',' + purchase_num;
+				     });
+
+					if (str.length == 0 || num.length==0) {
+						alert("请选择产品并填写采购数量！");
+					} else {
+						$.post('project_product.php', {
+							act : 'save_record',
+							ppIds : str,
+							purchaseNums : num
+						}, function(data) {
+							if (data == 1)
+								setTimeout(function() {
+									window.location.reload();
+								}, 500);
+							else
+								alert("记录保存失败！");
+
+						});
+					}
+				});
+
+		$("#add_record").click(function() {
+			var project_id = $("#project_id").val();
+			$.post('project.php', {
+				act : 'getProducts',
+				project_id : project_id
+			}, function(data) {
+				$("#content").html(data);
+			});
+		});
+
+		//init
+		$("input[name='ppIds']").prop('checked', false);
+		$("#checkAll").prop('checked', false);
+		$("#checkAll").live('click', function(){ 
+			var v = $(this).prop('checked');
+			$("input[name='ppIds']").prop('checked', v);
+		});
+
+	});
+
+	function del(record_id) {
+		if (confirm("确定删除这条记录吗？")) {
+			$.post('project_product.php', {
+				act : "del_record",
+				record_id : record_id
+			}, function(data) {
+				if (data == 1)
+					setTimeout(function() {
+						window.location.reload();
+					}, 500);
+				else
+					alert("删除失败！");
+			});
+		}
+	}
+</script>
+</head>
+<body>
+	{#include file="top.html"#}
+	<div class="uk-container">
+		{#include file="header.html"#}
+		<h2>
+			{#$project_name#} <span class="uk-text-large">实际采购记录</span>  &nbsp;&nbsp; <span style="float: right;"><a class="uk-text-small uk-link-muted"
+				id="add_record" href="#modal-record" uk-toggle>+添加采购记录</a></span>
+		</h2>
+
+		<table class="uk-table uk-table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>产品信息</th>
+					<th>采购数量</th>
+					<th>记录人/时间</th>
+					<th>删除人/时间</th>
+					<th>积分</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#foreach from=$data item=temp#}
+				<tr class="uk-text-small">
+					<td>{#$temp.record_id#}</td>
+					<td>{#$temp.products#}</td>
+					<td>{#$temp.purchase_num#}{#$temp.unit#}</td>
+					<td>{#$temp.act_uname#} &nbsp;&nbsp; {#$temp.act_time#}</td>
+					<td>{#if !empty($temp.del_uid)#} {#$temp.del_uname#}
+						&nbsp;&nbsp; {#$temp.del_time#} {#/if#}</td>
+					<td>{#$temp.score#}</td>
+					<td>{#if $temp.flag==0#} <a
+						href="javascript:del('{#$temp.record_id#}')"
+						class="uk-text-small uk-text-primary">删除</a> {#else#} <span
+						class="uk-text-small uk-text-danger">已删除</span> {#/if#}
+					</td>
+				</tr>
+				{#/foreach#}
+			</tbody>
+		</table>
+
+		<div id="modal-record" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<h2 class="uk-modal-title">添加采购记录</h2>
+				<form class="uk-form-horizontal uk-margin-large">
+					<input type="hidden" id="project_id" value='{#$project_id#}'
+						name="project_id">
+					<div class="uk-margin" id="content"></div>
+					<p class="uk-text-right">
+						<button class="uk-button uk-button-default uk-modal-close"
+							type="button">取消</button>
+						<button class="uk-button uk-button-primary" type="button"
+							id="save_record">确定</button>
+					</p>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

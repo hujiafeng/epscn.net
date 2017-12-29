@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="renderer" content="webkit">
+<meta charset="utf-8">
+<title>江苏明及电气—供应商竞标系统</title>
+<script type="text/javaScript" src="/statics/js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/statics/home/css/indexn.css"/>
+<script type="text/javascript">
+    $(document).ready(function(){
+	$("ul li").mouseover(function(){
+            $(this).addClass("lis");
+        })
+        .mouseout(function(){
+            $(this).removeClass("lis");
+        });  
+    });
+	
+	$(function(){ updateEndTime(); });  
+      
+    //倒计时函数  
+    function updateEndTime()  
+    {  
+        var date = new Date();  
+        var time = date.getTime();  //当前时间距1970年1月1日之间的毫秒数  
+       
+        $(".settime").each(function(i){  
+       
+        var endDate =this.getAttribute("endTime"); //结束时间字符串  
+        //转换为时间日期类型  
+        var endDate1 = eval('new Date(' + endDate.replace(/\d+(?=-[^-]+$)/, function (a) { return parseInt(a, 10) - 1; }).match(/\d+/g) + ')');  
+      
+        var endTime = endDate1.getTime(); //结束时间毫秒数  
+       
+        var lag = (endTime - time) / 1000; //当前时间和结束时间之间的秒数  
+        if(lag > 0)  
+        {  
+            var second = Math.floor(lag % 60);      
+            var minite = Math.floor((lag / 60) % 60);  
+            var hour = Math.floor((lag / 3600) % 24);  
+            var day = Math.floor((lag / 3600) / 24);  
+            $(this).html(day+"天"+hour+"小时"+minite+"分"+second+"秒");  
+        }  
+        else $(this).html("已结束");  
+     });  
+       
+     setTimeout("updateEndTime()",1000);  
+    }  
+</script>
+</head>
+<body>
+<div class="tou">
+	<div class="tou_cont">
+		<div class="denglu">
+		<a>{$Think.cookie.uname}</a>
+			<a href="{:U('Index/index')}" title="返回竞标"><img src="/statics/home/images/fanhui.png"></a>
+		</div>
+	</div>
+</div>
+
+<div class="cont1">
+<li class="cont1_li">欢迎更多优秀的供应商加入我们！</li><li class="cont1_r">账号开通方式： ▪ 联系人[ <font color="#0e4481">王经理</font> ]  ▪ 联系电话[ <font color="#0e4481">13585359094</font> ]</li>
+</div>
+
+<div class="cont2">
+	<ul>
+		<li class="li1"><span>ID号</span><span class="s1">需求名称</span><span>竞标模式</span><span>加工数量</span><span class="s2">到货日期</span><span class="s2">发布时间</span><span class="s2">招标截止</span><span>状态</span></li>
+		<foreach name="data" key="key" item="vo">
+		<a href="{:U('Index/show',array('id'=>$vo['id']))}">
+		<li title="{$vo.title}">
+		<span>#{$vo.id}</span>
+		<span class="s1">{$vo.title}</span>
+		<span><img src="/statics/home/images/{$vo.ms}.png"></span>
+		<span>{$vo.shuliang}</span>
+		<span class="s2">{$vo.daohuo_time}</span>
+		<span class="s2">{$vo.add_time}</span>
+		<if condition="$vo.status eq 'yizhongbiao'">
+          <span class="s2"><s>{$vo.jiezhi_time}</s></span>
+       	<elseif condition="$vo.status eq 'weizhongbiao'"/>
+       	<span class="s2"><s>{$vo.jiezhi_time}</s></span>
+       	<elseif condition="$vo.status eq 'yitoubiao2'"/>
+       	<span class="s2"><s>{$vo.jiezhi_time}</s></span>
+       	<else />
+          <span class="s2 settime" endTime="{$vo.jiezhi_time}"></span>
+        </if>
+		
+		<span><img src="/statics/home/images/{$vo.status}.png"></span>
+		</li>
+		</a>
+         </foreach>
+	</ul>
+
+<div class="pagination">{$page}</div>
+<div class="footn">Copyright © 2016 Mecan Co.,Ltd. 保留所有权利。苏ICP备10206808号-2</div>
+</div>
+
+
+
+</body>
+</html>

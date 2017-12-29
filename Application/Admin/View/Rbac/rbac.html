@@ -1,0 +1,14 @@
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> 
+  <if condition="$appinfo.action eq 'purview'">
+  <a href='javascript:;' class="on"><em>管理权限节点</em></a><span>|</span>
+  <else />
+  <a href='{:U("Rbac/purview")}' ><em>管理权限节点</em></a><span>|</span>
+  </if>
+  <if condition="$appinfo.action eq 'addpur'">
+  <a href='javascript:;' class="on"><em>添加节点权限</em></a>
+  <else />
+  <a href='{:U("Rbac/addpur")}' ><em>添加节点权限</em></a>
+  </if>
+  </div>
+</div>

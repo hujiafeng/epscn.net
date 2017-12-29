@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<include file="Common:cssjs" />
+<script type="text/javascript" src="/statics/js/region.js"></script>
+
+<script type="text/javascript">
+	var path='__PUBLIC__';
+	var url='__URL__';
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/handlers.js"></script>
+<script type="text/javascript">
+	var swfu;
+	window.onload = function () {
+		swfu = new SWFUpload({
+			upload_url: "__URL__/addphoto",
+			post_params: {"PHPSESSID": "<?php echo session_id();?>"},
+			file_size_limit : "2 MB",
+			file_types : "*.jpg;*.png;*.gif;*.bmp",
+			file_types_description : "JPG Images",
+			file_upload_limit : "100",
+			file_queue_error_handler : fileQueueError,
+			file_dialog_complete_handler : fileDialogComplete,
+			upload_progress_handler : uploadProgress,
+			upload_error_handler : uploadError,
+			upload_success_handler : uploadSuccess,
+			upload_complete_handler : uploadComplete,
+			button_image_url : "",
+			button_placeholder_id : "spanButtonPlaceholder",
+			button_width: 20,
+			button_height: 65,
+			button_text : '+',
+			button_text_style : '.spanButtonPlaceholder {background:red} ',
+			button_text_top_padding: 0,
+			button_text_left_padding: 0,
+			button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+			button_cursor: SWFUpload.CURSOR.HAND,			
+			flash_url : "__PUBLIC__/swf/swfupload.swf",
+			custom_settings : {
+				upload_target : "divFileProgressContainer"
+			},				
+			debug: false
+		});
+	};
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/lightbox-2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/lightbox.css"/>
+</head>
+<body class="J_scroll_fixed">
+<script type="text/javascript">
+  $(document).ready(function() {
+	$(".city_b").click(function(){
+		var shen = $("#province").find("option:selected").text();
+		var shi = $("#city").find("option:selected").text();
+		if(shen != "省份/直辖市" && shi != "请选择"){
+			var n_city = $("#citys").val() + shen + shi + " ";
+			$("#citys").show().val(n_city);
+		}else{
+			alert("请选择区域！");
+		}
+	});
+	
+	$("form").submit(function(e){
+		var citys = $("#citys").val();
+		var checkVal=''; 
+		$("input[name='info[n_type][]']:checkbox").each(function(){ 
+		  if($(this).attr('checked')){ 
+			checkVal+=$(this).val()+','; 
+		  } 
+		}) 
+		var name = $("#name").val();
+		var number = $("#number").val();
+		var wx_number = $("#wx_number").val();
+		var bank = $("#bank").val();
+		var bank_number = $("#bank_number").val();
+
+		if(!citys){
+			alert("请添加服务区域！");
+			return false;
+		}
+		if(!checkVal){
+			alert("请选择行业工种！");
+			return false;
+		}
+		if(!name){
+			alert("请填写姓名！");
+			return false;
+		}
+		if(!number){
+			alert("请填写手机号！");
+			return false;
+		}
+		if(!wx_number){
+			alert("请填写微信号！");
+			return false;
+		}
+		
+  	});
+
+
+
+  })
+</script>
+<style type="text/css">
+	.city_b{ font-size:24px; cursor:pointer}
+	
+	.biaoqian {display: none;}
+label {display: inline;}
+.biaoqian + label {background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+.biaoqian + label:active, .biaoqian:checked + label:active {box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);}
+.biaoqian:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.swfupload{ float:left;border:1px solid #ccc; padding-top:35px; padding-left:8px;}
+#thumbnails ul li{float:left;list-style-type:none;width:105px;margin-left:5px;}
+#thumbnails .button{display:block;position: relative;right:-84px;top: -118px;width: 30px;z-index: 1103;cursor:pointer;}
+#pic_list li{padding:0 0 0 5px;}
+.table_form tr td{ padding:0px;}
+</style>
+ <div class="wrap jj">
+    <ul class="nav nav-tabs">
+		<li><a href="{:U('Temporary/index')}" >临时工列表</a></li> 
+		<li class="active"><a href="#">修改临时工</a></li> 
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Temporary/edit')}" method="post" id="myform">
+	<input type="hidden" name="s" id="" value=""/>
+	<input type="hidden" name="id" value="{$info.id}">
+	<div class="table_list">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">服务区域</td>
+			<td>
+			<input type="text" name="info[city]" class="input-text" id="citys" style="width:300px; border-top:0px; border-left:0px; border-right:0px;" value="{$info.city}"><br />
+			<select name="province" id="province" onChange="loadRegion('province',2,'city','{:U('Fwuser/getRegion')}');" style="width:150px;">
+		        <option value="0" selected>省份/直辖市</option>
+		        <volist name="province" id="vo"> 
+		        <option value="{$vo.id}" >{$vo.name}</option>
+		        </volist>
+		     </select>          
+		     <select name="city" id="city" style="width:150px;">
+		       <option value="0">市/县</option>
+		     </select>&nbsp;&nbsp;<b class="city_b" title="添加">+</b>
+		     </td>
+        </tr>
+		<tr>
+            <td width="80">行业工种</td>
+			<td>
+			<foreach name="type" key="k" item="v">
+				<if condition="$v.check eq '1'">
+				<input name="info[n_type][]" type="checkbox" value="{$v.name}" class="biaoqian" id="bq{$k}" checked /><label for="bq{$k}">{$v.name}</label>
+				<else />
+				<input name="info[n_type][]" type="checkbox" value="{$v.name}" class="biaoqian" id="bq{$k}" /><label for="bq{$k}">{$v.name}</label>
+				</if>
+			</foreach>
+			</td>
+        </tr>
+		<tr>
+            <td width="80">姓名</td>
+			<td><input type="text" name="info[name]" class="input-text" id="name" value="{$info.name}"></td>
+        </tr>
+		<tr>
+            <td width="80">手机号</td>
+			<td><input type="text" name="info[number]" class="input-text" id="number" value="{$info.number}"></td>
+        </tr>
+		<tr>
+            <td width="80">微信号</td>
+			<td><input type="text" name="info[wx_number]" class="input-text" id="wx_number" value="{$info.wx_number}"></td>
+        </tr>
+		<tr>
+            <td width="80">开户银行</td>
+			<td><input type="text" name="info[bank]" class="input-text" id="bank" value="{$info.bank}"></td>
+        </tr>
+		<tr>
+            <td width="80">银行卡号</td>
+			<td><input type="text" name="info[bank_number]" class="input-text" id="bank_number" value="{$info.bank_number}"></td>
+        </tr>
+		<tr>
+            <td width="80">能力等级</td>
+			<td>
+			<select name="info[grade]" style="width:150px;">
+			   <option value="">—选择等级—</option>
+			   <option value="1级" <if condition="$info.grade eq '1级'">selected</if>>1级</option>
+			   <option value="2级" <if condition="$info.grade eq '2级'">selected</if>>2级</option>
+			   <option value="3级" <if condition="$info.grade eq '3级'">selected</if>>3级</option>
+			   <option value="4级" <if condition="$info.grade eq '4级'">selected</if>>4级</option>
+			   <option value="5级" <if condition="$info.grade eq '5级'">selected</if>>5级</option>
+			</select>
+		 </td>
+        </tr>
+		<tr>
+          <td>身份证<br>(正+反面)</td>
+          <td>
+			<foreach name="p" key="k" item="v">
+				<a href="/uploads/{$v.large}" data-lightbox="example-set"><img src="/uploads/{$v.large}" style="width:100px;height:100px;"></a>&nbsp;
+			</foreach>
+			</td>
+          </tr>
+		<tr>
+          <td>重新上传<br>(正+反面)</td>
+          <td>
+			<div style="width:800px;font-size: 12px;height:120px;" id="pingshentupianheight">
+				<span id="spanButtonPlaceholder"></span>
+				<div id="thumbnails">
+					<ul id="pic_list"></ul>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			<br>
+			<div style="color:red">[选择重新上传图片，不保留原图]</div><p>
+			</td>
+          </tr>
+		<tr>
+  			<td width="80">备注</td>
+  			<td><textarea name="info[remark]" cols="20" rows="3" style="width:400px;">{$info.remark}</textarea></td>
+          </tr>
+        </tbody>
+      </table>
+	</div>
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn">
+	 </div>
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

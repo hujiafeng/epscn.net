@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<include file="Rbac:nav" />
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<script type="text/javascript">
+<!--
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#rolename").formValidator({onshow:"请输入角色名称",onfocus:"角色名称不能为空。"}).inputValidator({min:1,max:999,onerror:"角色名称不能为空。"});
+})
+//-->
+</script>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U("Rbac/roleadd")}" method="post" id="myform" class="form-horizontal J_ajaxForm">
+     <table cellpadding="2" cellspacing="2" width="100%">
+        <tr>
+          <td>角色名称</td>
+          <td><input type="text" name="name" value="" class="input-text" id="rolename">
+            </input></td>
+        </tr>
+        <tr>
+          <td>角色描述</td>
+          <td><textarea name="remark" rows="2" cols="20" id="remark" class="inputtext" style="height:100px;width:500px;"></textarea></td>
+        </tr>
+        <tr>
+          <td>是否启用</td>
+          <td><input type="radio" name="status" value="1" checked="">启用&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="status" value="0">禁止</td>
+        </tr>
+      </table>
+   
+      <div class="form-actions">
+      <input type="hidden" name="create_time" />
+      <input name="dosubmit" type="submit" value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn">
+		      </div>
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

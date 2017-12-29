@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+  <if condition="$appinfo.action eq 'rolemanage'">
+  <li  class="active"><a href='javascript:;'>角色管理</a></li>
+  <else />
+  <li><a href='{:U("Rbac/rolemanage")}' >角色管理</a></li>
+  </if>
+  <if condition="$appinfo.action eq 'roleadd'">
+  <li class="active"><a href='javascript:;' >添加角色</a></li></ul>
+  <else />
+<li><a href='{:U("Rbac/roleadd")}' >添加角色</a></li></ul>
+  </if>
+</ul>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>项目产品-电气销售家</title>
+<link rel="stylesheet" href="uikit/css/uikit.min.css" />
+<script src="jquery/jquery-1.7.2.min.js"></script>
+<script src="uikit/js/uikit.min.js"></script>
+<script src="uikit/js/uikit-icons.min.js"></script>
+</head>
+<body>
+	{#include file="top.html"#}
+	<div class="uk-container">
+		{#include file="header.html"#}
+		<h5>{#$pj_name#} 项目产品</h5>
+		<table class="uk-table uk-table-striped">
+			<thead>
+				<tr>
+					<th>产品ID</th>
+					<th>品牌</th>
+					<th>类别</th>
+					<th>型号</th>
+					<th>规格</th>
+					<th>计量单位</th>
+					<th>采购价</th>
+					<th>结算价</th>
+					<th>采购数量</th>
+					<th>结算数量</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#foreach from=$data item=temp#}
+				<tr class="uk-text-small">
+					<td>{#$temp.product_id#}</td>
+					<td>{#$temp.brand_name#}</td>
+					<td>{#$temp.category_name#}</td>
+					<td>{#$temp.model_name#}</td>
+					<td>{#$temp.specification#}</td>
+					<td>{#$temp.measure_name#}</td>
+					<td>{#$temp.purchase_price#}</td>
+					<td>{#$temp.last_price#}</td>
+					<td>{#$temp.purchase_num#}</td>
+					<td>{#$temp.last_num#}</td>
+					<td><a
+						href="project_product.php?act=purchase_record&pp_id={#$temp.pp_id#}"
+						class="uk-text-small uk-text-primary">采购记录</a></td>
+				</tr>
+				{#/foreach#}
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

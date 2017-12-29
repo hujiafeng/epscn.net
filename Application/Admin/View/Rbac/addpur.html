@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> 
+  <if condition="$appinfo.action eq 'purview'">
+  <a href='javascript:;' class="on"><em>管理项目</em></a><span>|</span>
+  <else />
+  <a href='{:U("Rbac/purview")}' ><em>管理项目</em></a><span>|</span>
+  </if>
+  <if condition="$appinfo.action eq 'addpur'">
+  <a href='javascript:;' class="on"><em>添加项目</em></a>
+  <else />
+  <a href='{:U("Rbac/addpur")}' ><em>添加项目</em></a>
+  </if>
+  </div>
+</div>
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<script type="text/javascript"> 
+	$(function(){
+		$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'200',height:'50'}, function(){this.close();$(obj).focus();})}});
+		$("#title").formValidator({onshow:"请输入名称",onfocus:"请输入名称",oncorrect:"输入正确"}).inputValidator({min:1,onerror:"请输入名称"});
+		$("#name").formValidator({onshow:"请输入项目",onfocus:"请输入项目",oncorrect:"输入正确"}).inputValidator({min:1,onerror:"请输入项目"});
+	})
+var subNodeHtml = '<br/><input name="subaction[]" class="input-text" type="text" value="">&nbsp; ';
+function addSubNode() {
+	$('#addSubNode').before(subNodeHtml);
+}
+</script>
+<form name="myform" id="myform" action="{:U("Rbac/addpur")}" method="post">
+<div class="pad-10">
+   <div class="col-tab">
+    <table width="100%" class="table_form ">
+      <tr>
+        <th width="100">选择上级权限：</th>
+        <td><select name="parentid" >
+              <option value="0">作为一级项目</option>
+              <volist name="data" id="vo"> <option value='{$vo['id']}' <eq name="Think.get.parentid" value="$vo['id']">selected</eq>> {$vo['title']}
+                </option>
+                <volist name="vo['child']" id="lo"> <option value='{$lo['id']}' <eq name="Think.get.parentid" value="$lo['id']">selected</eq>>&nbsp;├ {$lo['title']}
+                  </option>
+                  <volist name="lo['child']" id="loo"> <option value='{$loo['id']}'  <eq name="Think.get.parentid" value="$loo['id']">selected</eq>disabled="disabled">&nbsp;│&nbsp;├ {$loo['title']}
+                    </option>
+                  </volist>
+                </volist>
+              </volist>
+            </select></td>
+      </tr>
+    
+      <tr>
+        <th width="100">名称：</th>
+        <td><input type="text" name="title" id="title" class="input-text" value=""></td>
+      </tr>
+      <tr>
+        <th>项目：</th>
+        <td><input type="text" name="name" id="name" class="input-text" value=""></td>
+      </tr>
+      <tr>
+        <th>是否开启：</th>
+        <td><input type='radio' name='status' value='1' checked>是&nbsp;&nbsp;&nbsp;&nbsp;<input type='radio' name='status' value='0'  >否</td>
+      </tr>
+      <tr>
+        <th>描述：</th>
+        <td><textarea name="remark" maxlength="255" style="width:300px;height:60px;"></textarea></td>
+      </tr>
+    </table>
+  <div class="bk15"></div>
+  <input name="pid" value="0" type="hidden" />
+  <input name="level" value="1" type="hidden" />
+  <input name="dosubmit" type="submit" value="提交" class="button">
+   </div>
+</div>
+</form>
+</body>
+</html>

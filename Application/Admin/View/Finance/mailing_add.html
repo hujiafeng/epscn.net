@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<include file="Common:cssjs" />
+</head>
+<body class="J_scroll_fixed">
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#number").formValidator({empty:false,onshow:"请输入单号",onfocus:"请输入单号"}).inputValidator({min:2,max:60,onerror:"请输入单号"});
+  })
+</script>
+ <div class="wrap jj">
+    <ul class="nav nav-tabs">
+		<li><a href='{:U("Finance/lists")}'>全部</a></li>
+		<li><a href='{:U("Finance/billing")}'>待开票</a></li>
+		<li><a href='{:U("Finance/mailing")}' >待邮寄</a></li>
+		<li><a href='{:U("Finance/completed")}' >已完成</a></li>
+		<li class="active"><a href='#' >填写邮寄信息</a></li>
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Finance/mailing_add')}" method="post" id="myform">
+	<input type="hidden" name="id" value="{$info.id}">
+  <input type="hidden" name="no" value="{$info.no}">
+  <input type="hidden" name="uid_x" value="{$info.uid_x}">
+	<div class="table_list">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">快递公司</td>
+			<td>
+			<select name="info[name]" style="width:150px;">
+			<option value="顺丰">顺丰</option>
+			<option value="EMS快递">EMS快递</option>
+			  
+			  <option value="圆通">圆通</option>
+			  <option value="中通">中通</option>
+			  <option value="韵达">韵达</option>
+			  <option value="申通">申通</option>
+			  <option value="天天快递">天天快递</option>
+			  <option value="中国邮政">中国邮政</option>
+			  <option value="百世汇通">百世汇通</option>
+			 </select>
+		  </td>
+        </tr>
+		<tr>
+            <td width="80">单号</td>
+			<td><input type="text" name="info[number]" class="input-text" id="number"></td>
+        </tr>
+        </tbody>
+      </table>
+	</div>
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn btn-primary btn_submit J_ajax_submit_btn">
+	 </div>
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

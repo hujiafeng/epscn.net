@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.list-div {
+    background: none repeat scroll 0 0 #eef8f9;
+    border: 1px solid #eee;
+    width: 100%;
+}
+.list-div th {
+    background: none repeat scroll 0 0 #eef3f7;
+    line-height: 24px;
+    white-space: nowrap;
+	font-style: normal;
+    font-weight: bold;
+}
+.list-div td {
+    background: none repeat scroll 0 0 #fff;
+    line-height: 22px;
+	
+}
+.list-div table {
+	border-collapse:separate;
+	border-spacing: 1px;
+	width:100%;
+}
+
+input {
+    background: url("../images/admin_img/input.png") repeat-x scroll 0 0 #fff;
+    border: 1px solid #d0d0d0;
+    font-family: Verdana,Geneva,sans-serif,"宋体";
+    font-size: 12px;
+    height: 18px;
+    margin: 0 5px 0 0;
+    padding: 2px 0 2px 5px;
+	vertical-align: middle;
+}
+
+a.special:link, a.special:visited{
+  margin:0 5px;
+  padding:1px 5px;
+  *padding:2px 5px 0;
+  border:1px solid #91C4D0;
+  border-right:2px solid #278296;;
+  border-bottom:2px solid #278296;
+  background:#DDEEF2;
+  text-decoration:none;
+  font-weight:400;
+}
+
+a.special:hover{
+  color:#666;
+}
+
+a.special:active{
+  margin:1px 5px 0 6px;
+  border:1px solid #5FA6B6;
+  background:#F2F9FA;
+  color:#666;
+  outline:none;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<link rel="stylesheet" type="text/css" href="{$Config.siteurl}statics/js/calendar/jscal2.css"/>
+<link rel="stylesheet" type="text/css" href="{$Config.siteurl}statics/js/calendar/border-radius.css"/>
+<link rel="stylesheet" type="text/css" href="{$Config.siteurl}statics/js/calendar/win2k.css"/>
+<script type="text/javascript" src="{$Config.siteurl}statics/js/calendar/calendar.js"></script> 
+<script type="text/javascript" src="{$Config.siteurl}statics/js/calendar/lang/en.js"></script>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap J_check_wrap">
+ <form name="searchform" action="" method="get" class="well form-search">
+    <input type="hidden" value="Admin" name="g">
+    <input type="hidden" value="Logs" name="m">
+    <input type="hidden" value="index" name="a">
+     <div class="search_type cc mb10">
+	 <div class="mb10"> 
+            <span class="mr20">状态:
+              <select name="status" style="width:150px;">
+                <option value='' <if condition="$_GET['status'] eq ''">selected</if>>不限</option>
+                <option value="1" <if condition="$_GET['status'] eq '1'">selected</if>>登陆成功</option>
+                <option value="0" <if condition="$_GET['status'] eq '0'">selected</if>>登陆失败</option>
+              </select>
+              用户名:
+              <input type="text" value="{$Think.get.username}" class="input" name="username"  style="width:120px;">
+              IP:
+              <input type="text" value="{$Think.get.loginip}" class="input" name="loginip" style="width:120px;">
+              时 间:
+              <input type="text" name="start_time" id="start_time" value="{$Think.get.start_time}"  style="width:85px;" class="input" " autocomplete="off">
+              &nbsp;<script type="text/javascript">
+			Calendar.setup({
+			weekNumbers: true,
+		    inputField : "start_time",
+		    trigger    : "start_time",
+		    dateFormat: "%Y-%m-%d %H:%M:%S",
+		    showTime: 12,
+		    minuteStep: 1,
+		    onSelect   : function() {this.hide();}
+			});
+        </script>-
+              <input type="text" name="end_time" id="end_time" value="{$Think.get.end_time}"  style="width:85px;" class="input" " autocomplete="off">
+              &nbsp;<script type="text/javascript">
+			Calendar.setup({
+			weekNumbers: true,
+		    inputField : "end_time",
+		    trigger    : "end_time",
+		    dateFormat: "%Y-%m-%d %H:%M:%S",
+		    showTime: 12,
+		    minuteStep: 1,
+		    onSelect   : function() {this.hide();}
+			});
+        </script>
+              <input type="submit" value="确定搜索" class="btn" name="dosubmit">
+              &nbsp;&nbsp;
+              <input type="button" class="btn" name="del_log_4" value="删除一月前数据" onclick="location='{:U("Logs/deleteloginlog")}'"  />
+			  </span>
+            </div>
+	</div>
+  </form>
+    <div class="table_list">
+      <table width="100%" class="table table-hover">
+        <thead>
+	          <tr>
+	          <th width="80">ID</th>
+            <th >用户名</th>
+            <th >密码</th>
+            <th >状态</th>
+            <th >其他说明</th>
+            <th width="120">时间</th>
+            <th width="120">IP</th>
+	          </tr>
+        </thead>
+        <volist name="logs" id="vo">
+          <tr>
+            <td align="center">{$vo.loginid}</td>
+            <td align="center">{$vo.username}</td>
+            <td align="center">{$vo.password}</td>
+            <td align="center"><if condition="$vo['status'] eq 1">登陆成功<else /><font color="#FF0000">登陆失败</font></if></td>
+            <td align="center">{$vo.info}</td>
+            <td align="center">{$vo.logintime}</td>
+            <td align="center">{$vo.loginip}</td>
+          </tr>
+         </volist>
+          </table>
+          <div class="pagination">{$Page}</div>
+    </div>
+    </div>
+</body>
+</html>

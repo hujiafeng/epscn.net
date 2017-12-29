@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<script type="text/javascript">
+  $(document).ready(function() {
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#title").formValidator({empty:false,onshow:"请输入分组名称",onfocus:"请输入分组名称"}).inputValidator({min:1,max:60,onerror:"请输入分组名称"});
+  })
+</script>
+<body class="J_scroll_fixed">
+
+ <div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+ 
+    <ul class="nav nav-tabs">
+     <li><a href="{:U('Device/Clists',array('uid'=>$info['uid']))}">分组管理</a></li> 
+     <li class="active"><a href="{:U('Device/Cedit',array('uid'=>$info['uid']))}" >修改分组</a></li> 
+     </ul>
+<div class="pad_10">
+  <div class="common-form">
+    <form name="myform" action="{:U('Device/Cedit')}" method="post" id="myform">
+	<input type="hidden" name="id" value="{$info.id}">
+	<input type="hidden" name="uid" value="{$info.uid}">
+<table width="100%" class="table_form contentWrap">
+
+        <tbody>
+		<tr>
+            <td width="80">用户</td>
+            <td>{$info.mobile}</td>
+            </tr>
+          <tr>
+            <td width="80">分组名称</td>
+            <td><input type="text" name="info[title]" class="input-text" id="title" value="{$info.title}"></td>
+            </tr>
+        </tbody>
+      </table>
+
+     <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit">
+
+	 </div>
+    
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>

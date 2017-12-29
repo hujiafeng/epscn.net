@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript">
+	var path='__PUBLIC__';
+	var url='__URL__';
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/handlers.js"></script>
+
+<!-- <link href="__PUBLIC__/css/default.css" rel="stylesheet" type="text/css" /> -->
+<script type="text/javascript">
+		var swfu;
+		window.onload = function () {
+			swfu = new SWFUpload({
+				upload_url: "__URL__/uploadImg",
+				post_params: {"PHPSESSID": "<?php echo session_id();?>"},
+				file_size_limit : "2 MB",
+				file_types : "*.jpg;*.png;*.gif;*.bmp",
+				file_types_description : "JPG Images",
+				file_upload_limit : "100",
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete,
+				button_image_url : "",
+				button_placeholder_id : "spanButtonPlaceholder",
+				button_width: 20,
+				button_height: 65,
+				button_text : '+',
+				button_text_style : '.spanButtonPlaceholder { font-family: Helvetica, Arial, sans-serif; font-size: 14pt;} ',
+				button_text_top_padding: 0,
+				button_text_left_padding: 0,
+				button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+				button_cursor: SWFUpload.CURSOR.HAND,			
+				flash_url : "__PUBLIC__/swf/swfupload.swf",
+				custom_settings : {
+					upload_target : "divFileProgressContainer"
+				},				
+				debug: false
+			});
+		};
+	</script>
+
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.n_img{width:100px; height:100px; float:left; display:inline; margin-top:5px; margin-left:5px;}
+	.need_td{ font-weight:bold;}
+	.swfupload{ float:left;border:1px solid #ccc; padding-top:35px; padding-left:8px;}
+	#thumbnails ul li{float:left;list-style-type:none;width:105px;margin-left:5px;}
+#thumbnails .button{display:block;position: relative;right:-84px;top: -118px;width: 30px;z-index: 1103;cursor:pointer;}
+#pic_list li{padding:0 0 0 5px;}
+</style>
+
+</head>
+<body class="J_scroll_fixed">
+ <div class="wrap jj">
+
+<ul class="nav nav-tabs">
+     <li><a href="{:U('Gongdan/lists')}">订单列表</a></li> 
+     <li class="active"><a href='#' >完工报告</a></li> 
+</ul>
+
+<div class="pad_10">
+  <div class="common-form">
+  <form name="myform" action="{:U('Gongdan/endbg')}" method="post" id="myform">
+  <input type="hidden" name="s" id="" value=""/>
+  <input type="hidden" name="id" value="{$info.id}">
+  <input type="hidden" name="no" value="{$info.no}">
+  <input type="hidden" name="uid_x" value="{$info.uid_x}">
+   <table class="table_form contentWrap">
+		   <tr>
+            <td width="80" class="need_td">订单号</td>
+            <td>{$info.no}</td>
+           </tr>
+		   <tr>
+            <td width="80" class="need_td">需求方</td>
+            <td>{$info.u_x_mobile} - {$info.u_x_khdw}</td>
+           </tr>
+		   <tr>
+            <td width="80" class="need_td">服务方</td>
+            <td>{$info.u_f_mobile}<br />{$info.u_f_company}</td>
+           </tr>
+           <tr>
+            <td width="80" class="need_td">技术评审</td>
+            <td>{$info.miaoshu2}</td>
+           </tr>
+		   <tr>
+			<td width="80" class="need_td">常规工时</td>
+			<td><input type="text" name="info[routine_time]" class="input-text" id="routine_time" style="width:50px;" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9.]/g,'');}).call(this)" onblur="this.v();"> 天.人（必填）</td>
+			</tr>
+			 <tr>
+			<td width="80" class="need_td">加班工时</td>
+			<td><input type="text" name="info[overtime]" class="input-text" value="0" id="overtime" style="width:50px;" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9.]/g,'');}).call(this)" onblur="this.v();"> 天.人</td>
+			</tr>
+			<tr>
+			<td width="80" class="need_td">总工时</td>
+			<td><b id="total_time" style="color:red">0</b> 天.人</td>
+			</tr>
+			<tr>
+			<td width="80" class="need_td">零配件费用</td>
+			<td><input type="text" name="info[fitting_reward]" class="input-text" value="0" style="width:100px;" id="fitting_reward"> 元</td>
+			</tr>
+     		<tr>
+  			<td width="80" class="need_td">内容</td>
+  			<td><textarea name="info[content]" cols="20" rows="3" style="width:400px;" id="content"></textarea>（必填）</td>
+          </tr>
+		  <tr>
+  			<td width="80" class="need_td">图片</td>
+  			<td>
+			<div style="width: 800px;height:130px;font-size: 12px;">
+				<span id="spanButtonPlaceholder"></span>
+				<div id="thumbnails">
+					<ul id="pic_list" style="margin: 5px;"></ul>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+            <br>
+			<div style="color:red">[请上传横向图片]</div><p>
+			</td>
+          </tr>
+      </table>
+	  <div class="form-actions">
+      <input name="dosubmit" type="submit"  value="提交" class="btn  btn-primary btn_submit" id="dosubmit">
+	 </div>
+	 </form>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#routine_time").blur(function(){
+	  var total_time = $("#routine_time").val()*1 + $("#overtime").val()*1;
+	  $("#total_time").text(total_time);
+	});
+	
+	$("#overtime").blur(function(){
+	  var total_time = $("#routine_time").val()*1 + $("#overtime").val()*1;
+	  $("#total_time").text(total_time);
+	});
+	
+	$("form").submit(function(e){
+		var routine_time = $("#routine_time").val();
+		var overtime = $("#overtime").val();
+		var fitting_reward = $("#fitting_reward").val();
+		var content = $("#content").val();
+
+			if(!routine_time){
+				alert("常规工时不能为空！");
+				return false;
+			}
+			if(overtime == ""){
+				alert("加班工时不能为空！");
+				return false;
+			}
+			if(!fitting_reward){
+				alert("零配件不能为空！");
+				return false;
+			}
+			if(!content){
+				alert("内容不能为空！");
+				return false;
+			}
+  });
+})
+</script>
+
+</body>
+</html>

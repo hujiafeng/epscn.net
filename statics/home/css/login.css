@@ -1,0 +1,20 @@
+﻿@charset "utf-8";
+@import url(header.css);
+.j_mfdl{ float:left; width:1098px; padding-bottom:50px; margin-top:15px; margin-bottom:50px; border:1px solid #c9c9c9; background:url(../images/login_bg_guo4new2.png); height:400px;}
+.j_hh{ width:1075px; margin:0 auto; height:40px; }
+.j_hh h1{ float:left; width:125px; line-height:40px; font-size:20px; text-indent:12px;}
+.j_hh p{ float:left; width:940px; line-height:40px; font-size:12px; text-align:right; color:#333;}
+.j_hh a{ color:#2661ad;}
+.g_loginmainR{ float:left; width:466px;}
+.intext{ border:1px solid #d0d1d1; font-family:arial,"宋体"; font-size:14px; height:24px; line-height:24px; padding:4px 0 4px 3px; width:236px; color:#999;}
+.w { margin:0 auto; width:236px; margin-top:15px;}
+.blk15{ height:60px; width:100%;}
+.blk16{ height:18px; width:100%;}
+.blk17{ height:10px; width:100%;}
+.zddl{ color:#3b3b3b; font-family: arial,"宋体"; font-size:12px; margin:0 auto; width:236px;}
+.zddl a{ color:#2661ad;}
+.logincheckbox{ vertical-align:middle;}
+.loginbutton{ background:url(../images/logo.jpg) no-repeat; border:none; cursor:pointer; height:38px; width:238px;}
+.loginbutton:hover{ background:url(../images/logo2.jpg) no-repeat;}
+.loginmainL{  display:inline; float:left; height:309px; margin:70px 0 0 0px; width:520px;}
+

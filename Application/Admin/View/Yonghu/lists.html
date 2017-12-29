@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="wrap jj">
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+	
+	<form name="searchform" action="{:U('Yonghu/lists')}" method="get"  class="well form-search" id="searchform">
+<div class="search_type cc mb10">
+	 <div class="mb10"> 
+              <input type="text" value="{$Think.get.title}" class="input-text" name="title" placeholder="请输入手机/姓名" />
+			  &nbsp;
+              <input type="submit" value="确定搜索"  class="btn btn-primary btn_submit" name="dosubmit" id="goodssearch">
+            </div>
+	</div>
+  </form>
+  
+
+	<div class="table-list">
+	    <table width="100%" class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th width="2%">ID</th>
+	          <th width="10%" align="left" >用户</th>
+	          <th width="10%" align="left" >注册时间</th>
+			  <th width="10%" align="left" >最后登录时间</th>
+			  <th width="8%" align="left" >用户权限</th>
+			  <th width="12%" align="left" >客户单位</th>
+			  <th width="10%" align="left" >(需)业务员</th>
+			  <th width="10%" align="left" >(服)业务员</th>
+	          <th width="38%" >操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <foreach name="list" key="key" item="v">
+	        <tr>
+	          <td width="2%" align="center">{$v.uid}</td>
+	          <td width="10%" >{$v.mobile}</td>
+	          <td width="10%" >{$v.reg_time}</td>
+			  <td width="10%" >{$v.last_time}</td>
+			  <td width="8%" >{$v.type_name}</td>
+			  <td width="12%" >{$v.khdw}</td>
+			  <td width="10%" >{$v.clerk_x_name}</td>
+			  <td width="10%" >{$v.clerk_f_name}</td>
+	          <td width="38%"  align="center">
+	          <a href="{:U('Yonghu/show',array('id'=>$v['uid']))}">查看</a>
+			   | <span class="delbtn" data="{:U('Yonghu/reset',array('id'=>$v['uid']))}" cont="重置后密码88888888？" >密码重置</span>
+			  <if condition="$v.flag eq '1'">
+	          | <span>已屏蔽</span>
+			  <else />
+			  | <span class="delbtn" data="{:U('Yonghu/del',array('id'=>$v['uid']))}" cont="确定屏蔽该用户？" >屏蔽</span>
+			  </if>
+			  | <a href="{:U('Yonghu/clerk',array('id'=>$v['uid']))}">解绑业务员</a>
+			  <if condition="$v.type eq '0'">
+			  | <a href="{:U('Fwuser/request',array('id'=>$v['uid']))}">认证服务商</a>
+			  </if>
+			   | <a href="{:U('Device/Clists',array('uid'=>$v['uid']))}">设备管理</a>
+	          </td>
+	        </tr>
+	       </foreach>
+	      </tbody>
+	    </table>
+	    <div class="pagination">{$Page}</div>
+	</div>
+</div>
+</body>
+</html>

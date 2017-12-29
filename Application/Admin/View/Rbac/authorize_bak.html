@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+</head>
+<body>
+<div class="subnav">
+  <div class="content-menu ib-a blue line-x"> <a href='javascript:;' class="on"><em>角色授权</em></a><span>|</span> <a href='{:U("Rbac/rolemanage")}' ><em>角色管理</em></a> </div>
+</div>
+<style type="text/css">
+	html{_overflow-y:scroll}
+	.table-list tr:hover,.table-list table tbody tr:hover{ background:#FFF}
+.rbac {
+    width: 98%;
+}
+.rbac ul li {
+    border: 1px solid #CCCCCC;
+    float: left;
+    line-height: 20px;
+    margin: 5px;
+    padding: 5px;
+}
+.rbac ul li:hover {
+    background: none repeat scroll 0 0 #FFFEEC;
+}
+</style>
+<link href="{$Config.siteurl}statics/css/jquery.treeTable.css" rel="stylesheet" type="text/css" />
+<div class="pad_10" id="load_priv">
+  <div class="table-list">
+     <form name="myform" action="?m=admin&c=role&a=listorder" method="post" id="myform">
+      <table width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th width="80">选择</th>
+            <th width="100">id</th>
+            <th align="left">菜单英文名称</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="Menu" id="vo">
+          <tr>
+            <td align='center'><input type="checkbox" name="aid[]" value="{$vo['id']}" id="att_{$vo['id']}" /></td>
+            <td align='center'>{$vo['id']}</td>
+            <td >{$vo['name']}</td>
+          </tr>
+          <volist name="vo['lower']" id="lo">
+          <tr>
+            <td align='center'><input type="checkbox" name="aid[]" value="{$lo['id']}" id="att_{$lo['id']}" /></td>
+            <td align='center'>{$lo['id']}</td>
+            <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ {$lo['name']}</td>
+          </tr>
+          <volist name="lo['lower']" id="loo">
+          <tr>
+            <td align='center'><input type="checkbox" name="aid[]" value="{$loo['id']}" id="att_{$loo['id']}" /></td>
+            <td align='center'>{$loo['id']}</td>
+            <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ {$loo['name']}</td>
+          </tr>
+          
+          <foreach name="loo['lower']" item="looo">
+          <tr>
+            <td align='center'><input type="checkbox" name="aid[]" value="{$looo['id']}" id="att_{$looo['id']}" /></td>
+            <td align='center'>{$looo['id']}</td>
+            <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ {$looo['name']}</td>
+          </tr>
+          </foreach>
+          
+          </volist>
+          </volist>
+          </volist>
+        </tbody>
+    </table>
+    <input type="hidden" name="roid" value="{$roid}" />
+    <div class="btn"><a href="#" onClick="javascript:$('input[type=checkbox]').attr('checked', true)">全选</a>/<a href="#" onClick="javascript:$('input[type=checkbox]').attr('checked', false)">取消</a> <input type="submit" class="button" name="dosubmit" value="确认授权" onClick="document.myform.action='?m=attachment&c=manage&a=public_delete_all';return confirm('确认给改角色授权吗？')"/></div>
+ </form>
+  </div>
+</div>
+</body>
+</html>

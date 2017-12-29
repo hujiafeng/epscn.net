@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<include file="Common:cssjs" />
+<script type="text/javascript">
+var Delete = function(t){
+	if(confirm('是否确定删除?')) location.href=t;
+}
+</script>
+</head>
+<body class="J_scroll_fixed">
+<div class="wrap jj">
+<include file="Management:nav" />
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="table_list">
+      <table width="100%" class="table table-hover">
+       <thead>
+        <tr>
+            <th width="10%">序号</th>
+            <th width="10%" align="left" >用户名</th>
+            <th width="10%" align="left" >所属角色</th>
+             <th width="15%" align="left" >所属单位</th>
+            <th width="15%"  align="left" >最后登录时间</th>
+            <th width="15%"  align="left" >联系电话</th>
+            <th width="15%">备注</th>
+            <th width="15%" >管理操作</th>
+          </tr>
+        </thead>
+  <foreach name="Userlist" item="vo">
+          <tr>
+            <td  align="center">{$vo.id}</td>
+            <td  >{$vo.username}</td>
+            <td  >{$vo.role_name}</td>
+             <td>{$vo.departmentname}</td>
+            <td   >
+            <if condition="$vo['last_login_time'] eq 0">
+            该用户还没登陆过
+            <else />
+            {$vo.last_login_time|date="y-m-d H:i:s",###}
+            </if>
+            </td>
+            <td >{$vo.number}</td>
+            <td  align="center">{$vo.remark}</td>
+            <td  align="center">
+            <if condition="$User['username'] eq $vo['username']">
+            <font color="#cccccc">修改</font> | 
+            <font color="#cccccc">删除</font>
+            <else />
+            <a href="{:U("Management/edit",array("id"=>$vo[id]))}">修改</a> | 
+            <a href="{:U('Management/delete',array('id'=>$vo['id']))}" onclick="Delete(this);return false;">删除</a>
+            </if>
+            </td>
+          </tr>
+         </foreach>
+          </table>
+          <div class="pagination">{$Page}</div>
+     
+    </div>
+</div>
+</body>
+</html>
