@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="renderer" content="webkit">
+<meta charset="utf-8">
+<title>EPS接口文档</title>
+</head>
+<body>
+<h1>EPS接口说明</h1>
+<hr>
+<h4>【用户模块】</h4>
+<pre> * user_captcha 手机验证码接口
+ * 参数
+ * mobile：手机号
+ * unlearn:忘记密码增加unlearn值为1
+ * 返回值
+ * captcha：验证码
+
+ * user_register 用户注册接口
+ * 参数
+ * captcha:手机验证码
+ * mobile:手机号
+ * password:密码
+ * 返回值
+ * uid：用户id
+
+ * user_unlearn_pwd 忘记密码提交接口
+ * 参数
+ * mobile:手机号
+ * new_pw:新密码
+ * captcha:手机验证码
+ * user_pwd 修改密码接口
+ * 参数
+ * uid：用户id
+ * old_pw:老密码
+ * new_pw:新密码
+
+ * user_info 获取个人资料接口
+  * 参数
+ * uid：用户id
+ * 返回值
+ * gender:性别
+ * age:年龄
+ * city:地区
+ * avatar:头像
+ * mobile：手机号
+ * khdw:客户单位
+ * type：类型（0普通用户、1服务商）
+ * mailbox:邮箱
+
+ * user_profile 个人信息提交接口
+ * 参数
+ * uid：用户id
+ * gender:性别
+ * age:年龄
+ * city:地区
+ * avatar:头像
+ * mailbox:邮箱
+ * 返回值
+ * gender:性别
+ * age:年龄
+ * city:地区
+ * avatar:头像
+ * mailbox:邮箱
+
+ * user_login 用户登录接口
+ * 参数
+ * mobile:手机号
+ * password:密码
+ * token
+ * 返回值
+ * uid:用户id
+ * not:消息未读数
+ * type：类型（0普通用户、1服务商）
+
+ * user_logout 用户退出接口
+ * 参数
+ * uid：用户id
+
+ * feedback 用户反馈接口
+ * 参数
+ * uid:用户id
+ * title:标题
+ * info:内容
+
+ * user_token 获取用户token接口
+ * 参数
+ * uid：用户id
+ * token：token
+
+ * user_qualification 获取服务商资质接口
+ * 参数
+ * uid：用户id
+ * 返回值
+ * number:服务商编号
+ * name:负责人姓名
+ * company:公司名称
+ * address:公司地址
+ * city_f：服务区域
+ * task:服务类型
+ * end_time：协议到期时间
+ * bz_reward：已缴纳保证金
+
+ * billing 获取开票资料接口
+ * 参数
+ * uid：用户id
+ * 返回值
+ * khdw:客户单位
+ * pay_number:纳税人识别码
+ * register_address:注册地址
+ * company_phone:公司电话
+ * bank：开户银行
+ * bank_number:银行账号
+
+ * billing_edit 修改开票资料接口
+ * 参数
+ * uid：用户id
+ * khdw:客户单位
+ * pay_number:纳税人识别码
+ * register_address:注册地址
+ * company_phone:公司电话
+ * bank：开户银行
+ * bank_number:银行账号
+ * 返回值
+ * khdw:客户单位
+ * pay_number:纳税人识别码
+ * register_address:注册地址
+ * company_phone:公司电话
+ * bank：开户银行
+ * bank_number:银行账号
+</pre>
+
+
+<h4>【消息中心】</h4>
+<pre> * notification_list 消息列表接口
+ * 参数
+ * page：页数
+ * uid：用户id
+ * 返回值
+ * noti_id：消息id
+ * content：内容
+ * isread：是否已读（0未读、1已读）
+ * ctime：时间
+ * count：消息数量
+
+ * notification_read 消息已读接口
+ * 参数
+ * uid：用户id
+ * noti_id：消息id（为空表示全部已读）
+
+ * notification_clear 消息清空接口
+ * 参数
+ * uid:用户id
+
+</pre>
+
+
+<h4>【订单模块】</h4>
+<pre> * my_need_list 我的订单列表接口
+ * 参数
+ * uid：用户id
+ * status：（待确认1、待完工2、待付款3、已完成4）
+ * page：页数
+ * content：搜索内容
+ * 返回值
+ * id：用户id
+ * no：订单号
+ * status：（待确认需求11、待指派人员12、待服务完成13、待确认完工14、待支付费用15、交易完成16、已取消-2）
+ * kuanxing：款型
+ * miaoshu1：工作内容
+ * city：省市区
+ * address：地址
+ * go_time：完成时间
+ * reward：服务费
+ * evaluate：1已评价，0未评价
+ * pay_mode：2线下结算
+
+ * m_library 分类款型接口
+ * 参数
+ * n_time:服务器返的时间
+ * type:分类id
+ * 返回值
+ * id:款型id
+ * img：款型图片
+ * title：标题
+ * remark：备注
+ * percentage：百分比
+ * type：分类
+
+ * need_post 订单发布接口
+ * 参数
+ * uid：用户id
+ * s_type:设备类型
+ * m_id:设备款型id
+ * biaoqian:标签
+ * city:省市区
+ * address:服务地点
+ * zuobiao:坐标
+ * description:工作内容
+ * fw_name:服务身份
+ * 返回值
+ * id:订单id
+ * no:订单号
+
+ * photo_add 订单照片、视频提交处理接口
+ * 参数
+ * id:订单ID
+ * photo:图片
+ * video：视频
+ * 返回值
+ * 成功返回0，上传错误返回30000
+
+ * need_del 订单删除接口
+ * 参数
+ * id:订单id
+ * uid:用户uid
+
+ * need_detail  订单详情接口
+ * 参数
+ * id:订单ID
+ * type:用户类型（0普通用户，1服务商）
+ * 返回值
+ * id:订单ID
+ * no:订单号
+ * kuanxing:设备款型
+ * status：（待确认需求11、待指派人员12、待服务完成13、待确认完工14、待支付费用15、交易完成16、待完工审核17、待酬劳结算18、交易完成19、已取消-2）
+ * biaoqian:任务类型
+ * miaoshu1:工作描述1
+ * city:省市区
+ * address:详细地址
+ * fw_id:服务身份
+ * gw_name:顾问姓名
+ * gw_number:专属顾问
+ * miaoshu2:工作描述（评定描述）
+ * go_time:上门时间
+ * reward:服务费合计
+ * get_reward:服务酬劳
+ * zuobiao：坐标
+ * longitude：经度
+ * latitude：纬度
+ * js_name:技师姓名
+ * js_number：技师电话
+ * lx_name:现场联系人
+ * lx_number：现场联系人电话
+ * report:是否已出完工报告，1是、0否
+ * photo:图片（type图片1、视频2，small小图，large大图）
+ * photo2:评审图片（small小图，large大图）
+ * evaluate：1已评价，0未评价
+ * pay_mode：2线下结算
+ * time：工单发布时间
+ * check_time：审核通过时间
+ * js_time：指定人员时间
+ * app_over_time:服务商申请完工时间
+ * end_time：确认完工时间
+ * pay_time：确认收款时间
+ * end_time_f:服务商确认完工时间
+ * reward_time:确认打款时间
+ * del_time:订单取消时间
+
+ * you_need_list 服务商订单列表接口
+ * 参数
+ * uid：用户id
+ * status：（待指派1、待完工2、待结算3、已完成4）
+ * page：页数
+ * content：搜索内容
+ * 返回值
+ * id：订单id
+ * no：订单号
+ * status：（待指派人员12、待服务完成13、待完工审核14、待酬劳结算15、交易完成16、已取消-2）
+ * kuanxing：款型
+ * miaoshu2：工作内容
+ * city:省市区
+ * address：地址
+ * go_time：完成时间
+ * get_reward：服务酬劳
+
+ * need_time  订单时间接口
+ * 参数
+ * id:订单ID
+ * type:用户类型（0普通用户，1服务商）
+ * 返回值
+ * status:（待确认需求11、待指派人员12、待服务完成13、待确认完工14、待支付费用15、交易完成16、待完工审核17、待酬劳结算18、交易完成_服务方19、已取消-2）
+ * pay_mode：2线下结算
+ * time：工单发布时间
+ * check_time：审核通过时间
+ * js_time：指定人员时间
+ * app_over_time:服务商申请完工时间
+ * end_time：确认完工时间
+ * pay_time：确认收款时间
+ * end_time_f:服务商确认完工时间
+ * reward_time:确认打款时间
+ * del_time:订单取消时间
+
+ * need_js 指派技师接口
+ * 参数
+ * id:订单ID
+ * js_name:技师姓名
+ * js_number：技师手机号
+
+ * need_end  完工接口
+ * 参数
+ * id:订单ID
+
+ * need_comment  评价接口
+ * 参数
+ * id:订单ID
+ * zhpf:综合评分
+ * fwzl：服务质量
+ * sgzl：施工质量
+ * content:内容
+
+ * comment_show  获取订单详情接口
+ * 参数
+ * id:订单ID
+ * 返回值
+ * content:评价内容
+ * zhpf:综合评分
+ * fwzl：服务质量
+ * sgzl：施工质量
+ * time:评价时间
+
+ * comment_photo_add 评价照片提交处理接口
+ * 参数
+ * id:订单ID
+ * photo:图片
+ * 返回值
+ * 成功返回0，上传错误返回30000
+
+ * reward 酬劳明细接口
+ * 参数
+ * page：页数
+ * uid：用户id
+ * 返回值
+ * time：时间
+ * contact：金额
+ * remark：说明
+ * n_no：订单号
+ * type:1订单消费，2服务酬劳
+
+ * need_pay_down 对公转账接口
+ * 参数
+ * uid：用户id
+ * id:订单ID
+ 
+ * need_report  完工报告接口
+ * 参数
+ * id:订单ID
+ * 返回值
+ * routine_time:常规工时
+ * overtime：加班工时
+ * fitting_reward：零配件费用
+ * content：内容
+ * photo：图片
+ * inform：执行备注
+ * time:时间
+ * content：内容
+  
+ * pay/alipay/index  支付宝支付接口
+ * 参数
+ * no:订单号
+ * reward:金额
+ 
+ * pay/wxpay/index  微信支付接口
+ * 参数
+ * no:订单号
+ * reward:金额
+
+ * 推送返回值
+ * type:1跳转、0不跳转
+ * nid:订单id
+ * not:未读条数
+ * aisle:1服务端、0需求端
+ 
+ * version 版本升级接口
+ 
+ * need_mail_x 需求端发送订单邮件接口
+ * 参数
+ * id:订单id
+ * uid:用户id
+ * mail:邮箱账号
+
+ * need_mail_f 服务商发送订单邮件接口
+ * 参数
+ * id:订单id
+ * uid:用户id
+ * mail:邮箱账号
+
+ * need_js_edit 技师修改接口
+ * 参数
+ * id:订单ID
+ * js_name:技师姓名
+ * js_number：技师手机号
+
+ * need_end_f 服务商申请完工接口
+ * 参数
+ * uid：用户id
+ * id:订单ID
+
+ * consumption_upper 消费清单（线上）接口
+ * 参数
+ * page：页数
+ * uid：用户id
+ * 返回值
+ * reward：总支出
+ * time：时间
+ * contact：金额变化
+ * remark：说明
+ * n_no：订单号
+
+ * consumption_down 消费清单（线下）接口
+ * 参数
+ * page：页数
+ * uid：用户id
+ * 返回值
+ * reward：总消费
+ * payable：应付款
+ * time：时间
+ * contact：金额变化
+ * remark：说明
+ * n_no：订单号
+</pre>
+
+
+<h4>设备管理</h4>
+<pre>
+ * group_add 添加分组接口
+ * 参数
+ * uid：用户id
+ * title:分组名称
+
+ * group_edit 修改分组接口
+ * 参数
+ * id：分组id
+ * title:分组名称
+
+ * group_del 删除分组接口
+ * 参数
+ * id:分组id
+
+ * group_list 获取分组列表接口
+ * 参数
+ * uid：用户id
+ * 返回值
+ * id:分组id
+ * title:分组名
+ * g_count:分组设备数量
+
+ * device_list 获取某个分组设备列表接口
+ * 参数
+ * did：分组id
+ * 返回值
+ * gid:设备id
+ * no:设备编号
+ * name:设备名称
+ * type:型号
+
+ * device_add 设备添加接口
+ * 参数
+ * uid：用户id
+ * did:分组id
+ * name:设备名称
+ * type:产品型号
+ * modename:制造厂商
+ * modeyear:制造年月
+ * number:产品型号
+ * voltage:额定电压
+ * current:额定电流
+ * short_current:额定短路开断电流
+ * 返回值
+ * gid:设备id
+
+ * device_add2 设备添加步骤2、设备修改步骤2接口
+ * 参数
+ * gid:设备id
+ * 断路器/负荷开关/接触器
+ * d_modename:制造厂商
+ * d_type:产品型号
+ * d_modeyear:制造年月
+ * d_number:产品编号
+ * 微机保护装置
+ * w_modename:制造厂商
+ * w_type:产品型号
+ * w_modeyear:制造年月
+ * w_number:产品编号
+ * 互感器
+ * h_modename:制造厂商
+ * h_type:产品型号
+ * h_modeyear:制造年月
+ * h_number:产品编号
+ * 接地开关
+ * j_modename:制造厂商
+ * j_type:产品型号
+ * j_modeyear:制造年月
+ * j_number:产品编号
+
+ * device_photo_add 设备图片提交处理接口
+ * 参数
+ * gid:设备id
+ * photo:图片
+ * type:一次方案图1，其他2
+ * 返回值
+ * 成功返回0，上传错误返回30000
+
+ * device_show 设备详情接口
+ * 参数
+ * no:设备编号
+ * 返回值
+ * uid：用户id
+ * did:分组id
+ * title:分组名称
+ * name:设备名称
+ * type:产品型号
+ * modename:制造厂商
+ * modeyear:制造年月
+ * number:产品型号
+ * voltage:额定电压
+ * current:额定电流
+ * short_current:额定短路开断电流
+ * 断路器/负荷开关/接触器
+ * d_modename:制造厂商
+ * d_type:产品型号
+ * d_modeyear:制造年月
+ * d_number:产品编号
+ * 微机保护装置
+ * w_modename:制造厂商
+ * w_type:产品型号
+ * w_modeyear:制造年月
+ * w_number:产品编号
+ * 互感器
+ * h_modename:制造厂商
+ * h_type:产品型号
+ * h_modeyear:制造年月
+ * h_number:产品编号
+ * 接地开关
+ * j_modename:制造厂商
+ * j_type:产品型号
+ * j_modeyear:制造年月
+ * j_number:产品编号
+ * 温度
+ * 环境：wd_h
+ * A相：wd_a
+ * B相：wd_b
+ * C相：wd_c
+ * 温升
+ * 环境：ws_h
+ * A相：ws_a
+ * B相：ws_b
+ * C相：ws_c
+ * 短路开断总次数：z_breaking_times
+ * 已使用：breaking_times
+ * 机械寿命：z_mechanical_life
+ * 已使用：mechanical_life
+ * photo:图片
+ * code_img:二维码
+
+ * device_edit 设备修改接口
+ * 参数
+ * gid:设备id
+ * uid：用户id
+ * did:分组id
+ * name:设备名称
+ * type:产品型号
+ * modename:制造厂商
+ * modeyear:制造年月
+ * number:产品型号
+ * voltage:额定电压
+ * current:额定电流
+ * short_current:额定短路开断电流
+ * 返回值
+ * gid:设备id
+
+ * device_del 设备删除接口
+ * 参数
+ * gid:设备id
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>其他</h4>
+<pre>
+服务说明_需求方：https://www.epscn.net/addon/explanation.html
+
+服务要求_服务商：https://www.epscn.net/addon/claim.html
+
+软件许可协议：https://www.epscn.net/addon/agreement_app.html
+
+</pre>
+
+
+
+
+</body>
+</html>
